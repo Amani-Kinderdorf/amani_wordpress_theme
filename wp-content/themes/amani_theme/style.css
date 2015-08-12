@@ -122,7 +122,6 @@ header .logoDescription {
 
 nav {
 	margin-top: 10px;
-	height: 40px;
 	overflow: hidden;
 	font-family: 'Source Sans Pro';}
 nav  ul {
@@ -131,28 +130,36 @@ nav  ul {
 	margin: 0px;
 	height: 100%;
 	font-size: 0;
+	background-color: white;
+	border-bottom: solid 5px #EB9B00;
+
 }
 nav li {
 	display: inline-block;
-	width: 16.475%;
+	width: 14%;
 	height: 100%;
-	background-color: #EB9B00;
-	margin-right: 0.23%;
-	font-size: 17px;
+	padding: 0 1%;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
 	color: white;
+	color: #A80319;
+	color: rgb(37, 37, 37);
+
 	vertical-align: top;
 }
 nav li a {
 	display: block;
 	color: inherit;
-	line-height: 40px;
+	line-height: 50px;
 	text-decoration: none;
 }
 nav li:last-child {
 	margin-right: 0;
 }
 nav .current-menu-item {
-	background-color: #A80319;
+	background-color: #EB9B00;
+	color: white;
 }
 
 /********** LandingPage *********/
