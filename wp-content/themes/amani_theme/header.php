@@ -25,7 +25,7 @@
     <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.png" alt="logo"/>
 </a>
 <div class="logoItem">
-    <h2 class="logoText"><a href="<? echo home_url(); ?>">AMANI<br/>KINDERDORF e.V.</a></h2>
+    <h2 class="logoText"><a href="<?php echo home_url(); ?>">AMANI<br/>KINDERDORF e.V.</a></h2>
 </div>
 <h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
 
