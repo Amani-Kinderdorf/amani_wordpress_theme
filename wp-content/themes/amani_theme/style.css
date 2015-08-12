@@ -1,0 +1,332 @@
+/*
+Theme Name: Amani Theme
+Description: WordPress theme for Amani-Kinderdorf e.V.
+Author: Friedrich Weise
+Version: 0.1
+*/
+
+/*** GLOBAL : GENERAL STYLE DEFAULTS ***/
+html
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background-color: #F2F2F2;
+	color: #252525;
+	/*<TODO> responsive: tempor*/
+	min-width: 500px;
+
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 175%;
+}
+.contentWrapper {
+	width: 80%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.mainWrapper {
+	background-color: white;
+	overflow: hidden;
+}
+a {
+	color: inherit;
+}
+
+.xColumnView {
+	white-space: nowrap;
+}
+.xColumnView > div, .xColumnView > article, .xColumnView > aside {
+ 	display: inline-block;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  	white-space: normal;
+  	vertical-align: top;
+}
+/* <todo> gute idee ? */
+.xColumnView * {
+	max-width: 100%;
+}
+.twoColumnViewItem {
+	width: 50%;
+	padding: 3%;
+}
+.sideBarViewItem {
+	width: 27%;
+	padding: 6% 2% 6% 2%;
+}
+.pageContentViewItem {
+	width: 73%;
+	padding: 4%;
+}
+
+/********** HEADER & MENU *********/
+
+header {
+	margin-top: 50px;
+	text-align: center;
+}
+header .logoItem {
+	display: inline-block;
+	vertical-align: middle;
+	outline: 0px;
+}
+header .logoImage {
+	height: 115px; width: 115px;
+}
+header .logoText  {
+	font-family: 'AdLib';
+	font-size: 30px;
+	line-height: 120%;
+	text-align: left;
+	color: #A80319;	
+	margin-left: 15px;
+	letter-spacing: 0.3px;
+}
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+header .logoDescription {
+	font-family: "Coming Soon";
+	font-size: 17px;
+	text-align: center;
+	color: #A80319;	
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.smallHeader  {
+	margin-top: 30px;
+}
+.smallHeader .logoImage {
+	height: 50px; width: 50px;
+}
+.smallHeader .logoText  {
+	font-size: 22px;
+}
+.smallHeader .logoDescription {
+	display: none;
+}
+
+nav {
+	margin-top: 30px;
+	height: 40px;
+	overflow: hidden;
+	font-family: 'Source Sans Pro';}
+nav  ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	font-size: 0;
+}
+nav li {
+	display: inline-block;
+	width: 16.475%;
+	height: 100%;
+	background-color: #EB9B00;
+	margin-right: 0.23%;
+	font-size: 17px;
+	color: white;
+	vertical-align: top;
+}
+nav li a {
+	display: block;
+	color: inherit;
+	line-height: 40px;
+	text-decoration: none;
+}
+nav li:last-child {
+	margin-right: 0;
+}
+nav .current-menu-item {
+	background-color: rgba(75,75,75,0.9);
+}
+
+/********** LandingPage *********/
+/*todo: maybe global;*/
+
+/*content based spacing for headings*/
+.landingPageText h1.newsHeading {
+	margin-bottom: 1em;
+}
+.landingPageText h1.bottomHeading {
+	margin-top: 1.0em;
+}
+.newsPreview {
+	white-space: nowrap;
+	border-bottom: 1px solid #979797;
+	margin-top: 10px;
+}
+.newsPreview:last-child {
+	border-bottom-style: none;
+}
+.newsPreview p {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	font-size: 0.97em;
+	margin: 0px 0px 10px 0px;
+}
+.newsPreview > p.title {
+	width: 70%;
+	font-weight: 600;
+	line-height: 150%;
+}
+.newsPreview a {
+	text-decoration: none;
+}
+.newsPreview > p.date {
+	width: 30%;
+	text-align: right;
+}
+
+
+/********** Page Style *********/
+
+.pageStyle {
+	font-size: 1em;
+}
+.pageStyle h1, .pageStyle h2 {
+	color: #A80319;
+	font-weight: 700;
+	margin: 0.5em 0px 0.7em 0px;
+}
+.pageStyle h3, .pageStyle h4,  .pageStyle h5,  .pageStyle h6 {
+	font-weight: 700;
+	margin: 1em 0px 0.5em 0px;
+}
+.pageStyle p{
+	margin: 0.5em 0px 0.5em 0px;
+}
+.pageStyle img, .pageStyle iframe, .pageStyle video {
+	max-width: 100%;
+	height: auto;
+}
+.pageStyle .alignright
+{
+	padding: 8px 0 10px 8px;
+	float: right;
+}
+.pageStyle .alignleft
+{
+	padding: 8px 10px 8px 0;
+	float: left;
+}
+.pageStyle .aligncenter {
+	margin: 0px auto;
+}
+
+/* image caption */
+.wp-caption-text, .wp-caption-dt, .wp-caption-dd{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-align: left;
+	font-size: 90%;
+	font-weight: 600;
+}
+.aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd{
+	text-align: center;
+}
+.alignleft .wp-caption-text, .alignleft .wp-caption-dt, .alignleft .wp-caption-dd{
+	text-align: left;
+	padding-right: 10px;
+}
+.alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd{
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+
+
+
+.sideBarPageTree li{
+	list-style: none;
+}
+.sideBarPageTree a {
+	text-decoration: none;
+}
+
+.sideBarPageTree .page_item {
+	border-bottom: 1px solid #979797;
+	padding: 10px 0px;
+	display: block;
+	width: 100%;
+}
+.sideBarPageTree .children {
+	border-top: 1px solid #979797;
+	margin-top: 10px;
+}	
+
+.sideBarPageTree .page_item_has_children {
+	border-bottom-style: none;
+}
+
+.sideBarPageTree  ul{
+	padding-left: 20px;
+}
+.sideBarPageTree > .page_item > a{
+	font-size: 120%;
+	font-weight: 600;
+	color: #A80319;	
+	width: 100%;
+	display: block;
+}
+.sideBarPageTree .current_page_item > a {
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** FOOTER *********/
+
+footer {
+	height: 30px;
+	line-height: 30px;
+	background-color: #EB9B00;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	margin-bottom: 20px;
+}
+footer a {
+	color: inherit;
+}
+
+
+
+
+
+
+
+
