@@ -131,35 +131,42 @@ nav  ul {
 	height: 100%;
 	font-size: 0;
 	background-color: white;
-	border-bottom: solid 5px #EB9B00;
 
 }
 nav li {
 	display: inline-block;
-	width: 14%;
+	width: 16.666%;
 	height: 100%;
-	padding: 0 1%;
+	padding: 0 0%;
 	font-size: 18px;
 	font-weight: 600;
-	letter-spacing: 0.5px;
-	color: white;
-	color: #A80319;
 	color: rgb(37, 37, 37);
-
 	vertical-align: top;
+
+	border-bottom: solid 8px #EB9B00;
+
+	transition:border 0.5s ease; /* explorer 10 */
+	-webkit-transition:border 0.5s ease; /* chrome & safari */
+	-moz-transition:border 0.5s ease; /* firefox */
+	-o-transition:border 0.5s ease; /* opera */
 }
 nav li a {
 	display: block;
 	color: inherit;
-	line-height: 50px;
+	line-height: 45px;
 	text-decoration: none;
 }
 nav li:last-child {
 	margin-right: 0;
 }
+nav li:hover {
+	border-bottom: solid 8px #A80319;
+}
 nav .current-menu-item {
-	background-color: #EB9B00;
-	color: white;
+	border-bottom: solid 8px #A80319;
+
+	//background-color: #EB9B00;
+	//color: white;
 }
 
 /********** LandingPage *********/
