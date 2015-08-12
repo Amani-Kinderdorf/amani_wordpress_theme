@@ -143,7 +143,7 @@ nav li {
 	color: rgb(37, 37, 37);
 	vertical-align: top;
 
-	border-bottom: solid 8px #EB9B00;
+	border-bottom: solid 6px #EB9B00;
 
 	transition:border 0.5s ease; /* explorer 10 */
 	-webkit-transition:border 0.5s ease; /* chrome & safari */
@@ -160,13 +160,10 @@ nav li:last-child {
 	margin-right: 0;
 }
 nav li:hover {
-	border-bottom: solid 8px #A80319;
+	border-bottom-color:#A80319;
 }
 nav .current-menu-item {
-	border-bottom: solid 8px #A80319;
-
-	//background-color: #EB9B00;
-	//color: white;
+	border-bottom-color:#A80319;
 }
 
 /********** LandingPage *********/
@@ -329,10 +326,10 @@ nav .current-menu-item {
 footer {
 	height: 30px;
 	line-height: 30px;
-	background-color: #EB9B00;
+	border-bottom:solid 5px #EB9B00;
+	background-color: white;
 	text-align: center;
 	font-size: 14px;
-	color: white;
 	margin-bottom: 20px;
 }
 footer a {
