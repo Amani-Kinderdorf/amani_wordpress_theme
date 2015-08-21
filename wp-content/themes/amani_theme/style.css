@@ -5,6 +5,66 @@ Author: Friedrich Weise
 Version: 0.1
 */
 
+/*** FONTS: **/
+@font-face {
+    font-family: 'Coming Soon';
+    src: url('fonts/comingsoon-webfont.eot');
+    src: url('fonts/comingsoon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/comingsoon-webfont.woff2') format('woff2'),
+         url('fonts/comingsoon-webfont.woff') format('woff'),
+         url('fonts/comingsoon-webfont.ttf') format('truetype'),
+         url('fonts/comingsoon-webfont.svg#coming_soonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AdLib';
+    src: url('fonts/adlib-webfont.eot');
+    src: url('fonts/adlib-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/adlib-webfont.woff2') format('woff2'),
+         url('fonts/adlib-webfont.woff') format('woff'),
+         url('fonts/adlib-webfont.ttf') format('truetype'),
+         url('fonts/adlib-webfont.svg#adlibregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('fonts/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/opensans-regular-webfont.eot');
+    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('fonts/opensans-regular-webfont.woff') format('woff'),
+         url('fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/opensans-semibold-webfont.eot');
+    src: url('fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('fonts/opensans-semibold-webfont.woff') format('woff'),
+         url('fonts/opensans-semibold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
 html
 {
@@ -123,7 +183,8 @@ header .logoDescription {
 nav {
 	margin-top: 10px;
 	overflow: hidden;
-	font-family: 'Source Sans Pro';}
+//	font-family: 'Source Sans Pro';
+}
 nav  ul {
 	list-style: none;
 	padding: 0px;
@@ -138,7 +199,8 @@ nav li {
 	width: 16.666%;
 	height: 100%;
 	padding: 0 0%;
-	font-size: 18px;
+	font-size: 17px;
+	letter-spacing: -0.7px;
 	font-weight: 600;
 	color: rgb(37, 37, 37);
 	vertical-align: top;
