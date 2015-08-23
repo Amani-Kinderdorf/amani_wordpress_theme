@@ -3,11 +3,11 @@
 Template Name: Startseite
 */?>
 
-
-
-
-
 <?php get_header(); ?>
+
+<div class="contentWrapper searchWrapper">
+	<img id="searchIcon" src="<?php bloginfo('template_url') ?>/img/search.png" height="20" width="20"/>
+</div>
 
 <div class="contentWrapper mainWrapper">
 	<?php the_post(); ?>

@@ -76,7 +76,7 @@ body
 	background-color: #F2F2F2;
 	color: #252525;
 	/*<TODO> responsive: tempor*/
-	min-width: 500px;
+	min-width: 600px;
 
 	font-family: 'Open Sans';
 	font-weight: 400;
@@ -93,6 +93,13 @@ body
 .mainWrapper {
 	background-color: white;
 	overflow: hidden;
+}
+.searchWrapper {
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+ 	top: 50px;
+ 	text-align: right;
 }
 a {
 	color: inherit;
@@ -133,7 +140,7 @@ a {
 /********** HEADER & MENU *********/
 
 header {
-	margin-top: 50px;
+	margin-top: 25px;
 	text-align: center;
 }
 header .logoItem {
@@ -164,7 +171,7 @@ header .logoDescription {
 	color: #A80319;	
 	text-transform: uppercase;
 	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 
 .smallHeader  {
@@ -180,10 +187,11 @@ header .logoDescription {
 	display: none;
 }
 
+
+
 nav {
 	margin-top: 10px;
 	overflow: hidden;
-//	font-family: 'Source Sans Pro';
 }
 nav  ul {
 	list-style: none;
@@ -197,15 +205,12 @@ nav  ul {
 nav li {
 	display: inline-block;
 	width: 16.666%;
-	height: 100%;
-	padding: 0 0%;
 	font-size: 17px;
-	letter-spacing: -0.7px;
+	letter-spacing: -0.3px;
 	font-weight: 600;
-	color: rgb(37, 37, 37);
-	vertical-align: top;
+	color: #313131;
 
-	border-bottom: solid 6px #EB9B00;
+	border-bottom: solid 5px #EB9B00;
 
 	transition:border 0.5s ease; /* explorer 10 */
 	-webkit-transition:border 0.5s ease; /* chrome & safari */
@@ -224,7 +229,7 @@ nav li:last-child {
 nav li:hover {
 	border-bottom-color:#A80319;
 }
-nav .current-menu-item {
+nav .current-menu-item, nav .current-page-ancestor, nav .current_page_parent {
 	border-bottom-color:#A80319;
 }
 
@@ -269,7 +274,7 @@ nav .current-menu-item {
 /********** Page Style *********/
 
 .pageStyle {
-	font-size: 1em;
+	font-size: 0.95em;
 }
 .pageStyle h1, .pageStyle h2 {
 	color: #A80319;
@@ -309,16 +314,17 @@ nav .current-menu-item {
 	font-size: 90%;
 	font-weight: 600;
 }
+.wp-caption-dt, .wp-caption-dd, .wp-caption-text {
+	padding-right: 10px;
+}
 .aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd{
 	text-align: center;
 }
 .alignleft .wp-caption-text, .alignleft .wp-caption-dt, .alignleft .wp-caption-dd{
 	text-align: left;
-	padding-right: 10px;
 }
 .alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd{
 	text-align: right;
-	padding-right: 10px;
 }
 
 
@@ -327,6 +333,7 @@ nav .current-menu-item {
 
 .sideBarPageTree li{
 	list-style: none;
+	font-size: 0.97em;
 }
 .sideBarPageTree a {
 	text-decoration: none;
@@ -334,13 +341,13 @@ nav .current-menu-item {
 
 .sideBarPageTree .page_item {
 	border-bottom: 1px solid #979797;
-	padding: 7px 0px;
+	padding: 6px 0px;
 	display: block;
 	width: 100%;
 }
 .sideBarPageTree .children {
 	border-top: 1px solid #979797;
-	margin-top: 7px;
+	margin-top: 0px;
 }	
 
 .sideBarPageTree .page_item_has_children {
@@ -352,13 +359,12 @@ nav .current-menu-item {
 }
 .sideBarPageTree > .page_item > a{
 	font-size: 120%;
-	font-weight: 600;
 	color: #A80319;	
 	width: 100%;
 	display: block;
 }
 .sideBarPageTree .current_page_item > a {
-	font-weight: 600;
+	font-weight: 800;
 }
 
 
@@ -388,7 +394,7 @@ nav .current-menu-item {
 footer {
 	height: 30px;
 	line-height: 30px;
-	border-bottom:solid 5px #EB9B00;
+	border-bottom:solid 3px #EB9B00;
 	background-color: white;
 	text-align: center;
 	font-size: 14px;
