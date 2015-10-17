@@ -70,7 +70,9 @@ body {
   color: #313131;
   font-family: 'Open Sans';
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1em; }
+
+body {
   background-color: #F2F2F2; }
 
 .contentWrapper {
