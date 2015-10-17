@@ -13,7 +13,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/styles.css" />
     
     <?php if(is_front_page()||is_home()): ?>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/slick.css"/>
