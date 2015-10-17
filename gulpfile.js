@@ -1,36 +1,27 @@
-var url = 'localhost:8888/amani/'
-var name = 'Amani Kinderdorf'
-var styles = ['style.css','./styles/**'];
-/*************************************/
-var gulp        = require('gulp');
-var imageop = require('gulp-image-optimization');
-var autoprefixer = require('gulp-autoprefixer');
-var cssbeautify = require('gulp-cssbeautify');
- /***********************************/
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var cssmin = require('gulp-cssmin');
+var rename = require("gulp-rename");
 
-gulp.task('styles', function () {
-    return gulp.src('style.css')
-		.pipe(autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(cssbeautify({
-            indent: '	',
-            openbrace: 'end-of-line',
-            autosemicolon: true
-        }))
-        .pipe(gulp.dest('./'))
+
+var input = './styles/sass/*';
+var output = './styles/';
+
+gulp.task('sass', function () {
+  return gulp
+    .src(input)
+    .pipe(sass())
+    .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(gulp.dest(output))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(cssmin())
+    .pipe(gulp.dest(output));
 });
 
-gulp.task('images', function(cb) {
-    gulp.src(['./img/**/*.png','./img/**/*.jpg','./img/**/*.gif','./img/**/*.jpeg']).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest('./')).on('end', cb).on('error', cb);
-});
- 
-// Default task to be run with `gulp`
-gulp.task('publish', ['styles', 'browser-sync'], function () {
-    gulp.watch(styles, ['styles']);
-    gulp.watch(["**/*.php","**/*.js"], reload());
+gulp.task('watch', function() {
+  return gulp
+    .watch(input, ['sass'])
 });
 
-
+gulp.task('default', ['sass', 'watch']);
