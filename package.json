@@ -1,0 +1,22 @@
+{
+  "name": "amani_theme",
+  "version": "1.0.0",
+  "description": "wordpress amani theme",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp-image-optimization": "^0.1.3",
+    "gulp": "^3.9.0",
+    "gulp-notify": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cssbeautify": "*",
+  },
+  "devDependencies": {
+    "gulp-cssbeautify": "^0.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "friedrich",
+  "license": "ISC"
+}
