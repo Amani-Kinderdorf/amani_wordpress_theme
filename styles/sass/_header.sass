@@ -1,0 +1,126 @@
+// _header.sass
+
+header
+    margin-top: 25px
+    text-align: center
+    a
+        text-decoration: none
+        color: inherit    
+    .logoItem
+        display: inline-block
+        vertical-align: middle
+        outline: 0px
+    .logoImage
+        height: 115px
+        width: 115px
+    .logoText
+        font:
+            family: 'AdLib'
+            size: 30px
+        line-height: 120%
+        text-align: left
+        color: $amani_red
+        margin-left: 15px
+        letter-spacing: 0.3px
+    .logoDescription
+        font:
+            family: "Coming Soon"
+            size: 17px
+        color: $amani_red
+        text:
+            transform: uppercase
+            align: center
+        margin-top: 10px
+        margin-bottom: 35px
+        -webkit-font-smoothing: antialiased
+
+
+.smallHeader
+    margin-top: 20px
+    .logoImage
+        height: 50px
+        width: 50px
+    .logoText
+        font-size: 22px
+    .logoDescription
+        display: none
+
+
+nav
+    overflow: hidden
+    ul
+        list-style: none
+        padding: 0px
+        margin: 0px
+        height: 100%
+        font-size: 0
+        background-color: white
+    li
+        display: inline-block
+        width: 16.666%
+        font:
+            size: 17px
+            weight: 600
+        letter-spacing: -0.3px
+        color: $text_dark_gray
+        border-bottom: solid 5px $amani_orange
+        transition: border 0.5s ease
+        a
+            display: block
+            color: inherit
+            line-height: 45px
+            text-decoration: none
+        &:last-child
+            margin-right: 0
+        &:hover
+            border:
+                bottom-color: $amani_red
+                left-color: $amani_red
+
+    .current-menu-item, .current-page-ancestor, .current_page_parent
+        border-bottom-color: $amani_red
+        border-left-color: $amani_red
+
+
+/********** Search Bar *********/
+.searchWrapper
+    position: absolute
+    left: 50%
+    top: 30px
+    transform: translate(-50%, -50%)
+
+.mobileMenuButton
+    display: none
+
+#searchSection
+    right: 0px
+    position: absolute
+    width: 200px
+    height: 28px
+    background-color: white
+    transition: background-color 0.3s
+    #searchIcon
+        width: 20px
+        height: 20px
+        right: 0px
+        position: absolute
+        margin: 4px 6px
+        position: absolute
+        cursor: pointer
+    #searchField
+        width: 155px
+        height: 20px
+        line-height: 15px
+        font-size: 14px
+        padding: 0px
+        margin: 4px 6px
+        border-width: 0px
+        outline: none
+        background-color: white
+        appearance: none
+
+#searchSection.inputHidden
+    background-color: transparent
+
+#searchSection.inputHidden #searchField
+    background-color: transparent
