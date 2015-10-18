@@ -41,6 +41,17 @@
 </head>
 <body>
 
+<div class="stickyHeader" id="sticky-header">
+<div class="contentWrapper">
+    <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
+    <ul>
+        <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
+    </ul>
+    <span class="align-right" onclick="$('body, html').animate({scrollTop:0},600);">⇧</span>
+</div>
+</div>
+
+
 <div class="contentWrapper searchWrapper">
 <div class="mobileMenuButton" onclick="document.getElementById('mainMenu').classList.toggle('mainMenuVisible'); this.classList.toggle('menuHidden');"></div>
 <section id="searchSection" class="inputHidden">
@@ -70,3 +81,14 @@
 <?php endif; ?>
 
 </header>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  $(window).on("scroll", function() {
+    var fromTop = $("body").scrollTop();
+    $('#sticky-header').toggleClass("stickyHeaderVisible", (fromTop > 200));
+  });
+});
+</script>
