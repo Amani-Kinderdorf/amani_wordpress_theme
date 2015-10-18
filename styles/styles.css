@@ -287,7 +287,8 @@ nav {
   height: 60vh;
   max-height: 500px;
   min-height: 250px;
-  display: block; }
+  display: block;
+  position: relative; }
   #slideShowContent .contentDiv h3 {
     position: absolute;
     margin: 0px;
@@ -316,6 +317,7 @@ nav {
       border: 2px solid white;
       background-color: transparent;
       margin-left: 10px;
+      padding: 0px;
       font-size: 0px;
       cursor: pointer; }
     .slick-dots li > button:focus {
