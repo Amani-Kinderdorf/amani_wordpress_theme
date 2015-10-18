@@ -240,16 +240,19 @@ nav {
   .stickyHeader ul {
     vertical-align: top;
     padding-left: 30px;
-    margin: 0; }
+    margin: 0;
+    font-size: 0; }
   .stickyHeader ul > li {
     display: inline-block;
     list-style: none;
     padding: 0px 15px;
+    margin: 0px;
     line-height: 50px;
     font-weight: 500;
     font-size: 16px; }
     .stickyHeader ul > li a {
-      text-decoration: none; }
+      text-decoration: none;
+      display: block; }
     .stickyHeader ul > li:hover {
       background-color: #EB9B00;
       transition: background-color 0.2s ease; }
@@ -262,6 +265,19 @@ nav {
     line-height: 50px;
     font-weight: 600;
     cursor: pointer; }
+
+.headerIntro {
+  text-align: center; }
+  .headerIntro h2 {
+    color: #A80319;
+    font-family: 'AdLib';
+    font-size: 35px;
+    padding-top: 20px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0px; }
+  .headerIntro h5 {
+    font-size: 18px;
+    font-weight: 400; }
 
 .stickyHeaderVisible {
   opacity: 1; }
@@ -492,6 +508,8 @@ footer {
 /*****************MOBILE************/
 /*************Responsive*********/
 @media only screen and (max-width: 900px) {
+  .stickyHeaderVisible {
+    opacity: 0 !important; }
   .contentWrapper {
     width: 100%; } }
 

@@ -41,17 +41,17 @@
 </head>
 <body>
 
-<div class="stickyHeader" id="sticky-header">
+<div class="stickyHeader stickyHeaderVisible" id="sticky-header">
 <div class="contentWrapper">
     <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
     <ul>
         <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
     </ul>
-    <span class="align-right" onclick="$('body, html').animate({scrollTop:0},600);">⇧</span>
+    <span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>
 </div>
 </div>
 
-
+<!--
 <div class="contentWrapper searchWrapper">
 <div class="mobileMenuButton" onclick="document.getElementById('mainMenu').classList.toggle('mainMenuVisible'); this.classList.toggle('menuHidden');"></div>
 <section id="searchSection" class="inputHidden">
@@ -61,34 +61,13 @@
 </form>
 </section>
 </div>
+-->
+<div class="contentWrapper mainWrapper headerIntro" style="margin-top:80px;">
 
-
-<header class="<?php if (!is_front_page() && !is_404()) echo "smallHeader";?>">
-<a class="logoItem" href="<?php echo home_url(); ?>">
-    <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.png" alt="logo"/>
-</a>
-<div class="logoItem">
-    <h2 class="logoText"><a href="<?php echo home_url(); ?>">AMANI<br/>KINDERDORF e.V.</a></h2>
+<?php if(is_front_page()): ?>
+    <h2>AMANI KINDERDORF E.V</h2>
+    <h5>«Wir sind Amani. Ein gemeinnütziger Verein, der Kinderdörfer für Waisenkinder in Tansania unterstützt.»</h5>
+<?php endif;?>
 </div>
-<h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
-
-<?php if (!is_404()):?>
-<nav class="contentWrapper" id="mainMenu">
-    <ul>
-        <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
-    </ul>
-</nav>
-<?php endif; ?>
 
 </header>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-  $(window).on("scroll", function() {
-    var fromTop = $("body").scrollTop();
-    $('#sticky-header').toggleClass("stickyHeaderVisible", (fromTop > 200));
-  });
-});
-</script>
