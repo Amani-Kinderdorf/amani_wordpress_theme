@@ -122,8 +122,9 @@ header {
     margin-left: 15px;
     letter-spacing: 0.3px; }
   header .logoDescription {
-    font-family: "Coming Soon";
-    font-size: 17px;
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 19px;
     color: #A80319;
     text-transform: uppercase;
     text-align: center;
@@ -145,6 +146,7 @@ nav {
   overflow: hidden; }
   nav ul {
     list-style: none;
+    white-space: nowrap;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -292,20 +294,20 @@ nav {
   #slideShowContent .contentDiv h3 {
     position: absolute;
     margin: 0px;
-    padding: 30px 20px 10px 20px;
+    padding: 30px 20px 20px 30px;
     bottom: 0px;
     left: 0px;
     width: 100%;
     color: white;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     background: linear-gradient(to bottom, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3282828',GradientType=0 );
     box-sizing: border-box; }
 
 .slick-dots {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   right: 40px;
   list-style: none; }
   .slick-dots li {
