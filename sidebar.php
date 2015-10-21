@@ -2,10 +2,6 @@
 <?php
 //sidebar for posts
 if( is_archive() || is_category() ||  is_single() || is_home() || is_page_template('archive_template.php')): ?>
-            <div class="mobileSidebarHeader">
-                Berichte
-                <div class="button" onclick="document.getElementsByClassName('sideBarViewItem')[0].classList.toggle('sideBarViewItemVisible')">▼</div>
-            </div>
             <aside class="sideBarViewItem sideBarPageTree">
 
             <li class="page_item page_item_has_children">
@@ -47,12 +43,7 @@ else:
     global $pages;
     if(count($parent)>0) $parent = $parent[0];
     $parent = get_page($parent)->ID;
-    ?>
-    <div class="mobileSidebarHeader">
-        <?php echo get_the_title($parent);?>
-        <div class="button" onclick="document.getElementsByClassName('sideBarViewItem')[0].classList.toggle('sideBarViewItemVisible')">▼</div>
-    </div>
-    <?php
+
     $args=array('child_of' => $parent);
     $pages = get_pages($args); 
             if ($pages && count($pages)>0) { ?>

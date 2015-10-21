@@ -41,33 +41,24 @@
 </head>
 <body>
 
-<div class="stickyHeader stickyHeaderVisible" id="sticky-header">
+<div class="stickyHeader">
 <div class="contentWrapper">
     <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
     <ul>
         <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
     </ul>
-    <span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>
-</div>
-</div>
-
-<!--
-<div class="contentWrapper searchWrapper">
-<div class="mobileMenuButton" onclick="document.getElementById('mainMenu').classList.toggle('mainMenuVisible'); this.classList.toggle('menuHidden');"></div>
-<section id="searchSection" class="inputHidden">
+    <!--<span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>-->
+    <section id="searchSection" class="inputHidden">
 <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
     <img id="searchIcon" src="<?php bloginfo('template_url') ?>/img/search.png" onclick="searchButtonClicked();"/>
 </form>
 </section>
 </div>
--->
-<div class="contentWrapper mainWrapper headerIntro" style="margin-top:80px;">
+</div>
 
-<?php if(is_front_page()): ?>
-    <h2>AMANI KINDERDORF E.V</h2>
-    <h5>«Wir sind Amani. Ein gemeinnütziger Verein, der Kinderdörfer für Waisenkinder in Tansania unterstützt.»</h5>
-<?php endif;?>
+<div class="contentWrapper mainWrapper" style="margin-top:80px;">
+<!--todo spacing-->
 </div>
 
 </header>

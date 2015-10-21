@@ -1,85 +1,51 @@
 // _header.sass
-
-header
-    margin-top: 25px
-    text-align: center
-    a
-        text-decoration: none
-        color: inherit    
-    .logoItem
-        display: inline-block
-        vertical-align: middle
-        outline: 0px
-    .logoImage
-        height: 115px
-        width: 115px
-    .logoText
-        font:
-            family: 'AdLib'
-            size: 30px
-        line-height: 120%
-        text-align: left
-        color: $amani_red
-        margin-left: 15px
-        letter-spacing: 0.3px
-    .logoDescription
-        font:
-            family: "Coming Soon"
-            size: 17px
-        color: $amani_red
-        text:
-            transform: uppercase
-            align: center
-        margin-top: 10px
-        margin-bottom: 35px
-        -webkit-font-smoothing: antialiased
-
-
-.smallHeader
-    margin-top: 20px
-    .logoImage
-        height: 50px
-        width: 50px
-    .logoText
-        font-size: 22px
-    .logoDescription
-        display: none
-
-
-nav
+.stickyHeader
+    width: 100%
+    height: 50px
+    position: fixed
+    top: 0px
+    left: 0px
     overflow: hidden
-    ul
-        list-style: none
-        padding: 0px
-        margin: 0px
-        height: 100%
-        font-size: 0
-        background-color: white
-    li
+    background-color: $amani_red
+    color: white
+    z-index: 20
+    box-shadow: inset 0 0px 0 #fff,0 6px 8px rgba(0,0,0,0.15)
+    img, ul
         display: inline-block
-        width: 16.666%
-        font:
-            size: 17px
-            weight: 600
-        letter-spacing: -0.3px
-        color: $text_dark_gray
-        border-bottom: solid 5px $amani_orange
-        transition: border 0.5s ease
+    img
+        height: 30px
+        width: 35px
+        margin-top: 10px
+    ul  
+        vertical-align: top
+        padding-left: 30px
+        margin:0
+        font-size: 0
+    ul>li
+        display: inline-block
+        list-style: none
+        padding: 0px 15px
+        margin: 0px
+        line-height: 50px
+        font-weight: 400
+        font-size: 16px
         a
-            display: block
-            color: inherit
-            line-height: 45px
             text-decoration: none
-        &:last-child
-            margin-right: 0
+            display: block
         &:hover
-            border:
-                bottom-color: $amani_red
-                left-color: $amani_red
+            background-color: $amani_orange
+            transition: background-color 0.2s ease
+    .current-menu-item, .current-page-ancestor, .current_page_parent 
+        background-color: $amani_orange
 
-    .current-menu-item, .current-page-ancestor, .current_page_parent
-        border-bottom-color: $amani_red
-        border-left-color: $amani_red
+    .align-right
+        display: inline-block
+        float: right
+        font-size: 18px
+        line-height: 50px
+        font-weight: 600
+        cursor: pointer
+
 
 
 /********** Search Bar *********/
@@ -94,6 +60,7 @@ nav
 
 #searchSection
     right: 0px
+    top: 11px
     position: absolute
     width: 200px
     height: 28px
@@ -124,77 +91,6 @@ nav
 
 #searchSection.inputHidden #searchField
     background-color: transparent
-
-
-
-.stickyHeader
-    width: 100%
-    height: 50px
-    position: fixed
-    top: 0px
-    left: 0px
-    overflow: hidden
-    background-color: $amani_red
-    color: white
-    z-index: 20
-    opacity: 0
-    transition: opacity 0.6s ease
-    box-shadow: inset 0 0px 0 #fff,0 6px 8px rgba(0,0,0,0.15)
-    img, ul
-        display: inline-block
-    img
-        height: 30px
-        width: 35px
-        margin-top: 10px
-    ul  
-        vertical-align: top
-        padding-left: 30px
-        margin:0
-        font-size: 0
-    ul>li
-        display: inline-block
-        list-style: none
-        padding: 0px 15px
-        margin: 0px
-        line-height: 50px
-        font-weight: 500
-        font-size: 16px
-        a
-            text-decoration: none
-            display: block
-        &:hover
-            background-color: $amani_orange
-            transition: background-color 0.2s ease
-    .current-menu-item, .current-page-ancestor, .current_page_parent 
-        background-color: $amani_orange
-
-    .align-right
-        display: inline-block
-        float: right
-        font-size: 18px
-        line-height: 50px
-        font-weight: 600
-        cursor: pointer
-
-
-.headerIntro
-    text-align:center
-    h2
-        color: $amani_red
-        font-family: 'AdLib'
-        font-size: 35px
-        padding-top: 20px
-        letter-spacing: 0.3px
-        margin-bottom: 0px
-    h5
-        font-size:18px
-        font-weight: 400
-
-
-.stickyHeaderVisible
-    opacity: 1
-
-
 
 
 

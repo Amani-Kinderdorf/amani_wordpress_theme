@@ -59,7 +59,8 @@ body {
   width: 90%;
   max-width: 1100px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
 
 .mainWrapper {
   background-color: white;
@@ -100,78 +101,51 @@ a {
   padding: 3%; }
 
 /********** HEADER & MENU *********/
-header {
-  margin-top: 25px;
-  text-align: center; }
-  header a {
-    text-decoration: none;
-    color: inherit; }
-  header .logoItem {
+.stickyHeader {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: #A80319;
+  color: white;
+  z-index: 20;
+  box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
+  .stickyHeader img, .stickyHeader ul {
+    display: inline-block; }
+  .stickyHeader img {
+    height: 30px;
+    width: 35px;
+    margin-top: 10px; }
+  .stickyHeader ul {
+    vertical-align: top;
+    padding-left: 30px;
+    margin: 0;
+    font-size: 0; }
+  .stickyHeader ul > li {
     display: inline-block;
-    vertical-align: middle;
-    outline: 0px; }
-  header .logoImage {
-    height: 115px;
-    width: 115px; }
-  header .logoText {
-    font-family: 'AdLib';
-    font-size: 30px;
-    line-height: 120%;
-    text-align: left;
-    color: #A80319;
-    margin-left: 15px;
-    letter-spacing: 0.3px; }
-  header .logoDescription {
-    font-family: "Coming Soon";
-    font-size: 17px;
-    color: #A80319;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 35px;
-    -webkit-font-smoothing: antialiased; }
-
-.smallHeader {
-  margin-top: 20px; }
-  .smallHeader .logoImage {
-    height: 50px;
-    width: 50px; }
-  .smallHeader .logoText {
-    font-size: 22px; }
-  .smallHeader .logoDescription {
-    display: none; }
-
-nav {
-  overflow: hidden; }
-  nav ul {
     list-style: none;
-    padding: 0px;
+    padding: 0px 15px;
     margin: 0px;
-    height: 100%;
-    font-size: 0;
-    background-color: white; }
-  nav li {
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 16px; }
+    .stickyHeader ul > li a {
+      text-decoration: none;
+      display: block; }
+    .stickyHeader ul > li:hover {
+      background-color: #EB9B00;
+      transition: background-color 0.2s ease; }
+  .stickyHeader .current-menu-item, .stickyHeader .current-page-ancestor, .stickyHeader .current_page_parent {
+    background-color: #EB9B00; }
+  .stickyHeader .align-right {
     display: inline-block;
-    width: 16.666%;
-    font-size: 17px;
+    float: right;
+    font-size: 18px;
+    line-height: 50px;
     font-weight: 600;
-    letter-spacing: -0.3px;
-    color: #313131;
-    border-bottom: solid 5px #EB9B00;
-    transition: border 0.5s ease; }
-    nav li a {
-      display: block;
-      color: inherit;
-      line-height: 45px;
-      text-decoration: none; }
-    nav li:last-child {
-      margin-right: 0; }
-    nav li:hover {
-      border-bottom-color: #A80319;
-      border-left-color: #A80319; }
-  nav .current-menu-item, nav .current-page-ancestor, nav .current_page_parent {
-    border-bottom-color: #A80319;
-    border-left-color: #A80319; }
+    cursor: pointer; }
 
 /********** Search Bar *********/
 .searchWrapper {
@@ -185,6 +159,7 @@ nav {
 
 #searchSection {
   right: 0px;
+  top: 11px;
   position: absolute;
   width: 200px;
   height: 28px;
@@ -217,70 +192,6 @@ nav {
 
 #searchSection.inputHidden #searchField {
   background-color: transparent; }
-
-.stickyHeader {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  background-color: #A80319;
-  color: white;
-  z-index: 20;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
-  .stickyHeader img, .stickyHeader ul {
-    display: inline-block; }
-  .stickyHeader img {
-    height: 30px;
-    width: 35px;
-    margin-top: 10px; }
-  .stickyHeader ul {
-    vertical-align: top;
-    padding-left: 30px;
-    margin: 0;
-    font-size: 0; }
-  .stickyHeader ul > li {
-    display: inline-block;
-    list-style: none;
-    padding: 0px 15px;
-    margin: 0px;
-    line-height: 50px;
-    font-weight: 500;
-    font-size: 16px; }
-    .stickyHeader ul > li a {
-      text-decoration: none;
-      display: block; }
-    .stickyHeader ul > li:hover {
-      background-color: #EB9B00;
-      transition: background-color 0.2s ease; }
-  .stickyHeader .current-menu-item, .stickyHeader .current-page-ancestor, .stickyHeader .current_page_parent {
-    background-color: #EB9B00; }
-  .stickyHeader .align-right {
-    display: inline-block;
-    float: right;
-    font-size: 18px;
-    line-height: 50px;
-    font-weight: 600;
-    cursor: pointer; }
-
-.headerIntro {
-  text-align: center; }
-  .headerIntro h2 {
-    color: #A80319;
-    font-family: 'AdLib';
-    font-size: 35px;
-    padding-top: 20px;
-    letter-spacing: 0.3px;
-    margin-bottom: 0px; }
-  .headerIntro h5 {
-    font-size: 18px;
-    font-weight: 400; }
-
-.stickyHeaderVisible {
-  opacity: 1; }
 
 /********** Search Results *********/
 .searchResultItem {
@@ -506,114 +417,6 @@ footer {
     color: inherit; }
 
 /*****************MOBILE************/
-/*************Responsive*********/
-@media only screen and (max-width: 900px) {
-  .stickyHeaderVisible {
-    opacity: 0 !important; }
-  .contentWrapper {
-    width: 100%; } }
-
-@media only screen and (max-width: 800px) {
-  .mobileMenuButton {
-    display: block;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    bottom: 0px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #313131; }
-    .mobileMenuButton:before {
-      content: '\2630'; }
-  .menuHidden:before {
-    content: '\2716'; }
-  nav ul {
-    background-color: transparent; }
-  nav li {
-    display: block;
-    width: 100%;
-    border-bottom: none;
-    padding-left: 10px;
-    border-left: solid 8px #EB9B00;
-    text-align: left;
-    background-color: white; }
-  nav.contentWrapper {
-    max-height: 0px;
-    transition: max-height 0.5s ease; }
-  .mainMenuVisible {
-    max-height: 1000px !important; }
-  .slick-dots {
-    display: none !important; }
-  .searchWrapper {
-    top: 10px; } }
-
-@media only screen and (max-width: 500px) {
-  .contentWrapper {
-    width: 100%; }
-  .mainWrapper {
-    margin-top: 0px; }
-  header, .smallHeader {
-    margin-top: 15px; }
-  header .logoImage, .smallHeader .logoImage {
-    height: 40px;
-    width: 40px; }
-  header .logoText, .smallHeader .logoText {
-    font-size: 20px; }
-  header .logoDescription {
-    display: none; }
-  #searchSection {
-    display: none; }
-  #slideShowContent .contentDiv {
-    height: 30vh; }
-  .contentDiv h3 {
-    font-size: 18px; }
-  .sideBarViewItem, .pageContentViewItem, .oneColumnViewItem, .twoColumnViewItem {
-    width: 100%; }
-  .xColumnView > div, .xColumnView > article, .xColumnView > aside {
-    display: block; }
-  .archiveItem li {
-    display: block;
-    padding: 0px; }
-  .archiveItem li.archiveDate {
-    font-size: 13px;
-    font-style: italic;
-    margin-bottom: 20px;
-    width: auto;
-    text-align: left; }
-  .singleChild .childPreview_image {
-    float: none;
-    width: 100%;
-      width-padding-bottom: 70%; }
-  /*experimental*/
-  .mobileSidebarHeader {
-    display: block;
-    padding: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    background-color: #313131;
-    color: #f2f2f2;
-    position: relative; }
-  .mobileSidebarHeader > .button {
-    position: absolute;
-    right: 15px;
-    top: 8px; }
-  .sideBarViewItem {
-    max-height: 0px;
-    transition: max-height 0.5s ease;
-    font-size: 16px;
-    padding: 2% 4%; }
-  .sideBarPageTree > .page_item > a {
-    font-size: 110%; }
-  .sideBarPageTree .page_item, .sideBarPageTree .cat-item {
-    padding: 3px 0px; }
-  .sideBarViewItemVisible {
-    max-height: 1000px; } }
-
-.mobileSidebarHeader {
-  display: none !important; }
-
 /********** Page Style - Global *********/
 .pageStyle {
   font-size: 0.95em; }
