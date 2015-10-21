@@ -191,7 +191,8 @@ a {
   background-color: transparent; }
 
 #searchSection.inputHidden #searchField {
-  background-color: transparent; }
+  background-color: transparent;
+  font-size: 0px; }
 
 /********** Search Results *********/
 .searchResultItem {
