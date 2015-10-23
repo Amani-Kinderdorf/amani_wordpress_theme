@@ -182,7 +182,7 @@ a {
     margin: 4px 6px;
     border-width: 0px;
     outline: none;
-    background-color: white;
+    background-color: inherit;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none; }
@@ -191,7 +191,6 @@ a {
   background-color: transparent; }
 
 #searchSection.inputHidden #searchField {
-  background-color: transparent;
   font-size: 0px; }
 
 /********** Search Results *********/
