@@ -18,6 +18,12 @@
 }
 
 @media screen and (max-width: 768px) {
+	/*ausblenden des titels*/
+	.postHeading {
+		display: none;
+	}
+
+
 
 	.stickyHeader img {
 		position: fixed;
