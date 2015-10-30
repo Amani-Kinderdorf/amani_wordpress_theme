@@ -23,7 +23,7 @@
     <!-- change before upload -->
     <!-- change before upload -->
     <!-- change before upload -->
-    <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/amani/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css">
     <!-- change before upload -->
     <!-- change before upload -->
     <!-- change before upload -->
