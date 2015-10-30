@@ -12,12 +12,16 @@ gulp.task('sass', function () {
   return gulp
     .src(input)
     .pipe(sass())
-    .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
-    .pipe(gulp.dest(output))
+    .pipe(prefix({
+        browsers: ['> 1%','last 8 versions','Firefox >= 20'],
+        cascade: false
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssmin())
     .pipe(gulp.dest(output));
 });
+
+
 
 gulp.task('watch', function() {
   return gulp
