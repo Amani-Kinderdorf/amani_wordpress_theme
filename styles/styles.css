@@ -78,6 +78,8 @@ a {
   .xColumnView > div, .xColumnView > article, .xColumnView > aside {
     display: inline-block;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     white-space: normal;
     vertical-align: top; }
@@ -101,6 +103,48 @@ a {
   padding: 3%; }
 
 /********** HEADER & MENU *********/
+header {
+  margin-top: 90px;
+  margin-bottom: 40px;
+  text-align: center; }
+  header a {
+    text-decoration: none;
+    color: inherit; }
+  header .logoItem {
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0px; }
+  header .logoImage {
+    height: 115px;
+    width: 115px; }
+  header .logoText {
+    font-family: 'AdLib';
+    font-size: 30px;
+    line-height: 120%;
+    text-align: left;
+    color: #A80319;
+    margin-left: 15px;
+    letter-spacing: 0.3px; }
+  header .logoDescription {
+    font-size: 18px;
+    font-weight: 300;
+    color: #A80319;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    -webkit-font-smoothing: antialiased; }
+
+.smallHeader {
+  margin-top: 20px; }
+  .smallHeader .logoImage {
+    height: 50px;
+    width: 50px; }
+  .smallHeader .logoText {
+    font-size: 22px; }
+  .smallHeader .logoDescription {
+    display: none; }
+
 .stickyHeader {
   width: 100%;
   height: 50px;
@@ -111,6 +155,7 @@ a {
   background-color: #A80319;
   color: white;
   z-index: 20;
+  -webkit-box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
   .stickyHeader img, .stickyHeader ul {
     display: inline-block; }
@@ -137,7 +182,7 @@ a {
     .stickyHeader ul > li:hover {
       background-color: #EB9B00;
       -webkit-transition: background-color 0.2s ease;
-              transition: background-color 0.2s ease; }
+      transition: background-color 0.2s ease; }
   .stickyHeader .current-menu-item, .stickyHeader .current-page-ancestor, .stickyHeader .current_page_parent {
     background-color: #EB9B00; }
   .stickyHeader .align-right {
@@ -154,8 +199,8 @@ a {
   left: 50%;
   top: 30px;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .mobileMenuButton {
   display: none; }
@@ -168,7 +213,7 @@ a {
   height: 28px;
   background-color: white;
   -webkit-transition: background-color 0.3s;
-          transition: background-color 0.3s; }
+  transition: background-color 0.3s; }
   #searchSection #searchIcon {
     width: 20px;
     height: 20px;
@@ -189,8 +234,8 @@ a {
     outline: none;
     background-color: inherit;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none; }
+    -moz-appearance: none;
+    appearance: none; }
 
 #searchSection.inputHidden {
   background-color: transparent; }
@@ -279,9 +324,12 @@ a {
     color: white;
     font-weight: normal;
     font-size: 22px;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(40, 40, 40, 0.7)));
     background: -webkit-linear-gradient(top, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3282828',GradientType=0 );
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
 .slick-dots {
@@ -423,6 +471,30 @@ footer {
     color: inherit; }
 
 /*****************MOBILE************/
+/*************Responsive*********/
+@media only screen and (max-width: 500px) {
+  .contentWrapper {
+    width: 100%; }
+  .mainWrapper {
+    margin-top: 0px; }
+  .sideBarViewItem, .pageContentViewItem, .oneColumnViewItem, .twoColumnViewItem {
+    width: 100%; }
+  .xColumnView > div, .xColumnView > article, .xColumnView > aside {
+    display: block; }
+  .archiveItem li {
+    display: block;
+    padding: 0px; }
+  .archiveItem li.archiveDate {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 20px;
+    width: auto;
+    text-align: left; }
+  .singleChild .childPreview_image {
+    float: none;
+    width: 100%;
+      width-padding-bottom: 70%; } }
+
 /********** Page Style - Global *********/
 .pageStyle {
   font-size: 0.95em; }
