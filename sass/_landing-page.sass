@@ -1,0 +1,101 @@
+// _landing-page
+
+
+.landingPageText 
+    h1.newsHeading
+        margin-bottom: 1em
+    h1.bottomHeading
+        margin-top: 1.0em
+
+.newsPreview
+    white-space: nowrap
+    border-bottom: 1px solid #979797
+    &:last-child
+        border-bottom-style: none
+    p
+        display: inline-block
+        vertical-align: middle
+        white-space: normal
+        font-size: 0.97em
+        margin: 0px 0px 10px 0px
+
+.newsPreview > p.title, .childPreview_text > p.title
+    width: 70%
+    font-weight: 600
+    line-height: 150%
+
+.childPreview_text > p.title
+    margin-top: 0px
+    width: 100%
+
+.newsPreview a, .childPreview_text a
+    text-decoration: none
+
+.newsPreview > p.date
+    width: 30%
+    text-align: right
+
+.childPreview_image
+    width: 35%
+    padding-bottom: 35%
+    margin-right: 5%
+    display: inline-block
+    background-size: cover
+    vertical-align: top
+    border-radius: 3px
+
+.childPreview_text
+    width: 55%
+    display: inline-block
+    > p
+        margin-top: 0px!important
+
+#slideShowContent 
+    .contentDiv
+        background:
+            size: cover
+            repeat: no-repeat
+            position: center center
+        width: 100%
+        height: 60vh
+        max-height: 500px
+        min-height: 250px
+        display: block
+        position: relative
+        h3
+            position: absolute
+            margin: 0px
+            padding: 30px 20px 10px 20px
+            bottom: 0px
+            left: 0px
+            width: 100%
+            color: white
+            font:
+                weight: normal
+                size: 22px
+            background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(40,40,40,0.7) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3282828',GradientType=0 )
+            box-sizing: border-box
+
+.slick-dots
+    position: absolute
+    bottom: 0px
+    right: 40px
+    list-style: none
+    li
+        display: inline-block
+        > button
+            height: 15px
+            width: 15px
+            border-radius: 40px
+            border: 2px solid white
+            background-color: transparent
+            margin-left: 10px
+            padding: 0px
+            font-size: 0px
+            cursor: pointer
+        >button:focus
+            outline: 0
+
+.slick-active > button
+    background-color: white!important

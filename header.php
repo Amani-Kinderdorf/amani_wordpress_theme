@@ -9,11 +9,25 @@
         elseif ( is_404() ) { bloginfo('name'); print ' | Seite nicht gefunden'; }
         else { bloginfo('name'); wp_title('|'); get_page_number(); }
     ?></title>
+
+    <!-- blocks full scale -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/mobile.css" />
+
+    <!-- change before upload -->
+    <!-- change before upload -->
+    <!-- change before upload -->
+    <!-- change before upload -->
+    <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/amani/font-awesome/css/font-awesome.min.css">
+    <!-- change before upload -->
+    <!-- change before upload -->
+    <!-- change before upload -->
+    <!-- change before upload -->
     
     <?php if(is_front_page()||is_home()): ?>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/slick.css"/>
@@ -42,19 +56,23 @@
 <body>
 
 <div class="stickyHeader">
-<div class="contentWrapper">
-    <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
-    <ul>
-        <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
-    </ul>
-    <!--<span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>-->
-    <section id="searchSection" class="inputHidden">
-<form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
-    <img id="searchIcon" src="<?php bloginfo('template_url') ?>/img/search.png" onclick="searchButtonClicked();"/>
-</form>
-</section>
-</div>
+    <div class="contentWrapper">
+        <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
+        <nav id="nav">
+            <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-2x"></i></a>
+            <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-2x"></i></a>
+            <ul>
+                <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
+            </ul>
+            <!--<span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>-->
+        </nav>
+        <section id="searchSection" class="inputHidden">
+    <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
+        <img id="searchIcon" src="<?php bloginfo('template_url') ?>/img/search.png" onclick="searchButtonClicked();"/>
+    </form>
+    </section>
+    </div>
 </div>
 
 <div class="contentWrapper mainWrapper" style="margin-top:80px;">

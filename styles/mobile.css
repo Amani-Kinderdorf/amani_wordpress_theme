@@ -1,0 +1,202 @@
+#nav {
+	position: relative;
+	display: inline;
+}
+
+#nav > a {
+	display: none;
+}
+
+/*
+#sidebar > a {
+		display: none;
+}
+*/
+
+#submenu > a {
+		display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+	.stickyHeader img {
+		position: fixed;
+	}
+
+	.stickyHeader {
+		overflow: visible;
+	}
+
+	#nav {
+		left: 45px; /* space for white hand logo */
+	}
+
+	#nav > a {
+		width: 28px;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
+	#nav:not( :target ) > a:first-of-type,
+	#nav:target > a:last-of-type {
+		display: block;
+	}
+
+	#nav:target ul {
+		display: block;
+		background-color: #A80319;
+		padding-left: 0;
+	}
+
+	#nav > ul {
+		display: none;
+		font-size: 150%;
+		width: 7.5em;
+	}
+
+	#nav > ul > li {
+		display: block;
+	}
+
+	#nav > ul li:hover ul {
+		display: block;
+	}
+
+	#nav > ul ul li:hover ul {
+		display: none;
+	}
+
+	/* sidebar */
+
+	/* Ueber uns, Kinderdoerfer und Unterstuetzen */
+
+	#submenu {
+		line-height: 120%
+	}
+
+	#submenu > li {
+		display: inline;
+	}
+
+	#submenu > li > a {
+		font-size: 1.5em;
+	    color: #A80319;
+	    font-weight: 700;
+	    margin: 0.5em 0px 0.7em 0px;
+	}
+
+	#submenu:not( :target ) > a:first-of-type,
+	#submenu:target > a:last-of-type {
+		display: inline;
+		padding-left: 0.5em;
+		vertical-align: top;
+	}
+
+	#submenu:target ul {
+		display: block;
+	}
+
+	/* Berichte */
+
+/*
+	#sidebar > a {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		font-size: 150%;
+		width: 7.5em;
+	}
+*/
+
+/*
+	.sideBarPageTree li > a {
+		display: none;
+	}
+*/
+
+	.sideBarViewItem {
+		width: 100%;
+	}
+
+/*
+	#sidebar li {
+		display: inline;
+	}
+*/
+
+/*
+	#sidebar:not( :target ) > a:first-of-type,
+	#sidebar:target > a:last-of-type {
+		display: inline;
+	}
+
+	#sidebar:target li > a {
+		display: inline-block;
+		padding: 0.5em;
+	}
+*/
+
+/*
+	#sidebar:not( :target ) > a:first-of-type,
+	#sidebar:target > a:last-of-type {
+		display: inline;
+	}
+
+	#sidebar > a {
+		padding-left: 1em;
+	}
+*/
+/*
+	#sidebar li:target ul {
+		display: block;
+		z-index: 999;
+	}
+*/
+	/*
+	.sideBarPageTree li:target ul {
+		display: block;
+	}*/
+
+	.sideBarPageTree .cat-item, .sideBarPageTree .page_item { /* li Aktuelle Berichte / Archiv */
+		/*display: inline;*/
+		/*border-bottom: 0;*/
+	}
+
+	.sideBarPageTree .cat-item, .sideBarPageTree .page_item > a {
+		display: inherit;
+		padding-left: 0.5em;
+	}
+
+	.sideBarPageTree ul {
+		display: none;
+		/*position: absolute;*/
+		/*padding-left: 0;*/
+	}
+
+	.sideBarPageTree .children {
+		/*border-top: 0;*/
+	}
+
+	.xColumnView > article {
+		display: block;
+	}
+
+	.pageContentViewItem {
+		position: relative;
+		width: 100%;
+	}
+
+	.oneColumnViewItem {
+		left: 0; /* no sidebar */
+	}
+
+	.oneColumnViewItem > p {
+		display: inline-block; /* display map in one line */
+		width: 100%;
+	}
+
+	.oneColumnViewItem iframe {
+		width: 100%; /* display map on full horizontal scale */
+		height: 65vh; /* viewport height */
+	}
+
+}
