@@ -136,7 +136,8 @@ a {
       display: block; }
     .stickyHeader ul > li:hover {
       background-color: #EB9B00;
-      transition: background-color 0.2s ease; }
+      -webkit-transition: background-color 0.2s ease;
+              transition: background-color 0.2s ease; }
   .stickyHeader .current-menu-item, .stickyHeader .current-page-ancestor, .stickyHeader .current_page_parent {
     background-color: #EB9B00; }
   .stickyHeader .align-right {
@@ -152,7 +153,9 @@ a {
   position: absolute;
   left: 50%;
   top: 30px;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .mobileMenuButton {
   display: none; }
@@ -164,7 +167,8 @@ a {
   width: 200px;
   height: 28px;
   background-color: white;
-  transition: background-color 0.3s; }
+  -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s; }
   #searchSection #searchIcon {
     width: 20px;
     height: 20px;
@@ -178,11 +182,12 @@ a {
     height: 20px;
     line-height: 15px;
     font-size: 14px;
+    font-family: sans-serif;
     padding: 0px;
     margin: 4px 6px;
     border-width: 0px;
     outline: none;
-    background-color: white;
+    background-color: inherit;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none; }
@@ -191,7 +196,6 @@ a {
   background-color: transparent; }
 
 #searchSection.inputHidden #searchField {
-  background-color: transparent;
   font-size: 0px; }
 
 /********** Search Results *********/
@@ -275,6 +279,7 @@ a {
     color: white;
     font-weight: normal;
     font-size: 22px;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3282828',GradientType=0 );
     box-sizing: border-box; }
