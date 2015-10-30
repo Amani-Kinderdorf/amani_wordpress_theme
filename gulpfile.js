@@ -16,6 +16,7 @@ gulp.task('sass', function () {
         browsers: ['> 1%','last 8 versions','Firefox >= 20'],
         cascade: false
     }))
+    .pipe(gulp.dest(output))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssmin())
     .pipe(gulp.dest(output));
