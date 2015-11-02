@@ -8,7 +8,7 @@
         <?php get_sidebar(); ?>
         
         <article class="pageContentViewItem pageStyle">
-            <h1 class="postHeading"><?php wp_reset_query(); the_title(); ?></h1>
+            <h1><?php wp_reset_query(); the_title(); ?></h1>
             <?php the_content(); ?>
          </article>
      </div>
