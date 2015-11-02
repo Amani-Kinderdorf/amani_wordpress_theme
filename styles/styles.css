@@ -165,14 +165,14 @@ header {
   .stickyHeader ul > li {
     display: inline-block;
     list-style: none;
-    padding: 0px 15px;
     margin: 0px;
     line-height: 50px;
     font-weight: 400;
     font-size: 16px; }
     .stickyHeader ul > li a {
       text-decoration: none;
-      display: block; }
+      display: block;
+      padding: 0px 15px; }
     .stickyHeader ul > li:hover {
       background-color: #EB9B00;
       -webkit-transition: background-color 0.2s ease;
