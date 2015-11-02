@@ -6,15 +6,15 @@
 
 <script type="text/javascript">
     function searchButtonClicked () {
-        if(document.getElementById('searchField').value.length>0)
-        document.getElementById('searchForm').submit();
-        else document.getElementById('searchField').focus();
+        if(document.getElementById('searchField').value.length>0) document.getElementById('searchForm').submit();
+         document.getElementById('searchField').focus();
     }
     function changeVisibility(value) {
         document.getElementById('searchSection').classList.toggle('inputHidden',value);
+        if(value) document.getElementById('searchIcon').src = "<?php bloginfo('template_url') ?>/img/search.png"
+        else document.getElementById('searchIcon').src = "<?php bloginfo('template_url') ?>/img/search_black.png"
     }
 </script>
-
  <?php if(is_front_page()||is_home()): ?>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/slick.min.js"></script>

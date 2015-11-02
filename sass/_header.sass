@@ -1,51 +1,4 @@
 // _header.sass
-header
-    margin-top: 90px
-    margin-bottom: 40px
-    text-align: center
-    a
-        text-decoration: none
-        color: inherit    
-    .logoItem
-        display: inline-block
-        vertical-align: middle
-        outline: 0px
-    .logoImage
-        height: 115px
-        width: 115px
-    .logoText
-        font:
-            family: 'AdLib'
-            size: 30px
-        line-height: 120%
-        text-align: left
-        color: $amani_red
-        margin-left: 15px
-        letter-spacing: 0.3px
-    .logoDescription
-        font:
-            size: 18px
-            weight: 300
-        color: $amani_red
-        text:
-            transform: uppercase
-            align: center
-        margin-top: 10px
-        margin-bottom: 35px
-        -webkit-font-smoothing: antialiased
-
-
-.smallHeader
-    margin-top: 20px
-    .logoImage
-        height: 50px
-        width: 50px
-    .logoText
-        font-size: 22px
-    .logoDescription
-        display: none
-
-
 .stickyHeader
     width: 100%
     height: 50px
@@ -65,12 +18,13 @@ header
         margin-top: 10px
     ul  
         vertical-align: top
-        padding-left: 10px
-        margin: 0
+        padding-left: 30px
+        margin:0
         font-size: 0
     ul>li
         display: inline-block
         list-style: none
+        padding: 0px 15px
         margin: 0px
         line-height: 50px
         font-weight: 400
@@ -78,7 +32,6 @@ header
         a
             text-decoration: none
             display: block
-            padding: 0px 15px
         &:hover
             background-color: $amani_orange
             transition: background-color 0.2s ease
@@ -126,18 +79,18 @@ header
         height: 20px
         line-height: 15px
         font-size: 14px
-        font-family: sans-serif
         padding: 0px
         margin: 4px 6px
         border-width: 0px
         outline: none
-        background-color: inherit
+        background-color: white
         appearance: none
 
 #searchSection.inputHidden
     background-color: transparent
 
 #searchSection.inputHidden #searchField
+    background-color: transparent
     font-size: 0px
 
 
