@@ -18,16 +18,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/styles.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/mobile.css" />
-
-    <!-- change before upload -->
-    <!-- change before upload -->
-    <!-- change before upload -->
-    <!-- change before upload -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css">
-    <!-- change before upload -->
-    <!-- change before upload -->
-    <!-- change before upload -->
-    <!-- change before upload -->
     
     <?php if(is_front_page()||is_home()): ?>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/slick.css"/>
@@ -59,8 +50,8 @@
     <div class="contentWrapper">
         <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
         <nav id="nav">
-            <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-2x"></i></a>
-            <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-2x"></i></a>
+            <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-lg"></i></a>
+            <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-lg"></i></a>
             <ul>
                 <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
             </ul>
