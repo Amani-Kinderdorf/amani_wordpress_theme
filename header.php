@@ -48,7 +48,7 @@
 
 <div class="stickyHeader">
     <div class="contentWrapper">
-        <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/hand_weiß.png"/></a>
+        <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_url') ?>/img/logo_white.png"/></a>
         <nav id="nav">
             <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-lg"></i></a>
             <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-lg"></i></a>

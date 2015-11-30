@@ -4,8 +4,8 @@ add_theme_support( 'post-thumbnails' );
 add_image_size('landing_slideshow', 1100, 2000);
 add_image_size('child_preview',260,260);
 
-if ( function_exists('register_sidebar') )
-register_sidebar();
+//if ( function_exists('register_sidebar') )
+//register_sidebar();
 
 add_action( 'init', 'create_post_type_child' );
 
