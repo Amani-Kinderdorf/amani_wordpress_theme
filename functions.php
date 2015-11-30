@@ -1,13 +1,10 @@
 <?php
 
-add_theme_support( 'post-thumbnails' );
 add_image_size('landing_slideshow', 1100, 2000);
 add_image_size('child_preview',260,260);
 
-//if ( function_exists('register_sidebar') )
-//register_sidebar();
-
 add_action( 'init', 'create_post_type_child' );
+add_theme_support( 'menus' );
 
 function create_post_type_child() {
   register_post_type( 'child',
@@ -119,6 +116,14 @@ function my_post_gallery($output, $attr) {
     return $output;
 }
 
+//import theme plugins
+add_action('after_setup_theme', 'load_plugins');
+//load plugin
+function load_plugins() {
+	if (!function_exists('newsletter_form_get')) {
+		include_once(TEMPLATEPATH.'/plugins_theme/newsletter_form.php');
+	}
+}
 
 
 
@@ -136,9 +141,6 @@ function my_post_gallery($output, $attr) {
 
 
 
-
-
-	add_theme_support( 'menus' );
 
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";

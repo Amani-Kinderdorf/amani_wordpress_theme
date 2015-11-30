@@ -535,3 +535,36 @@ footer {
 
 .alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd {
   text-align: right; }
+
+/********** Plugin Style - Subscribe Form *********/
+.subscribe_form {
+  padding-top: 10px; }
+  .subscribe_form > input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    border: 1px #EB9B00 solid;
+    border-radius: 2px;
+    padding: 6px 10px;
+    background-color: #fcfcfc;
+    outline: 0px;
+    width: 175px;
+    margin: 8px 0px;
+    height: 20px;
+    font-size: 16px; }
+  .subscribe_form > input[type="submit"] {
+    margin-left: 130px;
+    background-color: #EB9B00;
+    color: white;
+    cursor: pointer; }
+  .subscribe_form > input[type="submit"]:hover {
+    background-color: #ffa800;
+    border-color: #ffa800; }
+  .subscribe_form > input:focus {
+    border-width: 2px;
+    margin: 7px -1px; }
+  .subscribe_form > label {
+    width: 130px;
+    display: inline-block;
+    font-weight: 600; }
