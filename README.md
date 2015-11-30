@@ -8,3 +8,8 @@ sass file in **styles/sass/**. Gulp workflow with minified version and debug css
 npm update
 gulp
 ```
+### Newsletter Form
+The Plugin `newsletter_form` is used to create a form to subscribe to our mailman installation.
+
+<img src="assets/02.png">
+
