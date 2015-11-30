@@ -16,11 +16,10 @@
     }
 </script>
  <?php if(is_front_page()||is_home()): ?>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/slick.min.js"></script>
 	<script type="text/javascript">	
-	    $(document).ready(function(){
-	       $('#slideShowContent').slick({
+	    jQuery(document).ready(function(){
+	       jQuery('#slideShowContent').slick({
 	        autoplay: false,
 	        autoplaySpeed: 2000,  
 	        infinite: true,

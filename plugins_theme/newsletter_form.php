@@ -15,11 +15,6 @@ define('PLUGIN_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) )
 define('PLUGIN_NAME', "newsletter form");
 define ("PLUGIN_VERSION", "1.0");
 
-add_action('wp_enqueue_scripts','enqueue_assets');
-function enqueue_assets() {
-	wp_enqueue_style('form_styles', PLUGIN_PATH.'form_styles.css');
-}
-
 /**print html content**/
 function newsletter_form_get(){
 	$form= ' 
