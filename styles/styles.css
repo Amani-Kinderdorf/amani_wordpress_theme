@@ -235,7 +235,8 @@ header {
   background-color: transparent; }
 
 #searchSection.inputHidden #searchField {
-  font-size: 0px; }
+  font-size: 0px;
+  background-color: transparent; }
 
 /********** Search Results *********/
 .searchResultItem {
@@ -465,30 +466,6 @@ footer {
     color: inherit; }
 
 /*****************MOBILE************/
-/*************Responsive*********/
-@media only screen and (max-width: 500px) {
-  .contentWrapper {
-    width: 100%; }
-  .mainWrapper {
-    margin-top: 0px; }
-  .sideBarViewItem, .pageContentViewItem, .oneColumnViewItem, .twoColumnViewItem {
-    width: 100%; }
-  .xColumnView > div, .xColumnView > article, .xColumnView > aside {
-    display: block; }
-  .archiveItem li {
-    display: block;
-    padding: 0px; }
-  .archiveItem li.archiveDate {
-    font-size: 13px;
-    font-style: italic;
-    margin-bottom: 20px;
-    width: auto;
-    text-align: left; }
-  .singleChild .childPreview_image {
-    float: none;
-    width: 100%;
-      width-padding-bottom: 70%; } }
-
 /********** Page Style - Global *********/
 .pageStyle {
   font-size: 0.95em; }
