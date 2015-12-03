@@ -2,11 +2,14 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
-var rename = require("gulp-rename");
+var insert = require('gulp-insert');
+var fs = require("fs");
+var metaStyle = "";
 
 
 var input = './styles/sass/*';
-var output = './styles/';
+var output = './';
+var outputDebug = './styles/';
 
 gulp.task('sass', function () {
   return gulp
@@ -16,17 +19,22 @@ gulp.task('sass', function () {
         browsers: ['> 1%','last 8 versions','Firefox >= 20'],
         cascade: false
     }))
-    .pipe(gulp.dest(output))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(outputDebug))
     .pipe(cssmin())
+    .pipe(insert.prepend(metaStyle))
     .pipe(gulp.dest(output));
 });
-
 
 
 gulp.task('watch', function() {
   return gulp
     .watch(input, ['sass'])
 });
+gulp.task('init',function() {
+    metaStyle = fs.readFileSync("./styles/stylesheet_meta.css", "utf-8");
+    console.log(metaStyle);
+    return gulp;
+});
 
-gulp.task('default', ['sass', 'watch']);
+
+gulp.task('default', ['init','sass', 'watch']);

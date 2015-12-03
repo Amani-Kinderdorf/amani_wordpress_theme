@@ -8,6 +8,6 @@
     "gulp-sass": "*",
     "gulp-autoprefixer":"*",
 	"gulp-cssmin":"*",
-	"gulp-rename":"*"	
+  "gulp-insert":"*"
   }
 }
