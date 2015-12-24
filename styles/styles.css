@@ -1,35 +1,35 @@
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
 @font-face {
-  src: url("../fonts/comingsoon-webfont.eot");
-  src: url("../fonts/comingsoon-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/comingsoon-webfont.woff2") format("woff2"), url("../fonts/comingsoon-webfont.woff") format("woff"), url("../fonts/comingsoon-webfont.ttf") format("truetype"), url("../fonts/comingsoon-webfont.svg#coming_soonregular") format("svg");
+  src: url("./fonts/comingsoon-webfont.eot");
+  src: url("./fonts/comingsoon-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/comingsoon-webfont.woff2") format("woff2"), url("./fonts/comingsoon-webfont.woff") format("woff"), url("./fonts/comingsoon-webfont.ttf") format("truetype"), url("./fonts/comingsoon-webfont.svg#coming_soonregular") format("svg");
   font-family: 'Coming Soon';
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  src: url("../fonts/adlib-webfont.eot");
-  src: url("../fonts/adlib-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/adlib-webfont.woff2") format("woff2"), url("../fonts/adlib-webfont.woff") format("woff"), url("../fonts/adlib-webfont.ttf") format("truetype"), url("../fonts/adlib-webfont.svg#adlibregular") format("svg");
+  src: url("./fonts/adlib-webfont.eot");
+  src: url("./fonts/adlib-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/adlib-webfont.woff2") format("woff2"), url("./fonts/adlib-webfont.woff") format("woff"), url("./fonts/adlib-webfont.ttf") format("truetype"), url("./fonts/adlib-webfont.svg#adlibregular") format("svg");
   font-family: 'AdLib';
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  src: url("../fonts/opensans-bold-webfont.eot");
-  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  src: url("./fonts/opensans-bold-webfont.eot");
+  src: url("./fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/opensans-bold-webfont.woff2") format("woff2"), url("./fonts/opensans-bold-webfont.woff") format("woff"), url("./fonts/opensans-bold-webfont.ttf") format("truetype"), url("./fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
   font-family: 'Open Sans';
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
-  src: url("../fonts/opensans-regular-webfont.eot");
-  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  src: url("./fonts/opensans-regular-webfont.eot");
+  src: url("./fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/opensans-regular-webfont.woff2") format("woff2"), url("./fonts/opensans-regular-webfont.woff") format("woff"), url("./fonts/opensans-regular-webfont.ttf") format("truetype"), url("./fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
   font-family: 'Open Sans';
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  src: url("../fonts/opensans-semibold-webfont.eot");
-  src: url("../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("../fonts/opensans-semibold-webfont.woff") format("woff"), url("../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  src: url("./fonts/opensans-semibold-webfont.eot");
+  src: url("./fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/opensans-semibold-webfont.woff2") format("woff2"), url("./fonts/opensans-semibold-webfont.woff") format("woff"), url("./fonts/opensans-semibold-webfont.ttf") format("truetype"), url("./fonts/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
   font-family: 'Open Sans';
   font-weight: 600;
   font-style: normal; }
