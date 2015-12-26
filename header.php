@@ -16,7 +16,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/style.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/mobile.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css">
     

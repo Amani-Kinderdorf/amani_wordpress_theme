@@ -8,7 +8,7 @@ var metaStyle = "";
 
 
 var input = './styles/sass/*';
-var output = './';
+var output = './style.css';
 var outputDebug = './styles/';
 
 gulp.task('sass', function () {
