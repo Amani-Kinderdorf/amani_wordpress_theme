@@ -483,12 +483,10 @@ h1.postHeading {
     text-decoration: none; }
   .archiveItem:hover {
     background-color: rgba(169, 169, 169, 0.18); }
-    .archiveItem:hover .archiveTitle {
-      text-decoration: underline; }
   .archiveItem li {
     display: inline-block;
     white-space: normal;
-    padding: 4px 0px; }
+    padding: 5px 0px; }
 
 .archiveTitle {
   width: 70%;
