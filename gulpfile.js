@@ -14,7 +14,9 @@ var outputDebug = './styles/';
 gulp.task('sass', function () {
   return gulp
     .src(input)
-    .pipe(sass())
+    .pipe(sass({
+        onError: function(err) {return notify().write(err);}
+        }))
     .pipe(prefix({
         browsers: ['> 1%','last 8 versions','Firefox >= 20'],
         cascade: false
