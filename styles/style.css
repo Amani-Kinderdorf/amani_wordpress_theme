@@ -96,6 +96,53 @@ a {
   width: 50%;
   padding: 3%; }
 
+/********** Page Style - Global *********/
+.pageStyle {
+  font-size: 0.95em; }
+  .pageStyle h1, .pageStyle h2 {
+    color: #A80319;
+    font-weight: 700;
+    margin: 0.5em 0px 0.7em 0px; }
+  .pageStyle h3, .pageStyle h4, .pageStyle h5, .pageStyle h6 {
+    font-weight: 700;
+    margin: 1em 0px 0.5em 0px; }
+  .pageStyle p {
+    margin: 0.5em 0px 0.5em 0px; }
+  .pageStyle img, .pageStyle video {
+    max-width: 100%;
+    height: auto; }
+  .pageStyle iframe {
+    max-width: 100%; }
+  .pageStyle .alignright {
+    padding: 8px 0 10px 8px;
+    float: right; }
+  .pageStyle .alignleft {
+    padding: 8px 10px 8px 0;
+    float: left; }
+  .pageStyle .aligncenter {
+    margin: 0px auto;
+    display: block; }
+
+/* image caption */
+.wp-caption-text, .wp-caption-dt, .wp-caption-dd {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 90%;
+  font-weight: 600; }
+
+.wp-caption-dt, .wp-caption-dd, .wp-caption-text {
+  padding-right: 10px; }
+
+.aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd {
+  text-align: center; }
+
+.alignleft .wp-caption-text, .alignleft .wp-caption-dt, .alignleft .wp-caption-dd {
+  text-align: left; }
+
+.alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd {
+  text-align: right; }
+
 /********** HEADER & MENU *********/
 header {
   margin-top: 90px;
@@ -418,11 +465,11 @@ h1.postHeading {
   margin-bottom: 0px; }
 
 /*************Category/Archive**********/
-h2.archiveNewMonth {
+.archive-content h2 {
   color: #4B4B4B;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-top: 30px; }
 
 .archiveItem {
@@ -467,53 +514,6 @@ footer {
     color: inherit; }
 
 /*****************MOBILE************/
-/********** Page Style - Global *********/
-.pageStyle {
-  font-size: 0.95em; }
-  .pageStyle h1, .pageStyle h2 {
-    color: #A80319;
-    font-weight: 700;
-    margin: 0.5em 0px 0.7em 0px; }
-  .pageStyle h3, .pageStyle h4, .pageStyle h5, .pageStyle h6 {
-    font-weight: 700;
-    margin: 1em 0px 0.5em 0px; }
-  .pageStyle p {
-    margin: 0.5em 0px 0.5em 0px; }
-  .pageStyle img, .pageStyle video {
-    max-width: 100%;
-    height: auto; }
-  .pageStyle iframe {
-    max-width: 100%; }
-  .pageStyle .alignright {
-    padding: 8px 0 10px 8px;
-    float: right; }
-  .pageStyle .alignleft {
-    padding: 8px 10px 8px 0;
-    float: left; }
-  .pageStyle .aligncenter {
-    margin: 0px auto;
-    display: block; }
-
-/* image caption */
-.wp-caption-text, .wp-caption-dt, .wp-caption-dd {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-align: left;
-  font-size: 90%;
-  font-weight: 600; }
-
-.wp-caption-dt, .wp-caption-dd, .wp-caption-text {
-  padding-right: 10px; }
-
-.aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd {
-  text-align: center; }
-
-.alignleft .wp-caption-text, .alignleft .wp-caption-dt, .alignleft .wp-caption-dd {
-  text-align: left; }
-
-.alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd {
-  text-align: right; }
-
 /********** Plugin Style - Subscribe Form *********/
 .subscribe_form {
   padding-top: 10px; }
