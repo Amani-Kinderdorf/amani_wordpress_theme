@@ -1,6 +1,7 @@
 <?php if (!is_404()):?>
 <footer class="contentWrapper">
-©  2015  Amani Kinderdorf e.V. | <a href="<?php echo get_page_link(85); ?>">Impressum</a>
+Amani Kinderdorf e.V. | <?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
+
 </footer>
 <?php endif; ?>
 
