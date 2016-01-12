@@ -168,7 +168,7 @@ header {
     letter-spacing: 0.3px; }
   header .logoDescription {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     color: #A80319;
     text-transform: uppercase;
     text-align: center;
@@ -312,16 +312,16 @@ header {
     display: inline-block;
     vertical-align: middle;
     white-space: normal;
+    line-height: 170%;
     font-size: 0.97em;
-    margin: 0px 0px 10px 0px; }
+    /*baseline fix*/
+    margin: 9px 0px; }
 
 .newsPreview > p.title, .childPreview_text > p.title {
   width: 70%;
-  font-weight: 600;
-  line-height: 150%; }
+  font-weight: 600; }
 
 .childPreview_text > p.title {
-  margin-top: 0px;
   width: 100%; }
 
 .newsPreview a, .childPreview_text a {
@@ -359,13 +359,13 @@ header {
   #slideShowContent .contentDiv h3 {
     position: absolute;
     margin: 0px;
-    padding: 30px 20px 10px 20px;
+    padding: 30px 3% 10px 3%;
     bottom: 0px;
     left: 0px;
     width: 100%;
     color: white;
-    font-weight: normal;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 1.2rem;
     background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(40, 40, 40, 0.7)));
     background: -webkit-linear-gradient(top, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(40, 40, 40, 0.7) 100%);
@@ -377,7 +377,11 @@ header {
 .slick-dots {
   position: absolute;
   bottom: 0px;
-  right: 40px;
+  /*to get relative 3% of padding*/
+  width: 100%;
+  padding: 0px;
+  text-align: right;
+  right: 3%;
   list-style: none; }
   .slick-dots li {
     display: inline-block; }
