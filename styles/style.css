@@ -433,7 +433,11 @@ header {
   padding: 6px 0px;
   display: block;
   width: 100%;
-  word-break: break-all; }
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
 
 .sideBarPageTree .children {
   border-top: 1px solid #979797;
