@@ -337,8 +337,7 @@ header {
   margin-right: 5%;
   display: inline-block;
   background-size: cover;
-  vertical-align: top;
-  border-radius: 3px; }
+  vertical-align: top; }
 
 .childPreview_text {
   width: 55%;
@@ -459,6 +458,9 @@ header {
   font-weight: 700; }
 
 /********** Single Post *********/
+.postHeading {
+  line-height: 150%; }
+
 p.postMeta {
   text-align: right;
   margin-top: 15px;
