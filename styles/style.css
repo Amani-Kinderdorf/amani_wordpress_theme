@@ -522,10 +522,10 @@ footer {
     margin-right: 10px; }
 
 /*****************MOBILE************/
-/********** Plugin Style - Subscribe Form *********/
-.subscribe_form {
+/****** Styles for Newsletter and Support Forms ***/
+form {
   padding-top: 10px; }
-  .subscribe_form > input {
+  form input, form select {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -539,18 +539,39 @@ footer {
     margin: 8px 0px;
     height: 20px;
     font-size: 16px; }
-  .subscribe_form > input[type="submit"] {
+  form input[type="submit"] {
     margin-left: 130px;
     background-color: #EB9B00;
     color: white;
     cursor: pointer; }
-  .subscribe_form > input[type="submit"]:hover {
+  form input[type="submit"]:hover {
     background-color: #ffa800;
     border-color: #ffa800; }
-  .subscribe_form > input:focus {
+  form input:focus {
     border-width: 2px;
     margin: 7px -1px; }
-  .subscribe_form > label {
+  form label {
     width: 130px;
     display: inline-block;
     font-weight: 600; }
+
+.fscf-div-form input, .fscf-div-form select {
+  width: 90%;
+  max-width: 250px;
+  margin: 2px 0px; }
+
+.fscf-div-form input:focus, .fscf-div-form select:focus {
+  margin: 1px -1px; }
+
+.fscf-div-form input[type="checkbox"] {
+  width: auto; }
+
+.fscf-div-form label {
+  width: auto; }
+
+.fscf-div-form .fscf-div-field {
+  margin-bottom: 15px; }
+
+.fscf-div-form .fscf-div-clear {
+  width: 49%;
+  display: inline-block; }
