@@ -32,8 +32,8 @@ if( is_archive() || is_category() ||  is_single() || is_home() || is_page_templa
                     <li class="page_item page_item_has_children <?php if(is_page_template('archive_template.php')) echo 'current_page_item'; ?>">
                         <a href="<?php echo getArchiveLink() ?>">Archiv</a>
                         <ul class="children">
-                            <?php wp_list_categories('title_li='); ?>
                             <li class="cat-item"><a href="<?php echo getArchiveLink() ?>">alle Kategorien</a></li>
+                            <?php wp_list_categories('title_li='); ?>
                         </ul>
                     </li>
                     <!--
