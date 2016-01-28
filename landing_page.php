@@ -29,33 +29,6 @@ Template Name: Startseite
    				wp_reset_query();
 				?>
 				</div>
-				<h1 class="bottomHeading">Unsere Kinder</h1>
-
-				<?php 
-				//custom loop for child
-				$args = array( 'posts_per_page' => 1, 'orderby' => 'date' , 'order' => 'DESC', 'post_type' => 'child');
-				$loop = new WP_Query($args);
- 				while( $loop->have_posts() ) : 
-				$loop->the_post(); ?>
-				<a href="<?php the_field('kinderdorf') ?>" nounderline>
-					<div class="childPreview_image" style="background-image:url('<?php echo wp_get_attachment_image_src(get_field('bild'),'child_preview')[0];?>');"></div>
-				</a>
-				<div class="childPreview_text">
-					<p class="title">
-						<a href="<?php the_field('kinderdorf') ?>"><?php the_title();?></a>
-					</p>
-					<p class="description"><?php the_field('beschreibung');?></p>
-				</div>
-				<?php	
-   				endwhile;
-   				wp_reset_query();
-				?>
-
-
-
-
-
-
 			</div>
 		</div> 
 	</article>
