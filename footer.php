@@ -21,8 +21,8 @@ Amani Kinderdorf e.V. | <?php wp_nav_menu( array('menu' => 'footerMenu', 'contai
 	<script type="text/javascript">	
 	    jQuery(document).ready(function(){
 	       jQuery('#slideShowContent').slick({
-	        autoplay: false,
-	        autoplaySpeed: 2000,  
+	        autoplay: true,
+	        autoplaySpeed: 3000,  
 	        infinite: true,
 	        speed: 400,
 	        fade: true,
