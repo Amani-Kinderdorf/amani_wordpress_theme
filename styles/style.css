@@ -128,6 +128,7 @@ a {
   margin-top: 5px;
   margin-bottom: 10px;
   text-align: left;
+  line-height: 150%;
   font-size: 90%;
   font-weight: 600; }
 
@@ -136,12 +137,6 @@ a {
 
 .aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd {
   text-align: center; }
-
-.alignleft .wp-caption-text, .alignleft .wp-caption-dt, .alignleft .wp-caption-dd {
-  text-align: left; }
-
-.alignright .wp-caption-text, .alignright .wp-caption-dt, .alignright .wp-caption-dd {
-  text-align: right; }
 
 /********** HEADER & MENU *********/
 header {
