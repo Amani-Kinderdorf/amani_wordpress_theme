@@ -518,37 +518,39 @@ footer {
 
 /*****************MOBILE************/
 /****** Styles for Newsletter and Support Forms ***/
-form {
-  padding-top: 10px; }
-  form input, form select {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    display: inline-block;
-    border: 1px #EB9B00 solid;
-    border-radius: 2px;
-    padding: 6px 10px;
-    background-color: #fcfcfc;
-    outline: 0px;
-    width: 175px;
-    margin: 8px 0px;
-    height: 20px;
-    font-size: 16px; }
-  form input[type="submit"] {
-    margin-left: 130px;
-    background-color: #EB9B00;
-    color: white;
-    cursor: pointer; }
-  form input[type="submit"]:hover {
-    background-color: #ffa800;
-    border-color: #ffa800; }
-  form input:focus {
-    border-width: 2px;
-    margin: 7px -1px; }
-  form label {
-    width: 130px;
-    display: inline-block;
-    font-weight: 600; }
+form input, form select {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  border: 1px #EB9B00 solid;
+  border-radius: 2px;
+  padding: 6px 10px;
+  background-color: #fcfcfc;
+  outline: 0px;
+  width: 175px;
+  margin: 8px 0px;
+  height: 20px;
+  font-size: 16px; }
+
+form input[type="submit"] {
+  margin-left: 130px;
+  background-color: #EB9B00;
+  color: white;
+  cursor: pointer; }
+
+form input[type="submit"]:hover {
+  background-color: #ffa800;
+  border-color: #ffa800; }
+
+form input:focus {
+  border-width: 2px;
+  margin: 7px -1px; }
+
+form label {
+  width: 130px;
+  display: inline-block;
+  font-weight: 600; }
 
 .fscf-div-form input, .fscf-div-form select {
   width: 90%;
