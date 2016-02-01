@@ -1,19 +1,5 @@
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
 @font-face {
-  src: url("./fonts/comingsoon-webfont.eot");
-  src: url("./fonts/comingsoon-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/comingsoon-webfont.woff2") format("woff2"), url("./fonts/comingsoon-webfont.woff") format("woff"), url("./fonts/comingsoon-webfont.ttf") format("truetype"), url("./fonts/comingsoon-webfont.svg#coming_soonregular") format("svg");
-  font-family: 'Coming Soon';
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  src: url("./fonts/adlib-webfont.eot");
-  src: url("./fonts/adlib-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/adlib-webfont.woff2") format("woff2"), url("./fonts/adlib-webfont.woff") format("woff"), url("./fonts/adlib-webfont.ttf") format("truetype"), url("./fonts/adlib-webfont.svg#adlibregular") format("svg");
-  font-family: 'AdLib';
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   src: url("./fonts/opensans-bold-webfont.eot");
   src: url("./fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/opensans-bold-webfont.woff2") format("woff2"), url("./fonts/opensans-bold-webfont.woff") format("woff"), url("./fonts/opensans-bold-webfont.ttf") format("truetype"), url("./fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
   font-family: 'Open Sans';
@@ -94,7 +80,7 @@ a {
 
 .twoColumnViewItem {
   width: 50%;
-  padding: 3%; }
+  padding: 1.5% 3%; }
 
 /********** Page Style - Global *********/
 .pageStyle {
@@ -140,8 +126,8 @@ a {
 
 /********** HEADER & MENU *********/
 header {
-  margin-top: 70px;
-  margin-bottom: 40px;
+  margin-top: 75px;
+  margin-bottom: 20px;
   text-align: center; }
   header a {
     text-decoration: none;
@@ -151,24 +137,17 @@ header {
     vertical-align: middle;
     outline: 0px; }
   header .logoImage {
-    height: 115px;
-    width: 115px; }
-  header .logoText {
-    font-family: 'AdLib';
-    font-size: 30px;
-    line-height: 120%;
-    text-align: left;
-    color: #A80319;
-    margin-left: 15px;
-    letter-spacing: 0.3px; }
+    height: auto;
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px; }
   header .logoDescription {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
     color: #A80319;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-top: 17px;
     -webkit-font-smoothing: antialiased; }
 
 .smallHeader {

@@ -70,11 +70,9 @@
 <?php if (is_front_page()):?>
 <header>
     <a class="logoItem" href="<?php echo home_url(); ?>">
-        <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.png" alt="logo"/>
+        <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo"/>
     </a>
-    <div class="logoItem">
-        <h2 class="logoText"><a href="<?php echo home_url(); ?>">AMANI<br/>KINDERDORF e.V.</a></h2>
-    </div>
+
     <h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
 </header>
 <?php  else:?>
