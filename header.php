@@ -70,7 +70,7 @@
 <?php if (is_front_page()):?>
 <header>
     <a class="logoItem" href="<?php echo home_url(); ?>">
-        <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo"/>
+        <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo" onerror="this.src='<?php bloginfo('template_url')?>/img/logo_full.png'"/>
     </a>
 
     <h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
