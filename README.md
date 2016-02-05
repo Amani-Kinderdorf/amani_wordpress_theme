@@ -17,31 +17,20 @@ Add this to the `.htaccess`file to enable browser side caching (increases Google
 # Browser Caching
 
 FileETag MTime Size
-
 <IfModule expires_module>
     ExpiresActive on
-    ExpiresByType text/plain "access plus 1 week"
-    ExpiresByType text/css "access plus 1 week"
-    ExpiresByType text/javascript "access plus 1 week"
-    ExpiresByType application/javascript "access plus 1 week"
-    ExpiresByType application/x-javascript "access plus 1 week"
-    ExpiresByType image/svg+xml "access plus 1 week"
-    ExpiresByType image/gif "access plus 1 week"
-    ExpiresByType image/png "access plus 1 week"
-    ExpiresByType image/ico "access plus 1 week"
-    ExpiresByType image/x-icon "access plus 1 week"
-    ExpiresByType image/jpg "access plus 1 week"
-    ExpiresByType image/jpe "access plus 1 week"
-    ExpiresByType image/jpeg "access plus 1 week"
-    ExpiresByType font/truetype "access plus 1 week"
-    ExpiresByType application/x-font-ttf "access plus 1 week"
-    ExpiresByType font/opentype "access plus 1 week"
-    ExpiresByType application/x-font-otf "access plus 1 week"
-    ExpiresByType application/font-woff "access plus 1 week"
-    ExpiresByType application/vnd.ms-fontobject "access plus 1 week"
-    ExpiresByType application/x-shockwave-flash "access plus 1 week"
-    ExpiresByType application/x-httpd-php-source "access plus 1 week"
+    ExpiresDefault "access plus 1 week"
 </IfModule>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE image/svg+xml
 ```
 
 
