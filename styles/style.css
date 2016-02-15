@@ -124,6 +124,26 @@ a {
 .aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd {
   text-align: center; }
 
+/* Custom Image Grid - currently only manual use */
+.custom-grid {
+  font-size: 0px; }
+  .custom-grid .grid-item {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2%;
+    margin: 0px;
+    vertical-align: top; }
+  .custom-grid .grid-item:nth-child(odd) {
+    padding-left: 0px; }
+  .custom-grid .grid-item:nth-child(even) {
+    padding-right: 0px; }
+  .custom-grid img.grid-item, .custom-grid .grid-item img {
+    padding: 0px; }
+
 /********** HEADER & MENU *********/
 header {
   margin-top: 75px;

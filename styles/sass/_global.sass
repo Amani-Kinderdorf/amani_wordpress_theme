@@ -41,3 +41,21 @@
 .aligncenter .wp-caption-text, .aligncenter .wp-caption-dt, .aligncenter .wp-caption-dd
     text-align: center
 
+/* Custom Image Grid - currently only manual use */
+.custom-grid
+    font-size: 0px
+    .grid-item
+        width: 50%
+        height: auto
+        display: inline-block
+        box-sizing: border-box
+        padding: 2%
+        margin: 0px
+        vertical-align: top
+    .grid-item:nth-child(odd)
+        padding-left: 0px
+    .grid-item:nth-child(even)
+        padding-right: 0px
+    //remove floating styles
+    img.grid-item, .grid-item img
+        padding: 0px
