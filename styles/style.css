@@ -100,10 +100,10 @@ a {
   .pageStyle iframe {
     max-width: 100%; }
   .pageStyle .alignright {
-    padding: 8px 0 10px 8px;
+    padding: 8px 0 20px 8px;
     float: right; }
   .pageStyle .alignleft {
-    padding: 8px 10px 8px 0;
+    padding: 8px 20px 8px 0;
     float: left; }
   .pageStyle .aligncenter {
     margin: 0px auto;
