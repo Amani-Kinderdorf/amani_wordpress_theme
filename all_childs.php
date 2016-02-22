@@ -30,7 +30,7 @@ Template Name: All Childs
                 if(strcmp(get_field('kinderdorf'),$currentPage)==0):
                 ?>
         			<div class="singleChild">
-        				<div class="childPreview_image" style="background-image:url('<?php echo wp_get_attachment_image_src(get_field('bild'),'landing_slideshow')[0];?>');"></div>
+        				<div class="childPreview_image alignleft" style="background-image:url('<?php echo wp_get_attachment_image_src(get_field('bild'),'landing_slideshow')[0];?>');"></div>
         				<div class="childPreview_text">
         					<p class="title"><?php the_title();?></p>
         					<?php the_content(); ?>
