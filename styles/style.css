@@ -305,10 +305,10 @@ header {
     border-bottom-style: none; }
   .newsPreview p {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     white-space: normal;
     line-height: 170%;
-    font-size: 0.97em;
+    font-size: 0.95em;
     /*baseline fix*/
     margin: 9px 0px; }
 
