@@ -68,9 +68,6 @@ function get_categorie_simple($id) {
 	return $result;
 }
 
-
-
-
 //gallery overwrite
 add_filter('post_gallery', 'my_post_gallery', 10, 2);
 function my_post_gallery($output, $attr) {
@@ -124,11 +121,177 @@ function load_plugins() {
 		include_once(TEMPLATEPATH.'/plugins_theme/newsletter_form.php');
 	}
 }
-	function get_page_number() {
-	    if ( get_query_var('paged') ) {
-	        print ' | ' . __( 'Page ' , 'hbd-theme') . get_query_var('paged');
-	    }
-	} // end get_page_number
+function get_page_number() {
+    if ( get_query_var('paged') ) {
+        print ' | ' . __( 'Page ' , 'hbd-theme') . get_query_var('paged');
+    }
+} // end get_page_number
+
+
+//hide Custom Field
+define( 'ACF_LITE', true );
+//register Custom Fields using PHP
+if(function_exists("register_field_group"))
+{
+    register_field_group(array (
+        'id' => 'acf_kinder',
+        'title' => 'Kinder',
+        'fields' => array (
+            array (
+                'key' => 'field_55f92d74c4d78',
+                'label' => 'Bild',
+                'name' => 'bild',
+                'type' => 'image',
+                'required' => 1,
+                'save_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'uploadedTo',
+            ),
+            array (
+                'key' => 'field_55f92e247f141',
+                'label' => 'Kinderdorf',
+                'name' => 'kinderdorf',
+                'type' => 'page_link',
+                'required' => 1,
+                'post_type' => array (
+                    0 => 'page',
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'child',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+    register_field_group(array (
+        'id' => 'acf_redirect',
+        'title' => 'Redirect',
+        'fields' => array (
+            array (
+                'key' => 'field_56aa449b3c8a0',
+                'label' => 'Redirect Page',
+                'name' => 'url',
+                'type' => 'taxonomy',
+                'required' => 1,
+                'taxonomy' => 'category',
+                'field_type' => 'checkbox',
+                'allow_null' => 0,
+                'load_save_terms' => 1,
+                'return_format' => 'id',
+                'multiple' => 0,
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template_redirect.php',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+                0 => 'permalink',
+                1 => 'the_content',
+                2 => 'excerpt',
+                3 => 'custom_fields',
+                4 => 'discussion',
+                5 => 'comments',
+                6 => 'revisions',
+                7 => 'slug',
+                8 => 'author',
+                9 => 'format',
+                10 => 'featured_image',
+                11 => 'categories',
+                12 => 'tags',
+                13 => 'send-trackbacks',
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+    register_field_group(array (
+        'id' => 'acf_startseite',
+        'title' => 'Startseite',
+        'fields' => array (
+            array (
+                'key' => 'field_558d69a00d955',
+                'label' => 'Slideshow',
+                'name' => 'slideshow',
+                'type' => 'wysiwyg',
+                'instructions' => 'Einfügen der Standard Wordpress Slideshow.',
+                'default_value' => '',
+                'toolbar' => 'basic',
+                'media_upload' => 'yes',
+            ),
+            array (
+                'key' => 'field_558d7545e6ebc',
+                'label' => 'Anzahl der Neuigkeiten',
+                'name' => 'news_item_count',
+                'type' => 'number',
+                'required' => 1,
+                'default_value' => 4,
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => 0,
+                'max' => '',
+                'step' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'landing_page.php',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+                0 => 'permalink',
+                1 => 'custom_fields',
+                2 => 'comments',
+                3 => 'slug',
+                4 => 'author',
+                5 => 'featured_image',
+                6 => 'categories',
+                7 => 'tags',
+                8 => 'send-trackbacks',
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+}
+
+
+
+
 
 	
 ?>
