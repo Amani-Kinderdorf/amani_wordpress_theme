@@ -14,7 +14,7 @@ Template Name: Startseite
 				<?php the_content(); ?>
 			</div>
 			<div class="twoColumnViewItem">
-				<h1 class="newsHeading">Neuigkeiten</h1>
+				<h1>Neuigkeiten</h1>
 				<div>
 				<?php 
 				//custom loop for news
