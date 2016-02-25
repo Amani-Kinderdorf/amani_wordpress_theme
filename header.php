@@ -12,9 +12,11 @@
 
     <!-- blocks full scale -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="initial-scale=1">
+    <meta name="author" content="Amani Kinderdorf e.V." />
+    <meta name="description" content="Der Verein Amani Kinderdorf e.V. baut und betreibt Dörfer für Waisenkinder in Tansania und fördert die schulische und berufliche Bildung dieser Kinder. Bis jetzt besteht das erste Amani-Kinderdorf in Kilolo, in der Nähe der Stadt Iringa. Ein zweites Dorf in Kitwiru, ebenfalls in der Nähe von Iringa, ist fast fertiggestellt." />
+    <meta name="keywords" content="tansania, kilolo, kitwiru, amani, kinderdorf, tanzania, freiwilligendienst" />
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/style.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/mobile.css" />
