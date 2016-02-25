@@ -505,8 +505,9 @@ footer {
   margin-bottom: 20px; }
   footer li {
     list-style: none;
-    display: inline-block;
-    margin-right: 10px; }
+    display: inline-block; }
+  footer .footer-seperator {
+    margin: 0px 4px; }
 
 /*****************MOBILE************/
 /****** Styles for Newsletter and Support Forms ***/
