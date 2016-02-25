@@ -409,7 +409,7 @@ header {
 /*********** Sidebar ***************/
 .sideBarPageTree li {
   list-style: none;
-  font-size: 0.97em; }
+  font-size: 0.95em; }
 
 .sideBarPageTree a {
   text-decoration: none; }
@@ -419,11 +419,7 @@ header {
   padding: 6px 0px;
   display: block;
   width: 100%;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto; }
+  word-break: break-word; }
 
 .sideBarPageTree .children {
   border-top: 1px solid #979797;
