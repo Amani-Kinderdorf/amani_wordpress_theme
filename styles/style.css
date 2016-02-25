@@ -492,8 +492,6 @@ p.postMeta {
 
 /********** FOOTER *********/
 footer {
-  height: 30px;
-  line-height: 30px;
   border-bottom: solid 3px #EB9B00;
   background-color: white;
   text-align: center;

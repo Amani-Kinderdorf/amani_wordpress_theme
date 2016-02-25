@@ -148,8 +148,9 @@
 		display: none;
 	}
 
-	.xColumnView > article {
+	.xColumnView>article, .xColumnView>aside, .xColumnView>div {
 		display: block;
+		width: 100%;
 	}
 
 	.pageContentViewItem {
@@ -169,6 +170,11 @@
 	.oneColumnViewItem iframe {
 		width: 100%; /* display map on full horizontal scale */
 		height: 65vh; /* viewport height */
+	}
+	.newsPreview>p.title, .newsPreview>p.date {
+		width: 100%;
+		display: block;
+		text-align: left;
 	}
 
 	/* article */
