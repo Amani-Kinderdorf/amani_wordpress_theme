@@ -43,6 +43,12 @@ function modify_css_class($css_class, $page) {
 }
 add_filter('nav_menu_css_class','modify_css_class',10,2);
 
+
+//disable toolbar for alls users
+show_admin_bar(false);
+
+
+
 function getArchiveLink() {
 	$args = [
     'post_type' => 'page',
