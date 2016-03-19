@@ -222,7 +222,7 @@ if(function_exists("register_field_group"))
             'position' => 'normal',
             'layout' => 'no_box',
             'hide_on_screen' => array (
-                0 => 'permalink',
+                0 => 'send-trackbacks',
                 1 => 'the_content',
                 2 => 'excerpt',
                 3 => 'custom_fields',
@@ -235,7 +235,6 @@ if(function_exists("register_field_group"))
                 10 => 'featured_image',
                 11 => 'categories',
                 12 => 'tags',
-                13 => 'send-trackbacks',
             ),
         ),
         'menu_order' => 0,
