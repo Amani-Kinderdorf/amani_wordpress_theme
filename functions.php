@@ -186,6 +186,7 @@ if(function_exists("register_field_group"))
             array (
                 'key' => 'field_56aa449b3c8a0',
                 'label' => 'Redirect Page',
+                'instructions' => 'Leitet auf Archiv der ausgewählten Kategorie weiter.',
                 'name' => 'url',
                 'type' => 'taxonomy',
                 'required' => 0,
