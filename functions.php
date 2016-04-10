@@ -1,6 +1,7 @@
 <?php
 
 add_image_size('landing_slideshow', 1100, 2000);
+add_image_size('article_full_width', 700, 2000);
 add_image_size('child_preview',260,260);
 
 add_action( 'init', 'create_post_type_child' );
