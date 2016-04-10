@@ -11,8 +11,6 @@ Amani Kinderdorf e.V.<?php wp_nav_menu( array('menu' => 'footerMenu', 'container
     }
     function changeVisibility(value) {
         document.getElementById('searchSection').classList.toggle('inputHidden',value);
-        if(value) document.getElementById('searchIcon').src = "<?php bloginfo('template_url') ?>/img/search.png"
-        else document.getElementById('searchIcon').src = "<?php bloginfo('template_url') ?>/img/search_black.png"
     }
 </script>
  <?php if(is_front_page()||is_home()): ?>

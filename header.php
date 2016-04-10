@@ -62,7 +62,7 @@
         <section id="searchSection" class="inputHidden">
     <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
-        <img id="searchIcon" src="<?php bloginfo('template_url') ?>/img/search.png" onclick="searchButtonClicked();"/>
+        <span id="searchIcon" onclick="searchButtonClicked();"></span>
     </form>
     </section>
     </div>

@@ -99,15 +99,19 @@ header
 
 #searchSection
     right: 0px
-    top: 8px
+    top: 9px
     position: absolute
     width: 200px
-    height: 28px
+    height: 27px
     background-color: white
     transition: background-color 0.3s
     #searchIcon
-        width: 20px
-        height: 20px
+        width: 19px
+        height: 19px
+        background:
+            image: url('img/search_black.png')
+            repeat: no-repeat
+            size: cover
         right: 0px
         position: absolute
         margin: 4px 6px
@@ -132,6 +136,16 @@ header
 #searchSection.inputHidden #searchField
     font-size: 0px
     background-color: transparent
+#searchSection.inputHidden #searchIcon
+    background-image: url('img/search.png')
 
+@media #{$widescreen}
+    #searchSection.inputHidden
+        background-color: white
+    #searchSection.inputHidden #searchField
+        font-size: 0.8rem
+        background-color: white
+    #searchSection.inputHidden #searchIcon
+        background-image: url('img/search_black.png')
 
 
