@@ -575,6 +575,10 @@ form label {
   width: 49%;
   display: inline-block; }
 
+.fscf-div-form .fscf-div-error {
+  color: #d40000;
+  font-weight: bold; }
+
 @media screen and (max-width: 850px) {
   .fscf-div-form .fscf-div-clear {
     width: 100%;
