@@ -536,7 +536,6 @@ form input, form select {
   font-size: 16px; }
 
 form input[type="submit"] {
-  margin-left: 130px;
   background-color: #EB9B00;
   color: white;
   cursor: pointer; }
