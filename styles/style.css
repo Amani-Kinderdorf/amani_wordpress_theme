@@ -314,46 +314,26 @@ header {
 
 /********** LandingPage *********/
 .newsPreview {
-  white-space: nowrap;
   border-bottom: 1px solid #979797; }
   .newsPreview:last-child {
     border-bottom-style: none; }
-  .newsPreview p {
+  .newsPreview .title {
+    width: 100%;
     display: inline-block;
     vertical-align: bottom;
     white-space: normal;
     line-height: 170%;
     font-size: 0.95em;
+    font-weight: 600;
     /*baseline fix*/
     margin: 9px 0px; }
-
-.newsPreview > p.title, .childPreview_text > p.title {
-  width: 70%;
-  font-weight: 600; }
-
-.childPreview_text > p.title {
-  width: 100%; }
-
-.newsPreview a, .childPreview_text a {
-  text-decoration: none; }
-
-.newsPreview > p.date {
-  width: 30%;
-  text-align: right; }
-
-.childPreview_image {
-  width: 35%;
-  padding-bottom: 35%;
-  margin-right: 5%;
-  display: inline-block;
-  background-size: cover;
-  vertical-align: top; }
-
-.childPreview_text {
-  width: 55%;
-  display: inline-block; }
-  .childPreview_text > p {
-    margin-top: 0px !important; }
+  .newsPreview .date {
+    line-height: 170%;
+    margin: 0 0 0 10px;
+    float: right;
+    font-weight: normal; }
+  .newsPreview a {
+    text-decoration: none; }
 
 #slideShowContent .contentDiv {
   background-size: cover;
