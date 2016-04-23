@@ -50,7 +50,7 @@
 
 <div class="stickyHeader">
     <div class="contentWrapper">
-        <a href="<?php echo home_url();?>" class="logo-image"></a>
+        <div class="logo-container"><a href="<?php echo home_url();?>" class="logo-image"></a></div>
         <nav id="nav">
             <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-lg"></i></a>
             <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-lg"></i></a>

@@ -193,21 +193,25 @@ header {
   z-index: 20;
   -webkit-box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
+  .stickyHeader .logo-container {
+    padding: 10px;
+    display: inline-block; }
+  .stickyHeader .logo-container:hover {
+    background-color: #EB9B00;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; }
   .stickyHeader .logo-image {
-    display: inline-block;
+    display: block;
     height: 26px;
     width: 30px;
-    margin-top: 10px;
     background-image: url("img/logo-header.png");
     background-position: 0 0;
     background-repeat: none;
     background-size: cover; }
-  .stickyHeader .logo-image:hover {
-    background-position: 30px 0; }
   .stickyHeader ul {
     display: inline-block;
     vertical-align: top;
-    padding-left: 10px;
+    padding-left: 0px;
     margin: 0;
     font-size: 0; }
   .stickyHeader ul > li {
