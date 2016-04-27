@@ -86,3 +86,6 @@
 <header style="margin-to:60px"></header>
 <?php endif; ?> 
 
+<?php if(WP_DEBUG==true): ?>
+    <div class="test-overlay">Sie benutzen die Testumgebung der Amani-Kinderdorf Homepage. Bitte wechseln sie zur Hauptseite unter: <a href="https://www.amani-kinderdorf.de">www.amani-kinderdorf.de</a></div>
+<?php endif; ?>

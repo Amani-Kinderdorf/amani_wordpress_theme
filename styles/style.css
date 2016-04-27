@@ -571,3 +571,17 @@ form label {
   .fscf-div-form input[type=submit] {
     margin-left: 0px;
     margin-bottom: 20px; } }
+
+/******** TestBunner *********/
+.test-overlay {
+  position: fixed;
+  z-index: 99;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  background-color: #A80319;
+  text-align: center;
+  padding: 5px 0px; }
