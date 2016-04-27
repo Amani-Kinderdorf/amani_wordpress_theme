@@ -52,7 +52,9 @@
     <div class="contentWrapper">
         <ul>
             <li>
-                <a href="<?php echo home_url();?>" class="logo-container"><span class="logo-image"></span></a>
+                <a href="<?php echo home_url();?>" class="logo-container">
+                    <span class="logo-image"></span>
+                </a>
             </li>
         </ul>
         <nav id="nav">
@@ -61,7 +63,6 @@
             <ul>
                 <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
             </ul>
-            <!--<span class="align-right" onclick="$('body, html').animate({scrollTop:0},300);">⇧</span>-->
         </nav>
         <section id="searchSection" class="inputHidden">
     <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">

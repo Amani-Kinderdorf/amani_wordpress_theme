@@ -197,8 +197,9 @@ header {
     height: 45px; }
   .stickyHeader .logo-image {
     display: block;
-    height: 16px;
-    width: 16px;
+    height: 26px;
+    width: 30px;
+    margin-top: 10px;
     background-image: url("img/logo-header.png");
     background-position: 0 0;
     background-repeat: none;
