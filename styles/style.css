@@ -194,16 +194,11 @@ header {
   -webkit-box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
   .stickyHeader .logo-container {
-    padding: 10px;
-    display: inline-block; }
-  .stickyHeader .logo-container:hover {
-    background-color: #EB9B00;
-    -webkit-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease; }
+    height: 45px; }
   .stickyHeader .logo-image {
     display: block;
-    height: 26px;
-    width: 30px;
+    height: 16px;
+    width: 16px;
     background-image: url("img/logo-header.png");
     background-position: 0 0;
     background-repeat: none;
