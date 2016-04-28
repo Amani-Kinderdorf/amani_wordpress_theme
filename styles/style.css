@@ -154,15 +154,15 @@ header {
   header a {
     text-decoration: none;
     color: inherit; }
-  header .logoItem {
+  header .logo-item {
     display: inline-block;
     vertical-align: middle;
     outline: 0px; }
-  header .logoImage {
+  header .logo-image {
     height: auto;
     width: 360px;
     display: block; }
-  header .logoDescription {
+  header .logo-description {
     font-size: 1rem;
     font-weight: 400;
     color: #A80319;
@@ -175,6 +175,7 @@ header {
   margin-top: 20px; }
   .smallHeader .logoImage {
     height: 50px;
+    /*TODO: Bad Style*/
     width: 50px; }
   .smallHeader .logoText {
     font-size: 22px; }
@@ -193,9 +194,9 @@ header {
   z-index: 20;
   -webkit-box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
-  .stickyHeader .logo-container {
+  .stickyHeader .header-logo-container {
     height: 45px; }
-  .stickyHeader .logo-image {
+  .stickyHeader .header-logo {
     display: block;
     height: 26px;
     width: 30px;
