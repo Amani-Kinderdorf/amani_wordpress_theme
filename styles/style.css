@@ -159,9 +159,7 @@ header {
     outline: 0px; }
   header .logoImage {
     height: auto;
-    width: 100%;
-    min-width: 200px;
-    max-width: 360px; }
+    width: 360px; }
   header .logoDescription {
     font-size: 1rem;
     font-weight: 400;
@@ -203,7 +201,10 @@ header {
     background-image: url("img/logo-header.png");
     background-position: 0 0;
     background-repeat: none;
-    background-size: cover; }
+    background-size: cover;
+    /*IE5+ Solution:*/
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale')"; }
   .stickyHeader ul {
     display: inline-block;
     vertical-align: top;

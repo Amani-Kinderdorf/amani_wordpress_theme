@@ -12,9 +12,7 @@ header
         outline: 0px
     .logoImage
         height: auto
-        width: 100%
-        min-width: 200px
-        max-width: 360px
+        width: 360px
     .logoDescription
         font:
             size: 1rem
@@ -61,6 +59,9 @@ header
         background-position: 0 0
         background-repeat: none
         background-size: cover
+        /*IE5+ Solution:*/
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale')
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale')"
     // menu list styles
     ul  
         display: inline-block
