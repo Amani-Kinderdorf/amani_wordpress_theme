@@ -149,7 +149,8 @@ a {
 header {
   margin-top: 80px;
   margin-bottom: 20px;
-  text-align: center; }
+  text-align: center;
+  display: block; }
   header a {
     text-decoration: none;
     color: inherit; }
@@ -159,7 +160,8 @@ header {
     outline: 0px; }
   header .logoImage {
     height: auto;
-    width: 360px; }
+    width: 360px;
+    display: block; }
   header .logoDescription {
     font-size: 1rem;
     font-weight: 400;
