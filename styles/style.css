@@ -149,20 +149,20 @@ a {
 header {
   margin-top: 80px;
   margin-bottom: 20px;
-  text-align: center;
-  display: block; }
+  text-align: center; }
   header a {
     text-decoration: none;
     color: inherit; }
-  header .logo-item {
+  header .logoItem {
     display: inline-block;
     vertical-align: middle;
     outline: 0px; }
-  header .logo-image {
+  header .logoImage {
     height: auto;
-    width: 360px;
-    display: block; }
-  header .logo-description {
+    width: 100%;
+    min-width: 200px;
+    max-width: 360px; }
+  header .logoDescription {
     font-size: 1rem;
     font-weight: 400;
     color: #A80319;
@@ -175,7 +175,6 @@ header {
   margin-top: 20px; }
   .smallHeader .logoImage {
     height: 50px;
-    /*TODO: Bad Style*/
     width: 50px; }
   .smallHeader .logoText {
     font-size: 22px; }
@@ -194,9 +193,9 @@ header {
   z-index: 20;
   -webkit-box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0px 0 #fff, 0 6px 8px rgba(0, 0, 0, 0.15); }
-  .stickyHeader .header-logo-container {
+  .stickyHeader .logo-container {
     height: 45px; }
-  .stickyHeader .header-logo {
+  .stickyHeader .logo-image {
     display: block;
     height: 26px;
     width: 30px;
@@ -204,10 +203,7 @@ header {
     background-image: url("img/logo-header.png");
     background-position: 0 0;
     background-repeat: none;
-    background-size: cover;
-    /*IE5+ Solution:*/
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo-header.png',sizingMethod='scale')"; }
+    background-size: cover; }
   .stickyHeader ul {
     display: inline-block;
     vertical-align: top;

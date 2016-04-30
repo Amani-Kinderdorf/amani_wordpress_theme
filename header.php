@@ -52,8 +52,8 @@
     <div class="contentWrapper">
         <ul>
             <li>
-                <a href="<?php echo home_url();?>" class="header-logo-container">
-                    <span class="header-logo"></span>
+                <a href="<?php echo home_url();?>" class="logo-container">
+                    <span class="logo-image"></span>
                 </a>
             </li>
         </ul>
@@ -76,11 +76,11 @@
 
 <?php if (is_front_page()):?>
 <header>
-    <a class="logo-item" href="<?php echo home_url(); ?>">
-        <img class="logo-image" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo" onerror="this.src='<?php bloginfo('template_url')?>/img/logo_full.png'"/>
+    <a class="logoItem" href="<?php echo home_url(); ?>">
+        <img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo" onerror="this.src='<?php bloginfo('template_url')?>/img/logo_full.png'"/>
     </a>
 
-    <h4 class="logo-description"><?php bloginfo('description'); ?></h4>
+    <h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
 </header>
 <?php  else:?>
 <header style="margin-to:60px"></header>
