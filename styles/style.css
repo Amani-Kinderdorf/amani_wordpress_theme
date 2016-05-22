@@ -196,7 +196,7 @@ header {
   .stickyHeader .logo-container {
     height: 45px; }
   .stickyHeader .logo-image {
-    display: block;
+    display: inline-block;
     height: 26px;
     width: 30px;
     margin-top: 10px;
@@ -212,6 +212,7 @@ header {
     font-size: 0; }
   .stickyHeader ul > li {
     display: inline-block;
+    vertical-align: top;
     list-style: none;
     margin: 0px;
     line-height: 45px;

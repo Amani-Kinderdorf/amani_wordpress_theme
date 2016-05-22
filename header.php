@@ -50,17 +50,13 @@
 
 <div class="stickyHeader">
     <div class="contentWrapper">
-        <ul>
-            <li>
-                <a href="<?php echo home_url();?>" class="logo-container">
-                    <span class="logo-image"></span>
-                </a>
-            </li>
-        </ul>
         <nav id="nav">
             <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-lg"></i></a>
             <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-lg"></i></a>
             <ul>
+                <li>
+                    <a href="<?php echo home_url();?>" class="logo-container"><span class="logo-image"></span></a>
+                </li>
                 <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
             </ul>
         </nav>
