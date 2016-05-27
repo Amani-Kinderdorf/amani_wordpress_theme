@@ -406,7 +406,10 @@ header {
     float: left;
     display: block;
     padding-bottom: 45%;
-    width: 45%; }
+    width: 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px 20px 20px 0px; }
 
 /*********** Sidebar ***************/
 .sideBarPageTree li {
