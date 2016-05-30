@@ -34,7 +34,7 @@ Template Name: Archive
 				        <ul id="post-<?php the_ID(); ?>" class="archiveItem">
 				        <a href="<?php the_permalink(); ?>">
 				            <li class="archiveTitle"><?php the_title(); ?></li>
-				            <li class="archiveDate"><?php echo get_the_date('d. F'); ?></li>
+				            <li class="archiveDate"><?php echo get_the_date('d.m.'); ?></li>
 				         </a>
 						</ul>
 
