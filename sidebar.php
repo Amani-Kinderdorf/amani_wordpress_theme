@@ -3,13 +3,7 @@
 //sidebar for posts
 if( is_archive() || is_category() ||  is_single() || is_home() || is_page_template('archive_template.php')): ?>
             <aside class="sideBarViewItem sideBarPageTree">
-
-                <!--<nav id="sidebar">-->
-
-                    <!--<a href="#sidebar" title="Sidebar einblenden">Sidebar <i class="fa fa-chevron-right"></i></a>
-                    <a href="#" title="Sidebar ausblenden">Sidebar <i class="fa fa-chevron-left"></i></a>-->
-
-                    <li id="aktuelle-berichte" class="page_item page_item_has_children">
+                 <li id="aktuelle-berichte" class="page_item page_item_has_children">
                         <a href="<?php echo get_permalink( get_option('page_for_posts' ) );?>/#aktuelle_berichte">Aktuelle Berichte</a>
                         <ul class="children">
                             <?php 
@@ -36,12 +30,6 @@ if( is_archive() || is_category() ||  is_single() || is_home() || is_page_templa
                             <?php wp_list_categories('title_li='); ?>
                         </ul>
                     </li>
-                    <!--
-                    <a href="#sidebar" title="Sidebar einblenden"><i class="fa fa-chevron-down fa-lg"></i></a>
-                    <a href="#" title="Sidebar ausblenden"><i class="fa fa-chevron-up fa-lg"></i></a>
-                    -->
-                <!--</nav>-->
-
         </aside>
 <?php
 
@@ -58,9 +46,6 @@ else:
     $pages = get_pages($args); 
         if ($pages && count($pages)>0) { ?>
             <aside class="sideBarViewItem sideBarPageTree">
-                <nav id="submenu">
-                    <a href="#submenu" title="Unterpunkte einblenden"><i class="fa fa-chevron-down fa-lg"></i></a>
-                    <a href="#" title="Unterpunkte ausblenden"><i class="fa fa-chevron-up fa-lg"></i></a>
                     <?php
                     $pageids = array();
                     foreach ($pages as $page) {
@@ -73,7 +58,6 @@ else:
                     wp_list_pages($args);
                     wp_reset_query();
                     ?>
-                </nav>
             </aside>
        <?php
   }
