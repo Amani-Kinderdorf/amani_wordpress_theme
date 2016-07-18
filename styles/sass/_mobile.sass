@@ -3,42 +3,25 @@
 
 // _mobile.sass
 //written for old menu; design and syntax obsolete
-/*Sizes:
-	$tablet: "only screen and (max-width:800px)"
-	$mobile: "only screen and (max-width:500px)"
-	$widescreen: "only screen and (min-width: 1300px)"
-*/
 /*************Responsive*********/
 
 
-// todo: 
-//@media #{$tablet}...
-
-
 //simplify page layouts
-@media #{$mobile}
+@media #{$tablet}
 	.contentWrapper
 		width: 100%
-	.mainWrapper
-		margin-top: 0px
 
-	.sideBarViewItem,.pageContentViewItem,.oneColumnViewItem,.twoColumnViewItem
-		width: 100%
-	.xColumnView > div, .xColumnView > article, .xColumnView > aside
+	.xColumnView
+		white-space: normal
+	.twoColumnViewItem
 		display: block
-
-	.archiveItem 
-		li
-			display: block
-			padding: 0px
-		li.archiveDate
-			font:
-				size: 13px
-				style: italic
-			margin-bottom: 20px
-			width: auto
-			text-align: left
-	.singleChild .childPreview_image
-		float: none
 		width: 100%
-    	padding-bottom: 70%
+
+	//hide main menu and search bar
+	.stickyHeader
+		li:not(.logo-container)
+			display: none
+		#searchSection
+			display: none
+	.slick-dots
+		right: -99%

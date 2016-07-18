@@ -47,8 +47,8 @@
 <div class="stickyHeader">
     <div class="contentWrapper">
         <ul>
-            <li>
-                <a href="<?php echo home_url();?>" class="logo-container"><span class="logo-image"></span></a>
+            <li class="logo-container">
+                <a href="<?php echo home_url();?>" ><span class="logo-image"></span></a>
             </li>
             <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
         </ul>        
