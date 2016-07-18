@@ -19,7 +19,6 @@
     <meta name="keywords" content="tansania, kilolo, kitwiru, amani, kinderdorf, tanzania, freiwilligendienst, Patenschaft, weltwärts" />
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/style.css" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/mobile.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css">
     
     <?php if(is_front_page()||is_home()): ?>
@@ -50,22 +49,18 @@
 
 <div class="stickyHeader">
     <div class="contentWrapper">
-        <nav id="nav">
-            <a href="#nav" title="Menü einblenden"><i class="fa fa-bars fa-lg"></i></a>
-            <a href="#" title="Menü ausblenden"><i class="fa fa-bars fa-lg"></i></a>
-            <ul>
-                <li>
-                    <a href="<?php echo home_url();?>" class="logo-container"><span class="logo-image"></span></a>
-                </li>
-                <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
-            </ul>
-        </nav>
+        <ul>
+            <li>
+                <a href="<?php echo home_url();?>" class="logo-container"><span class="logo-image"></span></a>
+            </li>
+            <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
+        </ul>        
         <section id="searchSection" class="inputHidden">
-    <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
-        <span id="searchIcon" onclick="searchButtonClicked();"></span>
-    </form>
-    </section>
+            <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
+                <span id="searchIcon" onclick="searchButtonClicked();"></span>
+            </form>
+        </section>
     </div>
 </div>
 
@@ -79,7 +74,7 @@
     <h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
 </header>
 <?php  else:?>
-<header style="margin-to:60px"></header>
+<header style="margin-top:60px"></header>
 <?php endif; ?> 
 
 <?php if(WP_DEBUG==true): ?>

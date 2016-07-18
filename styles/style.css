@@ -509,6 +509,30 @@ footer {
     margin: 0px 4px; }
 
 /*****************RESPONSIVE************/
+/*************Responsive*********/
+@media only screen and (max-width: 500px) {
+  .contentWrapper {
+    width: 100%; }
+  .mainWrapper {
+    margin-top: 0px; }
+  .sideBarViewItem, .pageContentViewItem, .oneColumnViewItem, .twoColumnViewItem {
+    width: 100%; }
+  .xColumnView > div, .xColumnView > article, .xColumnView > aside {
+    display: block; }
+  .archiveItem li {
+    display: block;
+    padding: 0px; }
+  .archiveItem li.archiveDate {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 20px;
+    width: auto;
+    text-align: left; }
+  .singleChild .childPreview_image {
+    float: none;
+    width: 100%;
+      width-padding-bottom: 70%; } }
+
 /****** Styles for Newsletter and Support Forms ***/
 form input, form select {
   -webkit-box-sizing: content-box;
