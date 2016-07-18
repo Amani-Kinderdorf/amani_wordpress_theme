@@ -24,18 +24,19 @@
 	}
 
 	.contentWrapper {
-		padding-left: 3%;
+		width: 100%;
 	}
 
 	#nav {
 		position: absolute;
 		display: inline-block;
 		margin-top: 17px;
-		margin-left: 3%;
+		width: 100%;
 	}
 
 	#nav > a {
 		width: 19px;
+		margin-left: 2rem;
 	}
 
 	#nav:not( :target ) > a:first-of-type,
@@ -45,7 +46,7 @@
 
 	#nav > ul {
 		display: none;
-		width: 70vw;
+		width: 100%;
 		margin-top: 17px;
 	}
 
@@ -57,7 +58,8 @@
 
 	#nav > ul > li {
 		display: block;
-		font-size: 22px;
+		font-size: 1rem;
+		font-weight: 600;
 	}
 
 	#nav > ul li:hover ul {
@@ -80,7 +82,10 @@
 		margin-top: 45px;
 		margin-bottom: 10px;
 		padding: 3%;
-	}
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+    	}
 
 	header .logoImage {
 		height: 65px;
@@ -108,12 +113,14 @@
 	/* Ueber uns, Kinderdoerfer und Unterstuetzen */
 
 	#submenu {
-		line-height: 120%
+		line-height: 120%;
 	}
 
 	#submenu > li {
 		display: inline;
 	}
+
+
 
 	#submenu > li > a {
 		font-size: 1.5em;
@@ -121,6 +128,11 @@
 	    font-weight: 700;
 	    margin: 0.5em 0px 0.7em 0px;
 	}
+
+	#submenu  li  a {
+	    margin: 0.5em 0px 0.5em 0px;
+	}
+
 
 	#submenu:not( :target ) > a:first-of-type,
 	#submenu:target > a:last-of-type {
@@ -171,10 +183,9 @@
 		width: 100%; /* display map on full horizontal scale */
 		height: 65vh; /* viewport height */
 	}
-	.newsPreview>p.title, .newsPreview>p.date {
+	.newsPreview>p.title,{
 		width: 100%;
-		display: block;
-		text-align: left;
+		display: inline-block;
 	}
 
 	/* article */
