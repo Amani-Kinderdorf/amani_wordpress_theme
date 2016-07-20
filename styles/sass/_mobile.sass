@@ -17,27 +17,60 @@
 		display: block
 		width: 100%
 
+
+
+
 	//hide main menu and search bar
 	.stickyHeader
+		/* reenabled to show mobile menu */
+		overflow: visible
+
+		/*mobile button*/
+		.mobileMenuButton
+			right: 0px
+			padding: 0px 10px
+			position: absolute
+		span
+			display: inline-block
+			vertical-align: top
+		.mobileMenuTitle
+			max-width: 200px;
+			text-align:	right;
+			overflow: hidden
+		.mobileMenuIcon
+			background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>")
+			background-size: cover
+			background-position: center center
+			transition: background 0.3s ease-in
+			width: 30px
+			height: 25px	
+			margin: 10px 0px 10px 10px
+
+		/*nav menu*/
 		.mainMenuContainer
+			position: fixed
 			display: none
+			top: 45px
+			left: 45px
+			width: 100%
+			font-size: 1rem
+			background-color: $amani_red
+			color: white
+			li
+				list-style: none
+				padding: 8px 15px
+				a
+					text-decoration: none
+
+		.active .mobileMenuIcon
+			background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+		.active .mainMenuContainer
+			display: block
+
 		#searchSection
 			display: none
 	.slick-dots
 		right: -99%
 
-	.mobileMenuButton
-	    right: 0px
-	    position: absolute
-	    padding: 0px 10px
-	    span
-	    	display: inline-block
-	    	vertical-align: top
-	    .mobileMenuIcon
-		   	background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>")
-		    background-size: cover
-		    background-position: center center
-		    width: 30px
-		    height: 25px
-		   	margin: 10px 0px 10px 10px
-
+				
+			

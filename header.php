@@ -52,8 +52,8 @@
             </li>
             <?php wp_nav_menu( array('menu' => 'mainMenu', 'container_class' => 'mainMenuContainer','items_wrap' => '%3$s' )); ?>
             <li class="mobileMenuButton">
-                <span><?php echo single_post_title(''); ?></span>
-                <span class="mobileMenuIcon"></span>
+                <span class="mobileMenuTitle"><?php echo single_post_title(''); ?></span>
+                <span class="mobileMenuIcon" onclick="this.parentNode.parentNode.classList.toggle('active')"></span>
             </li>
         </ul>
 
