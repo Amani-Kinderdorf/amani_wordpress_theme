@@ -67,7 +67,7 @@ header
         padding-left: 0px
         margin: 0
         font-size: 0
-    ul>li
+    li
         display: inline-block
         vertical-align: top
         list-style: none
@@ -93,11 +93,16 @@ header
         font-weight: 600
         cursor: pointer
 
-
+li.mobileMenuButton
+    display: none
 
 /********** Search Bar *********/
-.mobileMenuButton
-    display: none
+.searchWrapper
+    position: absolute
+    left: 50%
+    top: 30px
+    transform: translate(-50%, -50%)
+
 
 #searchSection
     right: 0px

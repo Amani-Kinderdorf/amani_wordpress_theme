@@ -209,7 +209,7 @@ header {
     padding-left: 0px;
     margin: 0;
     font-size: 0; }
-  .stickyHeader ul > li {
+  .stickyHeader li {
     display: inline-block;
     vertical-align: top;
     list-style: none;
@@ -217,11 +217,11 @@ header {
     line-height: 45px;
     font-weight: 400;
     font-size: 15px; }
-    .stickyHeader ul > li a {
+    .stickyHeader li a {
       text-decoration: none;
       display: block;
       padding: 0px 15px; }
-    .stickyHeader ul > li:hover {
+    .stickyHeader li:hover {
       background-color: #EB9B00;
       -webkit-transition: background-color 0.2s ease;
       transition: background-color 0.2s ease; }
@@ -235,9 +235,17 @@ header {
     font-weight: 600;
     cursor: pointer; }
 
-/********** Search Bar *********/
-.mobileMenuButton {
+li.mobileMenuButton {
   display: none; }
+
+/********** Search Bar *********/
+.searchWrapper {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 #searchSection {
   right: 0px;
@@ -513,27 +521,29 @@ footer {
     /* reenabled to show mobile menu */
     overflow: visible;
     /*mobile button*/
-    /*nav menu*/ }
+    /*nav menu*/
+    /*active states*/ }
     .stickyHeader .mobileMenuButton {
       right: 0px;
       padding: 0px 10px;
-      position: absolute; }
-    .stickyHeader span {
-      display: inline-block;
-      vertical-align: top; }
-    .stickyHeader .mobileMenuTitle {
-      max-width: 200px;
-      text-align: right;
-      overflow: hidden; }
-    .stickyHeader .mobileMenuIcon {
-      background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>");
-      background-size: cover;
-      background-position: center center;
-      -webkit-transition: background 0.3s ease-in;
-      transition: background 0.3s ease-in;
-      width: 30px;
-      height: 25px;
-      margin: 10px 0px 10px 10px; }
+      position: absolute;
+      display: block; }
+      .stickyHeader .mobileMenuButton span {
+        display: inline-block;
+        vertical-align: top; }
+      .stickyHeader .mobileMenuButton .mobileMenuTitle {
+        max-width: 200px;
+        text-align: right;
+        overflow: hidden; }
+      .stickyHeader .mobileMenuButton .mobileMenuIcon {
+        background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>");
+        background-size: cover;
+        background-position: center center;
+        -webkit-transition: background 0.3s ease-in;
+        transition: background 0.3s ease-in;
+        width: 30px;
+        height: 25px;
+        margin: 10px 0px 10px 10px; }
     .stickyHeader .mainMenuContainer {
       position: fixed;
       display: none;
@@ -545,7 +555,8 @@ footer {
       color: white; }
       .stickyHeader .mainMenuContainer li {
         list-style: none;
-        padding: 8px 15px; }
+        padding: 5px 10px;
+        display: block; }
         .stickyHeader .mainMenuContainer li a {
           text-decoration: none; }
     .stickyHeader .active .mobileMenuIcon {

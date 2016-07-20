@@ -50,10 +50,14 @@
             <li class="logo-container">
                 <a href="<?php echo home_url();?>" ><span class="logo-image"></span></a>
             </li>
-            <?php wp_nav_menu( array('menu' => 'mainMenu', 'container_class' => 'mainMenuContainer','items_wrap' => '%3$s' )); ?>
-            <li class="mobileMenuButton">
+        </ul>
+        <ul class="mainMenuContainer">
+            <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
+        </ul>
+        <ul>
+            <li class="mobileMenuButton" onclick="this.parentNode.parentNode.classList.toggle('active')">
                 <span class="mobileMenuTitle"><?php echo single_post_title(''); ?></span>
-                <span class="mobileMenuIcon" onclick="this.parentNode.parentNode.classList.toggle('active')"></span>
+                <span class="mobileMenuIcon"></span>
             </li>
         </ul>
 
