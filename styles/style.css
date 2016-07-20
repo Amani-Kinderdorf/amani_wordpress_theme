@@ -236,14 +236,6 @@ header {
     cursor: pointer; }
 
 /********** Search Bar *********/
-.searchWrapper {
-  position: absolute;
-  left: 50%;
-  top: 30px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
 .mobileMenuButton {
   display: none; }
 
@@ -517,12 +509,26 @@ footer {
   .twoColumnViewItem {
     display: block;
     width: 100%; }
-  .stickyHeader li:not(.logo-container) {
+  .stickyHeader .mainMenuContainer {
     display: none; }
   .stickyHeader #searchSection {
     display: none; }
   .slick-dots {
-    right: -99%; } }
+    right: -99%; }
+  .mobileMenuButton {
+    right: 0px;
+    position: absolute;
+    padding: 0px 10px; }
+    .mobileMenuButton span {
+      display: inline-block;
+      vertical-align: top; }
+    .mobileMenuButton .mobileMenuIcon {
+      background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>");
+      background-size: cover;
+      background-position: center center;
+      width: 30px;
+      height: 25px;
+      margin: 10px 0px 10px 10px; } }
 
 /****** Styles for Newsletter and Support Forms ***/
 form input, form select {

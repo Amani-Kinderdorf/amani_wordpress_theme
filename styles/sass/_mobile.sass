@@ -19,9 +19,25 @@
 
 	//hide main menu and search bar
 	.stickyHeader
-		li:not(.logo-container)
+		.mainMenuContainer
 			display: none
 		#searchSection
 			display: none
 	.slick-dots
 		right: -99%
+
+	.mobileMenuButton
+	    right: 0px
+	    position: absolute
+	    padding: 0px 10px
+	    span
+	    	display: inline-block
+	    	vertical-align: top
+	    .mobileMenuIcon
+		   	background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>")
+		    background-size: cover
+		    background-position: center center
+		    width: 30px
+		    height: 25px
+		   	margin: 10px 0px 10px 10px
+

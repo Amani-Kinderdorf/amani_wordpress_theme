@@ -50,8 +50,13 @@
             <li class="logo-container">
                 <a href="<?php echo home_url();?>" ><span class="logo-image"></span></a>
             </li>
-            <?php wp_nav_menu( array('menu' => 'mainMenu', 'container' => '','items_wrap' => '%3$s' )); ?>
-        </ul>        
+            <?php wp_nav_menu( array('menu' => 'mainMenu', 'container_class' => 'mainMenuContainer','items_wrap' => '%3$s' )); ?>
+            <li class="mobileMenuButton">
+                <span><?php echo single_post_title(''); ?></span>
+                <span class="mobileMenuIcon"></span>
+            </li>
+        </ul>
+
         <section id="searchSection" class="inputHidden">
             <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
