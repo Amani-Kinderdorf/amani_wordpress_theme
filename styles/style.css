@@ -559,7 +559,7 @@ footer {
       color: white; }
       .stickyHeader .mainMenuContainer li {
         list-style: none;
-        padding: 5px 10px;
+        padding: 0px 5px;
         display: block; }
         .stickyHeader .mainMenuContainer li a {
           text-decoration: none; }
@@ -573,7 +573,7 @@ footer {
     display: none; }
   footer {
     text-align: left;
-    padding: 1.5% 3%;
+    padding: 1.5% 4%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -583,9 +583,13 @@ footer {
     footer .footer-seperator {
       display: none; }
   aside.sideBarViewItem {
-    display: none; }
+    padding: 1.5% 4%;
+    display: block;
+    width: 100%; }
   .pageContentViewItem {
-    width: 100%; } }
+    width: 100%; }
+    .pageContentViewItem .postHeading {
+      display: none; } }
 
 /****** Styles for Newsletter and Support Forms ***/
 form input, form select {

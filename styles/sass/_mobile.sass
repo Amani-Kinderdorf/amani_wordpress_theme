@@ -23,7 +23,7 @@
 		margin-left: auto
 
 
-	//hide main menu and search bar
+	//Header and main menu
 	.stickyHeader
 		/* reenabled to show mobile menu */
 		overflow: visible
@@ -62,7 +62,7 @@
 			color: white
 			li
 				list-style: none
-				padding: 5px 10px
+				padding: 0px 5px
 				display: block
 				a
 					text-decoration: none
@@ -76,9 +76,12 @@
 			display: none
 	#slideShowContent .contentDiv h3
 		display: none
+
+
+	//Footer
 	footer
 		text-align: left
-		padding: 1.5% 3%
+		padding: $default_padding
 		box-sizing: border-box
 		background-color: rgba(0, 0, 0, 0.04)		
 		li
@@ -86,10 +89,15 @@
 		.footer-seperator
 			display: none
 
+	//Sidebar Layout
 	aside.sideBarViewItem
-		display: none
+		padding: $default_padding
+		display: block
+		width: 100%
 	.pageContentViewItem
 		width: 100%
+		.postHeading
+			display: none
 
 				
 			
