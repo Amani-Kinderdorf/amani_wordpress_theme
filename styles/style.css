@@ -436,8 +436,6 @@ li.mobileMenuButton {
   padding-left: 20px; }
 
 .sideBarPageTree > .page_item > a {
-  font-size: 120%;
-  color: #A80319;
   width: 100%;
   display: block; }
 
@@ -586,6 +584,19 @@ footer {
     padding: 1.5% 4%;
     display: block;
     width: 100%; }
+  .sideBarPageTreeItems {
+    display: none; }
+  .sideBarPageTreeHeading {
+    color: #A80319;
+    font-weight: 800;
+    font-size: 150%;
+    margin-top: 0.5em; }
+    .sideBarPageTreeHeading .showMoreButton {
+      display: inline-block;
+      float: right;
+      height: 20px;
+      width: 20px;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='#000000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); }
   .pageContentViewItem {
     width: 100%; }
     .pageContentViewItem .postHeading {

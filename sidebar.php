@@ -35,29 +35,31 @@ if( is_archive() || is_category() ||  is_single() || is_home() || is_page_templa
 
 else:
     //sidebar for pages
-    // use wp_list_pages to display parent and all child pages all generations (a tree with parent)
+    // use wp_list_pages to display parent and all child pages
     //get top level parent
     $parent = array_reverse(get_post_ancestors($post->ID));
     global $pages;
     if(count($parent)>0) $parent = $parent[0];
     $parent = get_page($parent)->ID;
-
     $args=array('child_of' => $parent);
     $pages = get_pages($args); 
         if ($pages && count($pages)>0) { ?>
             <aside class="sideBarViewItem sideBarPageTree">
+                <li class="page_item page_item_has_children">
+                    <a class="sideBarPageTreeHeading" href="<?php echo the_permalink($parent); ?>">
+                        <?php echo get_the_title($parent); ?>
+                        <span class="showMoreButton"></span>
+                    </a>
+                    <ul class="children sideBarPageTreeItems">
                     <?php
-                    $pageids = array();
-                    foreach ($pages as $page) {
-                        $pageids[]= $page->ID;
-                    }
                     $args=array(
                     'title_li' => '',
-                    'include' =>  $parent . ',' . implode(",", $pageids)
+                    'child_of' =>  $parent
                     );
                     wp_list_pages($args);
                     wp_reset_query();
                     ?>
+                    </ul></li>
             </aside>
        <?php
   }
