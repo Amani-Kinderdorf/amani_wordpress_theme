@@ -539,7 +539,7 @@ footer {
         max-width: 200px;
         text-align: right; }
       .stickyHeader .mobileMenuButton .mobileMenuIcon {
-        background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>");
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPScjRkZGRkZGJyBoZWlnaHQ9JzI0JyB2aWV3Qm94PScwIDAgMjQgMjQnIHdpZHRoPScyNCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PHBhdGggZD0nTTMgMThoMTh2LTJIM3Yyem0wLTVoMTh2LTJIM3Yyem0wLTd2MmgxOFY2SDN6Jy8+PC9zdmc+");
         background-size: cover;
         -webkit-transition: background-image 0.3s ease;
         transition: background-image 0.3s ease;
@@ -562,7 +562,7 @@ footer {
         .stickyHeader .mainMenuContainer li a {
           text-decoration: none; }
     .stickyHeader .active .mobileMenuIcon {
-      background-image: url("data:image/svg+xml;utf8,<svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); }
+      background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4="); }
     .stickyHeader .active .mainMenuContainer {
       display: block; }
     .stickyHeader #searchSection {
@@ -606,7 +606,7 @@ footer {
       transition: -webkit-transform 0.3s ease;
       transition: transform 0.3s ease;
       transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-      background-image: url("data:image/svg+xml;utf8,<svg fill='#000000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); }
+      background-image: url("data:image/svg+xml;utf8,<svg fill='%23000000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); }
     .sideBarPageTreeHeading--visible .showMoreButton {
       -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
