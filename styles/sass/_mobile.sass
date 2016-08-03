@@ -1,13 +1,8 @@
-
-
-
-// _mobile.sass
-//written for old menu; design and syntax obsolete
 /*************Responsive*********/
 
 
 //simplify page layouts
-@media #{$tablet}
+@media #{$mobile}
 	.contentWrapper
 		width: 100%
 
@@ -83,9 +78,10 @@
 		text-align: left
 		padding: $default_padding
 		box-sizing: border-box
-		background-color: rgba(0, 0, 0, 0.04)		
+		border-top: solid 3px $amani_orange
 		li
 			display: block
+			margin-left: 1em
 		.footer-seperator
 			display: none
 
