@@ -46,7 +46,8 @@ else:
         if ($pages && count($pages)>0) { ?>
             <aside class="sideBarViewItem sideBarPageTree">
                 <li class="page_item page_item_has_children">
-                    <a class="sideBarPageTreeHeading" href="<?php echo the_permalink($parent); ?>">
+                    <a class="sideBarPageTreeHeading" 
+                        onclick="this.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); this.classList.toggle('sideBarPageTreeHeading--visible');">
                         <?php echo get_the_title($parent); ?>
                         <span class="showMoreButton"></span>
                     </a>
