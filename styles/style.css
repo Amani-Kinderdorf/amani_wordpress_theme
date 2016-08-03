@@ -585,15 +585,15 @@ footer {
     display: block;
     width: 100%; }
   .sideBarPageTreeItems {
-    display: none; }
+    display: none !important; }
     .sideBarPageTreeItems--visible {
-      display: block; }
+      display: block !important; }
     .sideBarPageTreeItems .page_item > a {
-      display: block; }
+      display: block !important; }
   .sideBarPageTreeHeading {
     color: #A80319;
     font-weight: 800;
-    font-size: 150%;
+    font-size: 120%;
     margin-top: 0.5em;
     cursor: pointer; }
     .sideBarPageTreeHeading .showMoreButton {

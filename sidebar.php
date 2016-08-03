@@ -4,8 +4,15 @@
 if( is_archive() || is_category() ||  is_single() || is_home() || is_page_template('archive_template.php')): ?>
             <aside class="sideBarViewItem sideBarPageTree">
                  <li id="aktuelle-berichte" class="page_item page_item_has_children">
-                        <a href="<?php echo get_permalink( get_option('page_for_posts' ) );?>/#aktuelle_berichte">Aktuelle Berichte</a>
-                        <ul class="children">
+                    <a class="sideBarPageTreeHeading" 
+                        onclick="
+                        this.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
+                        this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
+                        this.classList.toggle('sideBarPageTreeHeading--visible');">
+                        Aktuelle Berichte
+                        <span class="showMoreButton"></span>
+                    </a>
+                        <ul class="children sideBarPageTreeItems">
                             <?php 
                             //custom loop for news
                             $current = get_the_title();
@@ -23,7 +30,7 @@ if( is_archive() || is_category() ||  is_single() || is_home() || is_page_templa
                             ?>
                         </ul>
                     </li>
-                    <li class="page_item page_item_has_children <?php if(is_page_template('archive_template.php')) echo 'current_page_item'; ?>">
+                    <li class="page_item page_item_has_children <?php if(is_page_template('archive_template.php')) echo 'current_page_item'; ?> sideBarPageTreeItems">
                         <a href="<?php echo getArchiveLink() ?>">Archiv</a>
                         <ul class="children">
                             <li class="cat-item"><a href="<?php echo getArchiveLink() ?>">alle Kategorien</a></li>
