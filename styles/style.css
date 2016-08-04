@@ -548,23 +548,26 @@ footer {
         margin: 10px 0px 10px 10px; }
     .stickyHeader .mainMenuContainer {
       position: fixed;
-      display: none;
       top: 45px;
-      left: 45px;
-      width: 100%;
+      right: -9999px;
+      opacity: 0;
+      -webkit-transition: opacity 0.4s ease;
+      transition: opacity 0.4s ease;
       font-size: 1rem;
       background-color: #A80319;
       color: white; }
       .stickyHeader .mainMenuContainer li {
         list-style: none;
-        padding: 0px 5px;
+        padding: 0px 5px 0px 30%;
         display: block; }
         .stickyHeader .mainMenuContainer li a {
-          text-decoration: none; }
+          text-decoration: none;
+          text-align: right; }
     .stickyHeader .active .mobileMenuIcon {
       background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4="); }
     .stickyHeader .active .mainMenuContainer {
-      display: block; }
+      right: 0px;
+      opacity: 1; }
     .stickyHeader #searchSection {
       display: none; }
   #slideShowContent .contentDiv h3 {
