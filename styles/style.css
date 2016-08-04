@@ -558,7 +558,7 @@ footer {
       color: white; }
       .stickyHeader .mainMenuContainer li {
         list-style: none;
-        padding: 0px 5px 0px 30%;
+        padding: 0px 5px 0px 40%;
         display: block; }
         .stickyHeader .mainMenuContainer li a {
           text-decoration: none;
@@ -572,6 +572,8 @@ footer {
       display: none; }
   #slideShowContent .contentDiv h3 {
     display: none; }
+  .alignright, .alignleft {
+    float: none; }
   footer {
     text-align: left;
     padding: 1.5% 4%;
