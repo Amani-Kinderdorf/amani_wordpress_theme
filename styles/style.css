@@ -637,6 +637,7 @@ form input, form select {
   padding: 6px 10px;
   background-color: #fcfcfc;
   outline: 0px;
+  -webkit-appearance: none;
   width: 175px;
   margin: 8px 0px;
   height: 20px;
