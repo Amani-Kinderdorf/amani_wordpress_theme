@@ -21,7 +21,7 @@ function newsletter_form_get(){
  <form method="POST" action="'.FORM_ACTION.'" class="form">
   	<label for="email">E-Mail Adresse</label><input name="email" id="email" required><br>
   	<label for="name">Name (optional) </label><input name="fullname"><br>
-  	<input type="submit" name="email-button" value="Anmelden">
+  	<label></label><input type="submit" name="email-button" value="Anmelden">
   </form>';
 	return $form;
 }
