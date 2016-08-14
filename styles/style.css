@@ -577,6 +577,8 @@ footer {
     padding-right: 0px !important; }
   .size-medium {
     width: 100% !important; }
+  iframe {
+    max-height: 60%; }
   footer {
     text-align: left;
     padding: 1.5% 4%;
