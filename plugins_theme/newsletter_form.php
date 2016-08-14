@@ -10,7 +10,7 @@ Author URI: http://weise.io/
 */
 
 /**TODO Change URL**/
-define('FORM_ACTION','http://85.214.232.126/mailman');
+define('FORM_ACTION','https://lists.amani-kinderdorf.de/listinfo/newsletter/subscribe/newsletter');
 define('PLUGIN_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
 define('PLUGIN_NAME', "newsletter form");
 define ("PLUGIN_VERSION", "1.0");
@@ -19,9 +19,9 @@ define ("PLUGIN_VERSION", "1.0");
 function newsletter_form_get(){
 	$form= ' 
  <form method="post" action="'.FORM_ACTION.'" class="form">
-  <label for="email">E-Mail Adresse</label><input name="email" id="email"><br>
-  <label for="name">Name (optional) </label><input name="fullname"><br>
-  <input type="submit" name="email-button" value="Anmelden">
+  	<label for="email">E-Mail Adresse</label><input name="email" id="email" required><br>
+  	<label for="name">Name (optional) </label><input name="fullname"><br>
+  	<input type="submit" name="email-button" value="Anmelden">
   </form>';
 	return $form;
 }
