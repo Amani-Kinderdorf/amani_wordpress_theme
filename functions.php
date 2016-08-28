@@ -1,5 +1,13 @@
 <?php
 
+
+//disable emoji script
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+//custom image sizes
 add_image_size('landing_slideshow', 1100, 2000);
 add_image_size('article_full_width', 700, 2000);
 add_image_size('child_preview',260,260);
