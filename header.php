@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
     <title><?php
@@ -57,7 +57,7 @@
 
         <section id="searchSection" class="inputHidden">
             <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <input id="searchField" type="search" name="s" name="searchInput" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
+                <input id="searchField" type="search" name="s" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
                 <span id="searchIcon" onclick="searchButtonClicked();"></span>
             </form>
         </section>
