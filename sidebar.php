@@ -4,13 +4,12 @@
 if( is_archive() || is_category() ||  is_single() || is_home() || is_page_template('archive_template.php')): ?>
             <aside class="sideBarViewItem sideBarPageTree">
                 <li id="aktuelle-berichte" class="page_item page_item_has_children">
-                    <a class="sideBarPageTreeHeading" 
-                        onclick="
-                        this.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
-                        this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
-                        this.classList.toggle('sideBarPageTreeHeading--visible');">
+                    <a class="sideBarPageTreeHeading">
                         Aktuelle Berichte
-                        <span class="showMoreButton"></span>
+                        <span class="showMoreButton" onclick="
+                        this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
+                        this.parentNode.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
+                        this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');"></span>
                     </a>
                     <ul class="children sideBarPageTreeItems">
                         <?php 
@@ -49,14 +48,18 @@ else:
     if(count($parent)>0) $parent = $parent[0];
     $parent = get_page($parent)->ID;
     $args=array('child_of' => $parent);
-    $pages = get_pages($args); 
+    $pages = get_pages($args);
+    $parenActiveClass = '';
+    if($post->ID == $parent)  $parenActiveClass = 'current_page_item_parent';
         if ($pages && count($pages)>0) { ?>
             <aside class="sideBarViewItem sideBarPageTree">
                 <li class="page_item page_item_has_children">
-                    <a class="sideBarPageTreeHeading" 
-                        onclick="this.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); this.classList.toggle('sideBarPageTreeHeading--visible');">
+                    <a class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?>" href="<?php echo get_permalink($parent); ?>">
                         <?php echo get_the_title($parent); ?>
-                        <span class="showMoreButton"></span>
+                        <span class="showMoreButton" onclick="
+                            this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); 
+                            this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');">
+                        </span>
                     </a>
                     <ul class="children sideBarPageTreeItems">
                     <?php

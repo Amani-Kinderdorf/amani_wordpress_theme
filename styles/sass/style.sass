@@ -22,6 +22,7 @@ html, body
 body
     line-height: 175%
     color:  $text_dark_gray
+    -webkit-font-smoothing: subpixel-antialiased
     font:
         family: 'Open Sans'
         weight: 400
@@ -145,8 +146,8 @@ a
     >.page_item>a
         width: 100%
         display: block
-    .current_page_item > a, .current-cat > a
-        font-weight: 700
+    .current_page_item > a, .current-cat > a, .current_page_item_parent
+        font-weight: 600
 
 /********** Single Post *********/
 .postHeading
