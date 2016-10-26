@@ -619,7 +619,10 @@ footer {
       display: none; } }
 
 /****** Styles for Newsletter and Support Forms ***/
-form input, form select {
+form input[type="text"],
+form input[type="submit"],
+form input[type="reset"],
+form select {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -630,7 +633,6 @@ form input, form select {
   background-color: #fcfcfc;
   outline: 0px;
   -webkit-appearance: none;
-  width: 175px;
   margin: 8px 0px;
   height: 20px;
   font-size: 16px; }
