@@ -54,12 +54,14 @@ else:
         if ($pages && count($pages)>0) { ?>
             <aside class="sideBarViewItem sideBarPageTree">
                 <li class="page_item page_item_has_children">
-                    <a class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?>" href="<?php echo get_permalink($parent); ?>">
+                    <a  class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> hiddenMobile" 
+                        href="<?php echo get_permalink($parent); ?>">
                         <?php echo get_the_title($parent); ?>
-                        <span class="showMoreButton" onclick="
-                            this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); 
-                            this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');">
-                        </span>
+                    </a>
+                    <a  class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" 
+                        onclick="return toggleMobileMenu(this);">
+                        <?php echo get_the_title($parent); ?>
+                        <span class="showMoreButton"</span>
                     </a>
                     <ul class="children sideBarPageTreeItems">
                     <?php

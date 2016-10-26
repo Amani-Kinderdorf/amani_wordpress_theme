@@ -499,7 +499,17 @@ footer {
 
 /*****************RESPONSIVE************/
 /*************Responsive*********/
+.visibleMobile {
+  display: none !important; }
+
+.hiddenMobile {
+  display: block !important; }
+
 @media only screen and (max-width: 820px) {
+  .visibleMobile {
+    display: block !important; }
+  .hiddenMobile {
+    display: none !important; }
   .contentWrapper {
     width: 100%; }
   .xColumnView {

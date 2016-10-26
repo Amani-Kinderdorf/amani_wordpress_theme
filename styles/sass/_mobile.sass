@@ -1,8 +1,17 @@
 /*************Responsive*********/
 
+.visibleMobile
+	display: none!important
+.hiddenMobile
+	display: block!important
 
 //simplify page layouts
 @media #{$mobile}
+	.visibleMobile
+		display: block!important
+	.hiddenMobile
+		display: none!important
+
 	.contentWrapper
 		width: 100%
 

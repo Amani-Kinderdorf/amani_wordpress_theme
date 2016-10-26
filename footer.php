@@ -12,6 +12,11 @@ Amani Kinderdorf e.V.<?php wp_nav_menu( array('menu' => 'footerMenu', 'container
     function changeVisibility(value) {
         document.getElementById('searchSection').classList.toggle('inputHidden',value);
     }
+	function toggleMobileMenu(el){
+		el.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); 
+		el.classList.toggle('sideBarPageTreeHeading--visible');
+		return false;
+	}
 </script>
  <?php if(is_front_page()||is_home()): ?>
     <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/slick.min.js"></script>
