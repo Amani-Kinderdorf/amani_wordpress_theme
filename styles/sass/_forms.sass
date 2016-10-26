@@ -25,20 +25,23 @@ form
 		border-color: #ffa800
 	input:focus
 		border-width: 2px
-		margin: 7px -1px
 	label
 		width: 130px
 		display: inline-block
 		font-weight: 600
 //custom styling for contact form
 .fscf-div-form
-	input,select
+	input[type="text"],
+	input[type="submit"],
+	input[type="reset"],
+	select
 		width: 90%
-		max-width: 250px
 		margin: 2px 0px
+	input[type="submit"],
+	input[type="reset"]
+		max-width: 250px
 	input:focus, select:focus
 		margin: 1px -1px
-
 	input[type="checkbox"]
 		width: auto
 	label

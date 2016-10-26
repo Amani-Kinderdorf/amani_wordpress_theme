@@ -647,18 +647,23 @@ form input[type="submit"]:hover {
   border-color: #ffa800; }
 
 form input:focus {
-  border-width: 2px;
-  margin: 7px -1px; }
+  border-width: 2px; }
 
 form label {
   width: 130px;
   display: inline-block;
   font-weight: 600; }
 
-.fscf-div-form input, .fscf-div-form select {
+.fscf-div-form input[type="text"],
+.fscf-div-form input[type="submit"],
+.fscf-div-form input[type="reset"],
+.fscf-div-form select {
   width: 90%;
-  max-width: 250px;
   margin: 2px 0px; }
+
+.fscf-div-form input[type="submit"],
+.fscf-div-form input[type="reset"] {
+  max-width: 250px; }
 
 .fscf-div-form input:focus, .fscf-div-form select:focus {
   margin: 1px -1px; }
