@@ -1,5 +1,4 @@
-## Amani 2.0 Website
-<a href="https://pad.stunkymonkey.de/p/amani_2.0">Main Etherpad</a>
+## Wordpress Theme for <a href="https://amani-kinderdorf.de">Amani Kinderdorf e.V.</a>
 
 ### Development Environment
 sass file in **styles/sass/**. Gulp workflow with minified version and debug css file included.
@@ -43,7 +42,6 @@ AddOutputFilterByType DEFLATE image/svg+xml
 
 #### Plugins
 + `Advanced Custom Fields` (Current version: 4.4.3)
-	+ Kinder (bild, beschreibung, kinderdorf)
 	+ Startseite (slideshow, news_item_count)
 + `WP Lightbox 2` (Current version: 3.0.5)
 
