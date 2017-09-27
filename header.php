@@ -16,7 +16,8 @@
     <meta name="viewport" content="initial-scale=1">
     <meta name="author" content="Amani Kinderdorf e.V." />
     <meta name="description" content="Der Verein Amani Kinderdorf e.V. baut und betreibt zwei Dörfer für bedürftige Kinder in der Region Iringa im Süden Tansanias und fördert ihre schulische und berufliche Bildung dieser Kinder." />
-    <meta name="keywords" content="tansania, kilolo, kitwiru, amani, kinderdorf, tanzania, freiwilligendienst, Patenschaft, weltwärts" />
+    <meta name="google-site-verification" content="JREDbEWnQYV2Soq1hJkElhc44D5VVkCziIxzghHdBFk" />
+    <meta name="keywords" content="tanzania, tansania, kilolo, kitwiru, amani, kinderdorf, freiwilligendienst, Patenschaft, weltwärts, Amani Kinderdorf, Amani-Kinderdorf, Amani Kinderdorf e.V., Amani Kinderdorf" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/style.css" />    
     <?php if(is_front_page()||is_home()): ?>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/styles/slick.css"/>
