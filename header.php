@@ -35,6 +35,22 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_url')?>/img/favicons/favicon.ico">
     <meta name="msapplication-config" content="<?php bloginfo('template_url')?>/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NGO",
+      "url": "https://www.amani-kinderdorf.de",
+      "name": "Amani Kinderdorf",
+      "legalName": "Amani Kinderdorf e.V.",
+      "disambiguatingDescription": "Der Verein Amani Kinderdorf e.V. baut und betreibt zwei Dörfer für bedürftige Kinder in der Region Iringa im Süden Tansanias und fördert die schulische und berufliche Bildung dieser Kinder.",
+      "sameAs": [
+        "http://facebook.com/Amani.Kinderdorf",
+        "https://de.wikipedia.org/wiki/Amani-Kinderdorf"
+      ]
+    }
+    </script>
+
     <?php wp_head(); ?>
 </head>
 <body>
