@@ -630,6 +630,7 @@ footer {
 
 /****** Styles for Newsletter and Support Forms ***/
 form input[type="text"],
+form input[type="mail"],
 form input[type="submit"],
 form input[type="reset"],
 form select {
