@@ -23,10 +23,8 @@ Template Name: Startseite
  				while( $loop->have_posts() ) : 
 				$loop->the_post(); ?>
 				<div class="newsPreview">
-					<p class="title">
-						<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
-						<span class="date"><?php echo get_the_date('d. F');?></span>
-					</p>
+					<span class="date"><?php echo get_the_date('d. F');?></span>
+					<a class="title" href="<?php the_permalink(); ?>"><?php the_title();?></a>
 				</div><?php	
    				endwhile;
    				wp_reset_query();

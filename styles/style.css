@@ -306,24 +306,23 @@ li.mobileMenuButton {
 
 /********** LandingPage *********/
 .newsPreview {
-  border-bottom: 1px solid #979797; }
-  .newsPreview:last-child {
-    border-bottom-style: none; }
-  .newsPreview .title {
-    width: 100%;
-    display: inline-block;
-    vertical-align: bottom;
-    white-space: normal;
-    line-height: 170%;
-    font-size: 0.95em;
-    font-weight: 600;
-    /*baseline fix*/
-    margin: 9px 0px; }
+  line-height: 170%;
+  margin-bottom: 0.75em; }
   .newsPreview .date {
-    line-height: 170%;
-    margin: 0 0 0 10px;
-    float: right;
-    font-weight: normal; }
+    display: inline-block;
+    margin-right: 0.5em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #828282; }
+  .newsPreview .title {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -moz-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    white-space: normal;
+    font-size: 0.9rem;
+    font-weight: 600; }
   .newsPreview a {
     text-decoration: none; }
 
