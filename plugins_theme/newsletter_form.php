@@ -19,8 +19,8 @@ define ("PLUGIN_VERSION", "1.0");
 function newsletter_form_get(){
 	$form= ' 
  <form method="POST" action="'.FORM_ACTION.'" class="form">
-  	<label for="email">E-Mail Adresse</label><input name="email" id="email" required><br>
-  	<label for="name">Name (optional) </label><input name="fullname"><br>
+  	<label for="email">E-Mail Adresse</label><input type="text" name="email" id="email" required><br>
+  	<label for="name">Name (optional) </label><input type="text" name="fullname"><br>
   	<label></label><input type="submit" name="email-button" value="Anmelden">
   </form>';
 	return $form;
