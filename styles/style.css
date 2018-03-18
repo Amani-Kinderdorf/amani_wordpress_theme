@@ -305,12 +305,11 @@ li.mobileMenuButton {
 /********** LandingPage *********/
 .newsPreview {
   line-height: 170%;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.8em; }
   .newsPreview .date {
-    display: inline-block;
-    margin-right: 0.5em;
+    display: block;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #828282; }
   .newsPreview .title {
     -webkit-box-flex: 2;
@@ -692,7 +691,6 @@ footer {
   background-color: white;
   border-top: 3px solid #EB9B00;
   padding: 0.5em 0 0.8em 0;
-  text-align: right;
   font-size: 14px;
   display: -webkit-box;
   display: -webkit-flex;
