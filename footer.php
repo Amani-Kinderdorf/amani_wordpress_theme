@@ -1,6 +1,9 @@
 <?php if (!is_404()):?>
 <footer class="contentWrapper">
-Amani Kinderdorf e.V.<?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s', 'before' => '<span class="footer-seperator">|</span>' )); ?>
+	<span>Amani Kinderdorf e.V.</span>
+	<div>
+	<?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s', 'before' => '' )); ?>
+	</div>
 </footer>
 <?php endif; ?>
 
