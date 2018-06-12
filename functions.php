@@ -146,7 +146,7 @@ function get_page_number() {
 
 
 //hide Custom Field
-define( 'ACF_LITE', true );
+define( 'ACF_LITE', false );
 //register Custom Fields using PHP
 if(function_exists("register_field_group"))
 {
@@ -315,9 +315,4 @@ if(function_exists("register_field_group"))
     ));
 }
 
-
-
-
-
-	
 ?>
