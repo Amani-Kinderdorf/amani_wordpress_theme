@@ -647,8 +647,6 @@ p.postMeta {
         -moz-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%; } }
-  .wpcf7-form div[role='group'] span {
-    display: block; }
 
 .wpcf7-form .wpcf7-list-item {
   margin: 0; }
