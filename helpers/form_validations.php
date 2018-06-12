@@ -9,15 +9,15 @@ $validations = [
 		'reg' => '/^(\d+((\.|,)\d{2})?)$/',
 		'message' => 'Bei der Betragseingabe nur Zahlen eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 12 oder 42,00).'
 	],
-	'patenschaft' => [
+	'patenschafts-betrag' => [
 		'reg' => '/^\d[>40]*+([\.,]\d{1,2})?$/',
 		'message' => 'Bei der Betragseingabe nur Zahlen größer 40 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
 	],
-	'mitglied' => [
+	'mitglieds-betrag' => [
 		'reg' => '/^\d[>36]*+([\.,]\d{1,2})?$/',
 		'message' => 'Bei der Betragseingabe nur Zahlen größer 36 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
 	],
-	'bildungspatenschaft' => [
+	'bildungspatenschafts-betrag' => [
 		'reg' => '/^\d[>20]*+([\.,]\d{1,2})?$/',
 		'message' => 'Bei der Betragseingabe nur Zahlen größer 20 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
 	],
