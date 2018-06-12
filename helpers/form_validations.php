@@ -6,8 +6,20 @@ add_filter( 'wpcf7_validate_text', 'custom_text_filter', 20, 2 );
 // source: https://stackoverflow.com/a/15920158
 $validations = [
 	'betrag' => [
-		'reg' => '/^(\d+((\.|,)\d{2})?)$/', 
-		'message' => 'Bei der Betragseingabe nur Zahlen eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 12 oder 12,00).'
+		'reg' => '/^(\d+((\.|,)\d{2})?)$/',
+		'message' => 'Bei der Betragseingabe nur Zahlen eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 12 oder 42,00).'
+	],
+	'patenschaft' => [
+		'reg' => '/^\d[>40]*+([\.,]\d{1,2})?$/',
+		'message' => 'Bei der Betragseingabe nur Zahlen größer 40 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
+	],
+	'mitglied' => [
+		'reg' => '/^\d[>36]*+([\.,]\d{1,2})?$/',
+		'message' => 'Bei der Betragseingabe nur Zahlen größer 36 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
+	],
+	'bildungspatenschaft' => [
+		'reg' => '/^\d[>20]*+([\.,]\d{1,2})?$/',
+		'message' => 'Bei der Betragseingabe nur Zahlen größer 20 eingeben, oder ein Komma zur Abtrennung der Cents (z.B. 42 oder 42,00).'
 	],
 	'iban' => [
 		'reg' => '/^DE\d{2}\s?([0-9a-zA-Z]{4}\s?){4}[0-9a-zA-Z]{2}$/',
