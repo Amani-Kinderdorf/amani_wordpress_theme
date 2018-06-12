@@ -675,6 +675,9 @@ p.postMeta {
   background: #cfcfcf;
   border-radius: 3px; }
 
+.wpcf7-form .wpcf7-mail-sent-ok {
+  border-color: green; }
+
 form input[type="text"],
 form input[type="email"],
 form input[type="submit"],
