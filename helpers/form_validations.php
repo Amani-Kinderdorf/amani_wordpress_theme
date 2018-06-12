@@ -25,7 +25,7 @@ function custom_text_filter( $result, $tag ) {
 		if($key == $tag->name) {
 			//check regex pattern
 			if(!preg_match($validation['reg'], $_POST[$key], $matches)) {
-				$result->invalidate($tag, $validation['message'];
+				$result->invalidate($tag, $validation['message']);
 			}
 		}
 	}
