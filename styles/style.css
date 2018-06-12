@@ -681,6 +681,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="submit"],
 form input[type="reset"],
+form input[type="date"],
 form select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -699,6 +700,7 @@ form select {
   form input[type="email"]:focus,
   form input[type="submit"]:focus,
   form input[type="reset"]:focus,
+  form input[type="date"]:focus,
   form select:focus {
     border-width: 2px;
     border-color: #EB9B00;
