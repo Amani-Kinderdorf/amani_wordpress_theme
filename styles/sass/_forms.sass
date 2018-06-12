@@ -1,67 +1,75 @@
 // _forms.scss
+$inputBorderRadius: 2px
+.wpcf7-form
+	div[role='group']
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		border: 0
+		margin: 0
+		padding: 0
+		margin: -2% 0 0 -2%
+		@media #{$mobile}
+			line-height: 82%
+		& > label
+			flex: 0 0 48%
+			@media #{$mobile}
+				flex: 0 0 100%
+			padding: 2% 0 0 2%
+	.wpcf7-list-item
+		margin: 0
+	.wpcf7-list-item-label
+		display: inline-block
+	.wpcf7-not-valid
+		border-color: $error_red
+		margin-bottom: 0
+		border-bottom-right-radius: 0
+		border-bottom-left-radius: 0
+	.wpcf7-not-valid-tip
+		color: $error_red
+		background: lighten($text_gray, 40)
+		text-align: center
+		padding: 0.3em 0
+		border-bottom-right-radius: $inputBorderRadius
+		border-bottom-left-radius: $inputBorderRadius
+	.wpcf7-response-output
+		margin: 0
+		border-width: 0 0 0 4px
+		border-color: $error_red
+		background: lighten($text_gray, 30)
+		border-radius: 3px
+	.wpcf7-mail-sent-ok
+		border-color: green
 
 form 
 	input[type="text"],
-	input[type="mail"],
+	input[type="email"],
 	input[type="submit"],
 	input[type="reset"],
+	input[type="date"],
 	select
-		box-sizing: content-box
+		$verticalPadding: 8px
+		$horizontalPadding: 10px
+		box-sizing: border-box
 		display: inline-block
-		border: 1px #EB9B00 solid
-		border-radius: 2px
-		padding: 6px 10px
+		border: 1px $amani_orange solid
+		border-radius: $inputBorderRadius
 		background-color: #fcfcfc
 		outline: 0px
 		-webkit-appearance: none
 		margin: 8px 0px
-		height: 20px
 		font-size: 16px
+		width: 100%
+		padding: $verticalPadding $horizontalPadding
+		&:focus
+			border-width: 2px
+			border-color: $amani_orange
+			padding: $verticalPadding - 1px $horizontalPadding - 1px
 	input[type="submit"]
-		background-color: #EB9B00
+		background-color: $amani_orange
 		color: white
 		cursor: pointer
+		max-width: 300px
 	input[type="submit"]:hover
 		background-color: #ffa800
 		border-color: #ffa800
-	input:focus
-		border-width: 2px
-	label
-		width: 130px
-		display: inline-block
-		font-weight: 600
-//custom styling for contact form
-.fscf-div-form
-	input[type="text"],
-	input[type="submit"],
-	input[type="reset"],
-	select
-		width: 90%
-		margin: 2px 0px
-	input[type="submit"],
-	input[type="reset"]
-		max-width: 250px
-	input:focus, select:focus
-		margin: 1px -1px
-	input[type="checkbox"]
-		width: auto
-	label
-		width: auto
-	.fscf-div-field, 
-		margin-bottom: 15px
-	.fscf-div-clear
-		width: 49%
-		display: inline-block
-	.fscf-div-error
-		color: rgb(212, 0, 0)
-		font-weight: bold
-
-@media screen and (max-width: 850px)
-	.fscf-div-form
-		.fscf-div-clear
-			width: 100%
-			display: block
-		input[type=submit]
-			margin-left: 0px
-			margin-bottom: 20px
-

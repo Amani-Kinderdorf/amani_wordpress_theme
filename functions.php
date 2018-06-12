@@ -1,5 +1,7 @@
 <?php
 
+//require validations
+require_once('helpers/form_validations.php');
 
 //disable emoji script
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -144,7 +146,7 @@ function get_page_number() {
 
 
 //hide Custom Field
-define( 'ACF_LITE', true );
+define( 'ACF_LITE', false );
 //register Custom Fields using PHP
 if(function_exists("register_field_group"))
 {
@@ -313,9 +315,4 @@ if(function_exists("register_field_group"))
     ));
 }
 
-
-
-
-
-	
 ?>
