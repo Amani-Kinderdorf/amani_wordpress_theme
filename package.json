@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "wordpress amani theme",
   "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp default"
+  },
   "dependencies": {
     "gulp": "*",
     "gulp-sass": "*",
