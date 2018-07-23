@@ -5,33 +5,11 @@ sass file in **styles/sass/**. Gulp workflow with minified version and debug css
 
 ```
 npm update
-gulp
+npm run dev
 ```
+A build only process for server side sass-compilation is provided by running `npm run build`
 
 ### Configuration
-
-### Browser Caching
-Add this to the `.htaccess`file to enable browser side caching (increases Google Page Rank):
-```
-# Browser Caching
-
-FileETag MTime Size
-<IfModule expires_module>
-    ExpiresActive on
-    ExpiresDefault "access plus 1 week"
-</IfModule>
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/xml
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/xhtml+xml
-AddOutputFilterByType DEFLATE application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-AddOutputFilterByType DEFLATE image/svg+xml
-```
-
 
 #### Menus (no nesting - never!)
 + `mainMenu` - all links visble in the header
