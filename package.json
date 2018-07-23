@@ -4,14 +4,15 @@
   "description": "wordpress amani theme",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp default"
+    "dev": "gulp default",
+    "build": "gulp build"
   },
   "dependencies": {
     "gulp": "*",
     "gulp-sass": "*",
-    "gulp-autoprefixer":"*",
-    "gulp-cssmin":"*",
-    "gulp-insert":"*",
-    "gulp-notify":"*"
+    "gulp-autoprefixer": "*",
+    "gulp-cssmin": "*",
+    "gulp-insert": "*",
+    "gulp-notify": "*"
   }
 }

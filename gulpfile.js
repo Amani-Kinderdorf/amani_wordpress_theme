@@ -40,3 +40,4 @@ gulp.task('init',function() {
 
 
 gulp.task('default', ['init','sass', 'watch']);
+gulp.task('build', ['init','sass']);
