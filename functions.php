@@ -16,6 +16,8 @@ add_image_size('child_preview',260,260);
 
 add_action( 'init', 'create_post_type_child' );
 add_theme_support( 'menus' );
+add_theme_support( 'post-thumbnails' ); 
+
 
 function create_post_type_child() {
   register_post_type( 'child',
@@ -323,6 +325,48 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	acf_add_local_field_group(array(
+	'key' => 'group_5cbc31bdd80f5',
+	'title' => 'Post',
+	'fields' => array(
+		array(
+			'key' => 'field_5cbc31c197a7a',
+			'label' => 'Post Teaser',
+			'name' => 'post_teaser',
+			'type' => 'true_false',
+			'instructions' => 'Anzeige des Posts als Teaser (es werden lediglich die letzten drei Posts mit dieser Option als Teaser angezeigt)',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
 }
 
 ?>

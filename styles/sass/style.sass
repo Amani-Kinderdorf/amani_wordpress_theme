@@ -11,6 +11,7 @@ $mobile: "only screen and (max-width:820px)"
 $widescreen: "only screen and (min-width: 1500px)"
 
 $default_padding: 1.5% 4%
+$default_spacing: 20px
 
 @import fonts
 
@@ -21,63 +22,63 @@ html, body
 	
 
 body
-    line-height: 175%
-    color:  $text_dark_gray
-    -webkit-font-smoothing: subpixel-antialiased
-    font:
-        family: 'Open Sans'
-        weight: 400
-        size: 15px
-    background-color: white
+	line-height: 175%
+	color:  $text_dark_gray
+	-webkit-font-smoothing: subpixel-antialiased
+	font:
+		family: 'Open Sans'
+		weight: 400
+		size: 15px
+	background-color: white
 
 
 .contentWrapper
-    width: 93%
-    max-width: 1024px
-    margin-left: auto
-    margin-right: auto
-    position: relative
+	width: 93%
+	max-width: 1024px
+	margin-left: auto
+	margin-right: auto
+	position: relative
 
 .mainWrapper
-    background-color: white
-    border-radius: 2px
-    overflow: hidden
+	background-color: white
+	border-radius: 2px
+	overflow: hidden
 
 a
-    color: inherit
+	color: inherit
 
 [nounderline]
-    text-decoration: none
+	text-decoration: none
 
 
 .xColumnView
-    white-space: nowrap
+	white-space: nowrap
 
-    >div, >article, >aside
-        display: inline-block
-        overflow: hidden
-        box-sizing: border-box
-        white-space: normal
-        vertical-align: top
+	>div, >article, >aside
+		display: inline-block
+		overflow: hidden
+		box-sizing: border-box
+		white-space: normal
+		vertical-align: top
 
-    *
-        max-width: 100%
+	*
+		max-width: 100%
 
 .sideBarViewItem
-    width: 27%
-    padding: 3% 2%
+	width: 27%
+	padding: 3% 2%
 
 .pageContentViewItem
-    width: 73%
-    padding: $default_padding
+	width: 73%
+	padding: $default_padding
 
 .oneColumnViewItem
-    width: 100%
-    padding: 3%
+	width: 100%
+	padding: 3%
 
 .twoColumnViewItem
-    width: 50%
-    padding: 1.5% 3%
+	width: 50%
+	padding: 1.5% 3%
 
 /********** Page Style - Global *********/
 @import global
@@ -88,15 +89,15 @@ a
 /********** Search Results *********/
 
 .searchResultItem
-    margin: 35px 0px
-    h2
-        color: #252525!important
-        margin-bottom: 0px!important
-        font:
-            size: 120%!important
-            weight: 600!important
-        >a
-            text-decoration: none
+	margin: 35px 0px
+	h2
+		color: #252525!important
+		margin-bottom: 0px!important
+		font:
+			size: 120%!important
+			weight: 600!important
+		>a
+			text-decoration: none
 
 /********** LandingPage *********/
 @import landing-page
@@ -104,103 +105,52 @@ a
 /********** Single Child **********/
 
 .singleChild
-    margin: 20px auto
-    padding-top: 20px
-    padding-bottom: 20px
-    .childPreview_text
-        width: 100%
-        display: block
-    .title
-        font-size: 120%
-    .childPreview_image
-        position: relative
-        float: left
-        display: block
-        padding-bottom: 45%
-        width: 45%
-        background-size: cover
-        background-repeat: no-repeat
-        margin: 0px 20px 20px 0px
+	margin: 20px auto
+	padding-top: 20px
+	padding-bottom: 20px
+	.childPreview_text
+		width: 100%
+		display: block
+	.title
+		font-size: 120%
+	.childPreview_image
+		position: relative
+		float: left
+		display: block
+		padding-bottom: 45%
+		width: 45%
+		background-size: cover
+		background-repeat: no-repeat
+		margin: 0px 20px 20px 0px
 
 /*********** Sidebar ***************/
 
 .sideBarPageTree 
-    li
-        list-style: none
-        font-size: 0.85rem
-    a
-        text-decoration: none
-    .page_item, .cat-item
-        border-bottom: 1px solid #979797
-        padding: 6px 0px
-        display: block
-        width: 100%
-        word-break: break-word
-    .children
-        border-top: 1px solid #979797
-        margin-top: 6px
-    .page_item_has_children
-        border-bottom-style: none
-    ul
-        padding-left: 20px
-    >.page_item>a
-        width: 100%
-        display: block
-    .current_page_item > a, .current-cat > a, .current_page_item_parent
-        font-weight: 600
+	li
+		list-style: none
+		font-size: 0.85rem
+	a
+		text-decoration: none
+	.page_item, .cat-item
+		border-bottom: 1px solid #979797
+		padding: 6px 0px
+		display: block
+		width: 100%
+		word-break: break-word
+	.children
+		border-top: 1px solid #979797
+		margin-top: 6px
+	.page_item_has_children
+		border-bottom-style: none
+	ul
+		padding-left: 20px
+	>.page_item>a
+		width: 100%
+		display: block
+	.current_page_item > a, .current-cat > a, .current_page_item_parent
+		font-weight: 600
 
-/********** Single Post *********/
-.postHeading
-    line-height: 150%
-
-p.postMeta
-    text-align: right
-    margin-top: 15px
-    margin-bottom: 20px
-    font-weight: 600
-    a
-        text-decoration: none
-
-.postMeta span
-    margin: 0px 7px
-
-/*************Category/Archive**********/
-.archive-content h2
-    color: #4B4B4B
-    font-weight: 600
-    font-size: 20px
-    margin-bottom: 5px
-    margin-top: 30px
-
-
-.archiveItem
-    padding: 0px
-    margin: 0px 0px
-    margin-left: -1%
-    list-style: none
-    white-space: nowrap
-    border-radius: 2px
-    a
-        text-decoration: none
-    &:hover
-        background-color: rgba(169, 169, 169, 0.18)
-    li
-        display: inline-block
-        white-space: normal
-        padding: 5px 0px
-
-.archiveTitle
-    width: 70%
-    margin-left: 1%
-
-
-.archiveDate
-    width: 26%
-    margin-left: 1%
-    margin-right: 1%
-    text-align: right
-    vertical-align: top
-
+@import posts
 
 /*****************RESPONSIVE************/
 //written for old menu; design and syntax obsolete
@@ -215,14 +165,14 @@ p.postMeta
 
 /******** TestBunner *********/
 .test-overlay
-    position: fixed
-    z-index: 99
-    bottom: 0px
-    left: 0px
-    width: 100%
-    height: 40px;
-    line-height: 40px
-    color: white
-    background-color: $amani_red
-    text-align: center
-    padding: 5px 0px
+	position: fixed
+	z-index: 99
+	bottom: 0px
+	left: 0px
+	width: 100%
+	height: 40px;
+	line-height: 40px
+	color: white
+	background-color: $amani_red
+	text-align: center
+	padding: 5px 0px
