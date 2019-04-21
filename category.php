@@ -2,41 +2,35 @@
  
 
 <div class="contentWrapper mainWrapper">
-     <div class="xColumnView">
-        <?php get_sidebar(); ?>
-        <article class="pageContentViewItem pageStyle">
+    <div class="xColumnView">
+    	<?php get_sidebar(); ?>
+		<div class="pageContentViewItem pageStyle">
+			<h1>Berichte - <span><?php single_cat_title() ?></span></h1>
+			<?php
+				wp_reset_postdata();
+				if (have_posts()) :
+				$shownTeaserPosts = 0;
+				while(have_posts()) : the_post();
+					if (get_field('post_teaser') == 1) $shownTeaserPosts++;
+					if ($shownTeaserPosts <= 3 && get_field('post_teaser') == 1) continue; //hides already outputted teasered posts
+			?>
+			<article class="articlePreview">
+				<?php if (has_post_thumbnail()): ?>
+					<div class="articlePreview__image" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')">
+						<a class="articlePreview__imageLink" href="<?php the_permalink();?>"></a>
+					</div>
+				<?php endif ?>
+				<div class="articlePreview__text">
+            		<p class="postMeta"><?php the_date('d. F Y'); ?> | <?php echo get_categorie_simple(get_the_ID()); ?></p>
+					<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+					<p><?php the_excerpt(); ?></p>
+				</div>
+			 </article>
+			<?php endwhile; endif; ?>
+			<?php wpbeginner_numeric_posts_nav(); ?>
 
-
-        <div id="container">
-            <div id="content" class="archive-content">
-
-                <?php the_post(); ?>          
-				<h1>Archiv - <span><?php single_cat_title() ?></span></h1>
-				<?php rewind_posts(); ?>
-				<?php 
-				$lastOutputMonth = 0;
-				$lastOutputYear = 0;
-				global $query_string;
-				query_posts( $query_string . '&posts_per_page=-1' );
-				if ( have_posts() ) : while ( have_posts() ) : the_post();
-					//output month
-					if(get_the_date('n')!=$lastOutputMonth || get_the_date('Y') != $lastOutputYear) {
-						echo '<h2 class="archiveNewMonth">'.get_the_date('F Y').'</h2>';
-						$lastOutputMonth = get_the_date('n');
-						$lastOutputYear = get_the_date('Y');
-					}
-					?>
-				        <ul id="post-<?php the_ID(); ?>" class="archiveItem">
-				        <a href="<?php the_permalink(); ?>">
-				            <li class="archiveTitle"><?php the_title(); ?></li>
-				            <li class="archiveDate"><?php  echo get_the_date('d.m.'); ?></li>
-				            </a>
-						</ul>
-				<?php endwhile; endif; wp_reset_query(); ?>
-            </div><!-- #content -->
-        </div><!-- #container -->
-</article>
-</div>
+		</div>
+	</div>
 </div>
 
 

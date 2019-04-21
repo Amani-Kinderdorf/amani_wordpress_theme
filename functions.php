@@ -2,6 +2,7 @@
 
 //require validations
 require_once('helpers/form_validations.php');
+require_once('helpers/pagination.php');
 
 //disable emoji script
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -17,6 +18,11 @@ add_image_size('child_preview',260,260);
 add_action( 'init', 'create_post_type_child' );
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' ); 
+
+function excerpt_readmore($more) {
+	return '…';
+}
+add_filter('excerpt_more', 'excerpt_readmore');
 
 
 function create_post_type_child() {

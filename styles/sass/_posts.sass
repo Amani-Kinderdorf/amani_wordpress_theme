@@ -53,10 +53,15 @@ p.postMeta
 
 .postTeaserContainer
 	display: flex
-	margin-top: $default_spacing
+	@media #{$mobile}
+		flex-direction: column
+	margin: $default_spacing 0
 	.postTeaser
 		flex: 0 0 33.33%
 		padding-bottom: 23%
+		@media #{$mobile}
+			flex: 0 0 100%
+			padding-bottom: 35%
 		position: relative
 		background-size: cover
 		background-repeat: no-repeat
@@ -64,7 +69,7 @@ p.postMeta
 		overflow: hidden
 		&__heading
 			font-size: 1.4em
-			@media #{$mobile}
+			@media #{$tablet}
 				font-size: 1.2em
 			line-height: 1.4em
 			position: absolute
@@ -82,6 +87,8 @@ p.postMeta
 .articlePreview
 	display: flex
 	margin: ($default_spacing*1.3) 0
+	&:first-child
+		margin-top: 0
 	&__image
 		float: left
 		background-size: cover
@@ -103,3 +110,27 @@ p.postMeta
 			text-decoration: none
 		a:hover
 			text-decoration: underline
+
+ 
+
+.navigation 
+	margin: $default_spacing 0
+	ul
+		text-align: center
+		padding: 0
+	li
+		display: inline
+
+.navigation 
+	li a, li a:hover, li.active a, li.disabled
+		color: #fff
+		text-decoration: none
+		background-color: $text_gray
+		color: white
+		cursor: pointer
+		padding: 0.5em 1em
+		transition: background-color 0.2s ease
+		border-radius: 2px
+	li a:hover, li.active a
+		background-color: $amani-orange
+

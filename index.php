@@ -1,25 +1,28 @@
 <?php get_header(); ?>
 
 <div class="contentWrapper mainWrapper">
-	<div class="postTeaserContainer">
-		<?php
-			$args = array( 'posts_per_page' => 3, 'orderby' => 'date' , 'order' => 'DESC', 'meta_key' => 'post_teaser', 'meta_value' => '1');
-			$loop = new WP_Query($args);
-			while( $loop->have_posts() ) :  $loop->the_post(); 
-		?>
-		<div class="postTeaser" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')">
-			<h3 class="postTeaser__heading"><a class="postTeaser__headingText" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+	<?php if(get_query_var('paged')==0): ?>
+		<div class="postTeaserContainer">
+			<?php
+				$args = array( 'posts_per_page' => 3, 'orderby' => 'date' , 'order' => 'DESC', 'meta_key' => 'post_teaser', 'meta_value' => '1');
+				$loop = new WP_Query($args);
+				while( $loop->have_posts() ) :  $loop->the_post(); 
+			?>
+			<div class="postTeaser" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')">
+				<h3 class="postTeaser__heading"><a class="postTeaser__headingText" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			</div>
+			<?php endwhile; wp_reset_query(); ?>
 		</div>
-		<?php endwhile; wp_reset_query(); ?>
-	</div>
+	<?php endif; ?>
 	 <div class="xColumnView">
 		<?php get_sidebar(); ?>
 		<div class="pageContentViewItem pageStyle">
 			<?php
-				$args = array('posts_per_page' => -1, 'orderby' => 'date' , 'order' => 'DESC');
+				wp_reset_postdata();
+				if (have_posts()) :
 				$shownTeaserPosts = 0;
-				$loop = new WP_Query($args);
-				while( $loop->have_posts() ) :  $loop->the_post(); 
+				while(have_posts()) : the_post();
 					if (get_field('post_teaser') == 1) $shownTeaserPosts++;
 					if ($shownTeaserPosts <= 3 && get_field('post_teaser') == 1) continue; //hides already outputted teasered posts
 			?>
@@ -35,7 +38,9 @@
 					<p><?php the_excerpt(); ?></p>
 				</div>
 			 </article>
-			<?php endwhile; wp_reset_query(); ?>
+			<?php endwhile; endif; ?>
+			<?php wpbeginner_numeric_posts_nav(); ?>
+
 		</div>
 	 </div>
  </div>

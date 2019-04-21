@@ -7,7 +7,8 @@ $text_dark_gray: #313131
 $text_gray: #828282
 $font_folder: "./fonts/"
 
-$mobile: "only screen and (max-width:820px)"
+$tablet: "only screen and (max-width:820px)"
+$mobile: "only screen and (max-width:600px)"
 $widescreen: "only screen and (min-width: 1500px)"
 
 $default_padding: 1.5% 4%
@@ -64,21 +65,29 @@ a
 	*
 		max-width: 100%
 
+
+$paddingTop: 3%
+$paddingHorizontal: 2%
+
 .sideBarViewItem
 	width: 27%
-	padding: 3% 2%
+	padding: $paddingTop $paddingHorizontal 0 0
 
 .pageContentViewItem
 	width: 73%
-	padding: $default_padding
+	padding: $paddingTop 0 0 $paddingHorizontal
 
 .oneColumnViewItem
 	width: 100%
-	padding: 3%
+	padding: $paddingTop 0
 
 .twoColumnViewItem
 	width: 50%
-	padding: 1.5% 3%
+	padding: $paddingTop 0
+	&:first-child
+		padding-right: $paddingHorizontal
+	&:last-child
+		padding-left: $paddingHorizontal
 
 /********** Page Style - Global *********/
 @import global
