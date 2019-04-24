@@ -55,10 +55,13 @@ p.postMeta
 	display: flex
 	@media #{$mobile}
 		flex-direction: column
-	margin: $default_spacing 0
+	$gutter: 0.8em
+	margin: 1em (-$gutter) 1em (-$gutter)
 	.postTeaser
-		flex: 0 0 33.33%
+		margin: $gutter
+		flex-grow: 2
 		padding-bottom: 23%
+		text-decoration: none
 		@media #{$mobile}
 			flex: 0 0 100%
 			padding-bottom: 35%
@@ -68,9 +71,9 @@ p.postMeta
 		background-position: center left
 		overflow: hidden
 		&__heading
-			font-size: 1.4em
+			font-size: 1.3em
 			@media #{$tablet}
-				font-size: 1.2em
+				font-size: 1.1em
 			line-height: 1.4em
 			position: absolute
 			margin: 0
@@ -79,7 +82,6 @@ p.postMeta
 			color: white
 			max-width: 80%
 		&__headingText
-			text-decoration: none
 			padding-top: .1em
 			background-color: $amani_red
 			box-shadow: -0.3em 0 0 $amani_red, 0.3em 0 0 $amani_red
@@ -133,7 +135,7 @@ p.postMeta
 	li a, li a:hover, li.active a, li.disabled
 		color: #fff
 		text-decoration: none
-		background-color: $text_gray
+		background-color: black
 		color: white
 		cursor: pointer
 		padding: 0.5em 1em

@@ -9,9 +9,9 @@
 				$loop = new WP_Query($args);
 				while( $loop->have_posts() ) :  $loop->the_post(); 
 			?>
-			<div class="postTeaser" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')">
-				<h3 class="postTeaser__heading"><a class="postTeaser__headingText" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			</div>
+			<a class="postTeaser" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')" href="<?php the_permalink(); ?>">
+				<h3 class="postTeaser__heading"><span class="postTeaser__headingText"><?php the_title(); ?></span></h3>
+			</a>
 			<?php endwhile; wp_reset_query(); ?>
 		</div>
 	<?php endif; ?>
