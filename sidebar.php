@@ -5,12 +5,14 @@ if( is_archive() || is_category() ||  is_single() || is_home() || is_page_templa
 			<aside class="sideBarViewItem sideBarPageTree">
 				<li class="page_item page_item_has_children <?php if(is_home()) echo 'current_page_item'; ?>">
  					<a class="hiddenMobile" href="<?php echo get_post_type_archive_link('post'); ?>">Alle Kategorien</a>
-					<a class="sideBarPageTreeHeading visibleMobile">
-                        Aktuelle Berichte
+					<a class="sideBarPageTreeHeading visibleMobile" href="<?php echo get_post_type_archive_link('post'); ?>">
+                        Alle Kategorien
                         <span class="showMoreButton" onclick="
                         this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
-                        this.parentNode.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
-                        this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');"></span>
+                        this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');">
+                    		Kategorie wählen
+                    		<span class="showMoreIcon"></span>
+                    	</span>
                     </a>
 					<ul class="children sideBarPageTreeItems">
 						<?php wp_list_categories('title_li='); ?>
@@ -41,7 +43,7 @@ else:
 					<a  class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" 
 						onclick="return toggleMobileMenu(this);">
 						<?php echo get_the_title($parent); ?>
-						<span class="showMoreButton"</span>
+						<span class="showMoreButton">Unterseiten<span class="showMoreIcon"></span></span>
 					</a>
 					<ul class="children sideBarPageTreeItems">
 					<?php

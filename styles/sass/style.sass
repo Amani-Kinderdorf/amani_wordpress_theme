@@ -72,14 +72,21 @@ $paddingHorizontal: 2%
 .sideBarViewItem
 	width: 27%
 	padding: $paddingTop $paddingHorizontal 0 0
+	@media #{$tablet}
+		padding: $paddingTop $paddingHorizontal
+		display: block
+		width: 100%
 
 .pageContentViewItem
 	width: 73%
 	padding: $paddingTop 0 0 $paddingHorizontal
-
+	@media #{$tablet}
+		padding: $paddingTop $paddingHorizontal
 .oneColumnViewItem
 	width: 100%
 	padding: $paddingTop 0
+	@media #{$tablet}
+		padding: $paddingTop $paddingHorizontal
 
 .twoColumnViewItem
 	width: 50%
@@ -88,7 +95,10 @@ $paddingHorizontal: 2%
 		padding-right: $paddingHorizontal
 	&:last-child
 		padding-left: $paddingHorizontal
-
+	@media #{$tablet}
+		display: block
+		width: 100%
+		padding: $paddingTop $paddingHorizontal
 /********** Page Style - Global *********/
 @import global
 
