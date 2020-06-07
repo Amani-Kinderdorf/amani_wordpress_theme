@@ -1,43 +1,44 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var cssmin = require('gulp-cssmin');
-var insert = require('gulp-insert');
-var fs = require("fs");
-var metaStyle = "";
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('autoprefixer');
+const postcss = require("gulp-postcss");
+const plumber = require("gulp-plumber");
+const insert = require('gulp-insert');
+const fs = require("fs");
+const cssnano = require("cssnano");
 
+var metaStyle = "";
 
 var input = './styles/sass/*';
 var output = './';
 var outputDebug = './styles/';
 
-gulp.task('sass', function () {
+function css () {
   return gulp
     .src(input)
-    .pipe(sass({
-        onError: function(err) {return notify().write(err);}
-        }))
-    .pipe(prefix({
-        browsers: ['> 1%','last 8 versions','Firefox >= 20'],
-        cascade: false
-    }))
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
     .pipe(gulp.dest(outputDebug))
-    .pipe(cssmin())
+    .pipe(postcss([cssnano(), autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
     .pipe(insert.prepend(metaStyle))
     .pipe(gulp.dest(output));
-});
+}
 
+// Watch files
+function watchFiles() {
+  gulp.watch(input, css);
+}
 
-gulp.task('watch', function() {
-  return gulp
-    .watch(input, ['sass'])
-});
-gulp.task('init',function() {
-    metaStyle = fs.readFileSync("./styles/stylesheet_meta.css", "utf-8");
-    console.log(metaStyle);
-    return gulp;
-});
+function init(cb) {
+	metaStyle = fs.readFileSync("./styles/stylesheet_meta.css", "utf-8");
+	console.log("added meta information");
+	cb();
+}
 
+// define complex tasks
+const build = gulp.series(init, css);
+const watch = gulp.series(init, css, watchFiles);
 
-gulp.task('default', ['init','sass', 'watch']);
-gulp.task('build', ['init','sass']);
+exports.build = build;
+exports.default = watch;
