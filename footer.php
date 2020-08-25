@@ -21,23 +21,6 @@
 		return false;
 	}
 </script>
- <?php if(is_front_page()||is_home()): ?>
-    <script type="text/javascript" src="<?php bloginfo('template_url')?>/js/slick.min.js"></script>
-	<script type="text/javascript">	
-	    jQuery(document).ready(function(){
-	       jQuery('#slideShowContent').slick({
-	        autoplay: true,
-	        autoplaySpeed: 4000,  
-	        infinite: true,
-	        speed: 400,
-	        fade: true,
-	        cssEase: 'linear',
-	        dots:true,
-	        arrows:false
-	    });
-	   });
-	</script>
- <?php endif; ?>
 
 <?php
    /* Always have wp_footer() just before the closing </body>
