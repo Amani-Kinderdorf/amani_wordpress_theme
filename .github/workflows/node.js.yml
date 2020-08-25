@@ -44,3 +44,4 @@ jobs:
           --exclude /.github/ \
           --exclude /node_modules/ \
           ./ ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:.
+        ssh -i ./deploy_key ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} sudo update-wordpress-theme
