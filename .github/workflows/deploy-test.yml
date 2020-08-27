@@ -1,28 +1,30 @@
-name: Node.js CI
+name: Deploy on staging
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ staging ]
 
 jobs:
   deploy:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - name: Pull code
       uses: actions/checkout@v2
+      with:
+        ref: staging
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: [14.x]
+
+    - name: Restore cached node_modules
+      uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
       run: npm ci
@@ -44,4 +46,4 @@ jobs:
           --exclude /.github/ \
           --exclude /node_modules/ \
           ./ ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:.
-        ssh -i ./deploy_key ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} sudo update-wordpress-theme
+        ssh -i ./deploy_key ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} sudo update-test-theme
