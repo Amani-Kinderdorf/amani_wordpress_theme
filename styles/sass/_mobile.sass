@@ -31,18 +31,17 @@
 
 		/*mobile button*/
 		.mobileMenuButton
-			right: 0px
 			height: 45px
 			padding: 0px 10px
-			position: absolute
-			display: block
-			overflow: hidden
+			display: flex
 			span
 				display: inline-block
 				vertical-align: top
 			.mobileMenuTitle
-				max-width: 200px;
-				text-align:	right;
+				text-align:	right
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
 			.mobileMenuIcon
 				background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPScjRkZGRkZGJyBoZWlnaHQ9JzI0JyB2aWV3Qm94PScwIDAgMjQgMjQnIHdpZHRoPScyNCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PHBhdGggZD0nTTMgMThoMTh2LTJIM3Yyem0wLTVoMTh2LTJIM3Yyem0wLTd2MmgxOFY2SDN6Jy8+PC9zdmc+")	
 				background-size: cover
@@ -50,6 +49,7 @@
 				width: 25px
 				height: 25px	
 				margin: 10px 0px 10px 10px
+				flex: 0 0 25px
 
 		/*nav menu*/
 		.mainMenuContainer
@@ -113,6 +113,7 @@
 		font-weight: 800
 		margin-top: 0.5em
 		cursor: pointer
+		min-height: 24px
 		.showMoreButton
 			display: inline-block
 			float: right
@@ -131,8 +132,5 @@
 
 	.pageContentViewItem
 		width: 100%
-		.postHeading
-			display: none
-
 				
 			
