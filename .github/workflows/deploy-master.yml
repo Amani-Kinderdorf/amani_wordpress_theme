@@ -38,10 +38,10 @@ jobs:
         echo "${{secrets.SSH_KEY}}" > deploy_key
         chmod 600 ./deploy_key
         rsync -chav --delete \
-          -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
+          -e 'ssh -i ./deploy_key -p 6158 -o StrictHostKeyChecking=no' \
           --exclude /deploy_key \
           --exclude /.git/ \
           --exclude /.github/ \
           --exclude /node_modules/ \
           ./ ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:.
-        ssh -i ./deploy_key ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} sudo update-wordpress-theme
+        ssh -i ./deploy_key -p 6158 ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} sudo update-wordpress-theme
