@@ -52,53 +52,48 @@ a
 	text-decoration: none
 
 
+$paddingTop: 3%
+$paddingHorizontal: 2%
+
+$spacing: 3rem
+
 .xColumnView
-	white-space: nowrap
+	display: flex
+	justify-content: space-between
+	padding-top: $paddingTop
 
-	>div, >article, >aside
-		display: inline-block
-		overflow: hidden
-		box-sizing: border-box
-		white-space: normal
-		vertical-align: top
-
+	@media #{$tablet}
+		flex-wrap: wrap
+		margin-left: 4vw
+		margin-right: 4vw
+		
 	*
 		max-width: 100%
 
 
-$paddingTop: 3%
-$paddingHorizontal: 2%
-
 .sideBarViewItem
-	width: 27%
-	padding: $paddingTop $paddingHorizontal 0 0
+	flex: 0 0 27%
+	margin-right: $spacing
 	@media #{$tablet}
-		padding: $paddingTop $paddingHorizontal
 		display: block
-		width: 100%
+		flex: 0 0 100%
+		margin-right: 0
 
 .pageContentViewItem
-	width: 73%
-	padding: $paddingTop 0 0 $paddingHorizontal
-	@media #{$tablet}
-		padding: $paddingTop $paddingHorizontal
+	flex-grow: 2
 .oneColumnViewItem
 	width: 100%
 	padding: $paddingTop 0
-	@media #{$tablet}
-		padding: $paddingTop $paddingHorizontal
+
 
 .twoColumnViewItem
-	width: 50%
-	padding: $paddingTop 0
-	&:first-child
-		padding-right: $paddingHorizontal
-	&:last-child
-		padding-left: $paddingHorizontal
+	flex: 0 0 45%
 	@media #{$tablet}
 		display: block
-		width: 100%
-		padding: $paddingTop $paddingHorizontal
+		flex: 0 0 100%
+		&:last-child
+			margin-top: 2rem
+
 /********** Page Style - Global *********/
 @import global
 

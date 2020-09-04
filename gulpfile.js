@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const postcss = require("gulp-postcss");
-const plumber = require("gulp-plumber");
 const insert = require('gulp-insert');
 const fs = require("fs");
 const cssnano = require("cssnano");
@@ -16,7 +15,6 @@ var outputDebug = './styles/';
 function css () {
   return gulp
     .src(input)
-    .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
     .pipe(gulp.dest(outputDebug))

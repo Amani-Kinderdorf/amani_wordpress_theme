@@ -9,11 +9,16 @@
 
 <script type="text/javascript">
     function searchButtonClicked () {
-        if(document.getElementById('searchField').value.length>0) document.getElementById('searchForm').submit();
-         document.getElementById('searchField').focus();
+    	console.log("Searchbutton clicked")
+    	if(document.getElementById('searchField').value.length>0) {
+    		document.getElementById('searchForm').submit();
+    	}
+    	document.getElementById('searchSection').classList.toggle('inputHidden', false);
+        document.getElementById('searchField').focus();
     }
+
     function changeVisibility(value) {
-        document.getElementById('searchSection').classList.toggle('inputHidden',value);
+        document.getElementById('searchSection').classList.toggle('inputHidden', value);
     }
 	function toggleMobileMenu(el){
 		el.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); 

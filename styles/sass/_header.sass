@@ -36,6 +36,12 @@ header
     color: white
     z-index: 20
     box-shadow: inset 0 0px 0 #fff,0 6px 8px rgba(0,0,0,0.15)
+    .stickyHeaderMenuContainer
+    	display: flex
+    	@media #{$tablet}
+    		justify-content: space-between
+    	.mobile-menu-container
+    		overflow: hidden
     //logo
     .logo-container
         height: 45px
@@ -52,7 +58,6 @@ header
         background-size: cover
     // menu list styles
     ul  
-        display: inline-block
         vertical-align: top
         padding-left: 0px
         margin: 0
@@ -101,6 +106,8 @@ li.mobileMenuButton
     height: 27px
     background-color: white
     transition: background-color 0.3s
+    #searchForm
+    	height: 100%
     #searchIcon
         width: 19px
         height: 19px
@@ -114,6 +121,8 @@ li.mobileMenuButton
         position: absolute
         cursor: pointer
     #searchField
+        display: initial
+        border: none
         width: 155px
         height: 20px
         line-height: 15px
@@ -132,6 +141,7 @@ li.mobileMenuButton
 #searchSection.inputHidden #searchField
     font-size: 0px
     background-color: transparent
+    display: none
 #searchSection.inputHidden #searchIcon
     background-image: url('img/search.png')
 
