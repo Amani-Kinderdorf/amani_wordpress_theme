@@ -1,11 +1,9 @@
-<?php if (!is_404()):?>
 <footer class="contentWrapper">
 	<span>Amani Kinderdorf e.V.</span>
 	<div>
 	<?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s', 'before' => '' )); ?>
 	</div>
 </footer>
-<?php endif; ?>
 
 <script type="text/javascript">
 	function searchButtonClicked () {
@@ -26,6 +24,11 @@
 		return false;
 	}
 </script>
+
+<?php if(WP_DEBUG==true): ?>
+	<div class="test-overlay">Sie benutzen die Testumgebung der Amani-Kinderdorf Homepage. Bitte wechseln sie zur Hauptseite unter: <a href="https://www.amani-kinderdorf.de">www.amani-kinderdorf.de</a></div>
+<?php endif; ?>
+
 
 <?php
    /* Always have wp_footer() just before the closing </body>

@@ -6,6 +6,13 @@ Template Name: Startseite
 <?php get_header(); ?>
 
 <div class="contentWrapper mainWrapper">
+	<header>
+		<a class="logoItem" href="<?php echo home_url(); ?>">
+			<img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo" onerror="this.src='<?php bloginfo('template_url')?>/img/logo_full.png'"/>
+		</a>
+
+		<h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
+	</header>
 	<?php the_post(); ?>
 	<?php the_field('slideshow'); ?>
 	<article class="pageStyle">

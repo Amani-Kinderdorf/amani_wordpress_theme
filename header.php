@@ -80,20 +80,3 @@
 		</section>
 	</div>
 </div>
-
-
-<?php if (is_front_page()):?>
-<header>
-	<a class="logoItem" href="<?php echo home_url(); ?>">
-		<img class="logoImage" src="<?php bloginfo('template_url')?>/img/logo.svg" alt="logo" onerror="this.src='<?php bloginfo('template_url')?>/img/logo_full.png'"/>
-	</a>
-
-	<h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
-</header>
-<?php  else:?>
-<header style="margin-top:60px"></header>
-<?php endif; ?> 
-
-<?php if(WP_DEBUG==true): ?>
-	<div class="test-overlay">Sie benutzen die Testumgebung der Amani-Kinderdorf Homepage. Bitte wechseln sie zur Hauptseite unter: <a href="https://www.amani-kinderdorf.de">www.amani-kinderdorf.de</a></div>
-<?php endif; ?>
