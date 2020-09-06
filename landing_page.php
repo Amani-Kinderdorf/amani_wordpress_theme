@@ -20,14 +20,14 @@ Template Name: Startseite
 				//custom loop for news
 				$args = array( 'posts_per_page' => get_field('news_item_count'), 'orderby' => 'date' , 'order'   => 'DESC');
 				$loop = new WP_Query($args);
- 				while( $loop->have_posts() ) : 
+				while( $loop->have_posts() ) : 
 				$loop->the_post(); ?>
 				<div class="newsPreview">
 					<span class="date"><?php echo get_the_date('d. F');?></span>
 					<a class="title" href="<?php the_permalink(); ?>"><?php the_title();?></a>
 				</div><?php	
-   				endwhile;
-   				wp_reset_query();
+				endwhile;
+				wp_reset_query();
 				?>
 				</div>
 			</div>

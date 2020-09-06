@@ -27,10 +27,10 @@ add_filter('excerpt_more', 'excerpt_readmore');
 // Load Slick JS Scripts
 function load_slick(){
 	if(is_front_page()||is_home()) {
-    	wp_register_script('slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), true);
-    	wp_register_script('slideshow', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery', 'slick' ), true);
-    	wp_enqueue_script( 'slick' );
-    	wp_enqueue_script( 'slideshow' );
+		wp_register_script('slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), true);
+		wp_register_script('slideshow', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery', 'slick' ), true);
+		wp_enqueue_script( 'slick' );
+		wp_enqueue_script( 'slideshow' );
 	}
 }
 add_action('wp_enqueue_scripts', 'load_slick');

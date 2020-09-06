@@ -8,18 +8,18 @@
 <?php endif; ?>
 
 <script type="text/javascript">
-    function searchButtonClicked () {
-    	console.log("Searchbutton clicked")
-    	if(document.getElementById('searchField').value.length>0) {
-    		document.getElementById('searchForm').submit();
-    	}
-    	document.getElementById('searchSection').classList.toggle('inputHidden', false);
-        document.getElementById('searchField').focus();
-    }
+	function searchButtonClicked () {
+		console.log("Searchbutton clicked")
+		if(document.getElementById('searchField').value.length>0) {
+			document.getElementById('searchForm').submit();
+		}
+		document.getElementById('searchSection').classList.toggle('inputHidden', false);
+		document.getElementById('searchField').focus();
+	}
 
-    function changeVisibility(value) {
-        document.getElementById('searchSection').classList.toggle('inputHidden', value);
-    }
+	function changeVisibility(value) {
+		document.getElementById('searchSection').classList.toggle('inputHidden', value);
+	}
 	function toggleMobileMenu(el){
 		el.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible'); 
 		el.classList.toggle('sideBarPageTreeHeading--visible');
@@ -29,10 +29,10 @@
 
 <?php
    /* Always have wp_footer() just before the closing </body>
-    * tag of your theme, or you will break many plugins, which
-    * generally use this hook to reference JavaScript files.
-    */
-    wp_footer();
+	* tag of your theme, or you will break many plugins, which
+	* generally use this hook to reference JavaScript files.
+	*/
+	wp_footer();
 ?>
 </body>
 </html>

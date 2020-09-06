@@ -2,8 +2,8 @@
  
 
 <div class="contentWrapper mainWrapper">
-    <div class="xColumnView">
-    	<?php get_sidebar(); ?>
+	<div class="xColumnView">
+		<?php get_sidebar(); ?>
 		<div class="pageContentViewItem pageStyle">
 			<h1>Berichte - <span><?php single_cat_title() ?></span></h1>
 			<?php
@@ -21,7 +21,7 @@
 					</div>
 				<?php endif ?>
 				<div class="articlePreview__text">
-            		<p class="postMeta"><?php echo get_the_date('d. F Y'); ?> | <?php echo get_categorie_simple(get_the_ID()); ?></p>
+					<p class="postMeta"><?php echo get_the_date('d. F Y'); ?> | <?php echo get_categorie_simple(get_the_ID()); ?></p>
 					<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
 					<p><?php the_excerpt(); ?></p>
 				</div>

@@ -13,19 +13,19 @@ var output = './';
 var outputDebug = './styles/';
 
 function css () {
-  return gulp
-    .src(input)
-    .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
-    .pipe(gulp.dest(outputDebug))
-    .pipe(postcss([cssnano(), autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
-    .pipe(insert.prepend(metaStyle))
-    .pipe(gulp.dest(output));
+	return gulp
+	.src(input)
+	.pipe(sass({ outputStyle: "expanded" }))
+	.pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
+	.pipe(gulp.dest(outputDebug))
+	.pipe(postcss([cssnano(), autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
+	.pipe(insert.prepend(metaStyle))
+	.pipe(gulp.dest(output));
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch(input, css);
+	gulp.watch(input, css);
 }
 
 function init(cb) {
