@@ -26,18 +26,9 @@
 					if (get_field('post_teaser') == 1) $shownTeaserPosts++;
 					if ($shownTeaserPosts <= 3 && get_field('post_teaser') == 1) continue; //hides already outputted teasered posts
 			?>
-			<article class="articlePreview">
-				<?php if (has_post_thumbnail()): ?>
-					<div class="articlePreview__image" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>')">
-						<a class="articlePreview__imageLink" href="<?php the_permalink();?>"></a>
-					</div>
-				<?php endif ?>
-				<div class="articlePreview__text">
-					<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-					<p class="postMeta"><?php echo get_the_date('d. F Y'); ?> | <?php echo get_categorie_simple(get_the_ID()); ?></p>
-					<p><?php the_excerpt(); ?></p>
-				</div>
-			 </article>
+				
+				<?php require('helpers/article_preview.php'); ?>
+
 			<?php endwhile; endif; ?>
 			<?php wpbeginner_numeric_posts_nav(); ?>
 

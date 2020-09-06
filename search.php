@@ -13,21 +13,11 @@
 				<h1 class="searchHeading">Suche nach <span><?php the_search_query(); ?></span></h1>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post() ?>
-					<div id="post-<?php the_ID(); ?>" class="searchResultItem">
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<div class="entry-summary">
-							<?php the_excerpt( __( 'Mehr lesen <span class="meta-nav">&raquo;</span>', 'amani-theme' )  ); ?>
-							<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'amani-theme' ) . '&after=</div>') ?>
-						</div>
-					</div>
+						<?php require('helpers/article_preview.php'); ?>
 					<?php endwhile; ?>
 
-					<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ): ?>
-						<div id="nav-below" class="navigation">
-							<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Ältere Ergebnisse', 'amani-theme' )) ?></div>
-							<div class="nav-next"><?php previous_posts_link(__( 'Neuere Ergebnisse <span class="meta-nav">&raquo;</span>', 'amani-theme' )) ?></div>
-						</div>
-					<?php endif ?>
+					<?php wpbeginner_numeric_posts_nav(); ?>
+					
 				<?php else : ?>
 					<p>Leider ergab die Suche keine Ergebnisse.</p>
 				<?php endif; ?>
