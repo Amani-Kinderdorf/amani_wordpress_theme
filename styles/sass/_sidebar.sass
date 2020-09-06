@@ -1,0 +1,27 @@
+.sideBarPageTree 
+	li
+		list-style: none
+		font-size: 0.85rem
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.page_item, .cat-item
+		padding: 6px 0px
+		display: block
+		width: 100%
+		word-break: break-word
+		line-height: 160%
+	.children
+	.page_item_has_children
+		border-bottom-style: none
+	ul
+		padding-left: 15px
+	ul.sideBarPageTreeItems
+		padding-left: 0
+	>.page_item>a
+		width: 100%
+		display: block
+
+	.current_page_item > a, .current-cat > a, .current_page_item_parent
+		font-weight: 800

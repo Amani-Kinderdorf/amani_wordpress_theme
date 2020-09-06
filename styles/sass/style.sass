@@ -110,34 +110,15 @@ $spacing: 3rem
 
 /*********** Sidebar ***************/
 
-.sideBarPageTree 
-	li
-		list-style: none
-		font-size: 0.85rem
-	a
-		text-decoration: none
-	.page_item, .cat-item
-		border-bottom: 1px solid #979797
-		padding: 6px 0px
-		display: block
-		width: 100%
-		word-break: break-word
-	.children
-		border-top: 1px solid #979797
-		margin-top: 6px
-	.page_item_has_children
-		border-bottom-style: none
-	ul
-		padding-left: 20px
-	>.page_item>a
-		width: 100%
-		display: block
-	.current_page_item > a, .current-cat > a, .current_page_item_parent
-		font-weight: 600
+@import sidebar
 
+
+/*********** Posts ****************/
 @import posts
 @import pagination
 @import article-preview
+
+
 /*****************RESPONSIVE************/
 //written for old menu; design and syntax obsolete
 @import mobile
