@@ -40,18 +40,22 @@ else:
 						href="<?php echo get_permalink($parent); ?>">
 						<?php echo get_the_title($parent); ?>
 					</a>
-					<a  class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" 
-						onclick="return toggleMobileMenu(this);">
-						<span class="showMoreButton">Unterseiten<span class="showMoreIcon"></span></span>
-					</a>
+					<div class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" >
+						<?php if (is_page() && $post->post_parent): ?>
+							<a href="<?php echo get_permalink($parent); ?>"><?php echo get_the_title($parent); ?></a>
+						<?php endif ?>
+						<span onclick="return toggleMobileMenu(this.parentElement);" class="showMoreButton">
+							Unterseiten
+						<span class="showMoreIcon"></span></span>
+					</div>
 					<ul class="children sideBarPageTreeItems">
 					<?php
 					$args=array(
-					'title_li' => '',
-					'child_of' =>  $parent
+						'title_li' => '',
+						'child_of' =>  $parent
 					);
-					wp_list_pages($args);
-					wp_reset_query();
+						wp_list_pages($args);
+						wp_reset_query();
 					?>
 					</ul></li>
 			</aside>
