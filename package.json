@@ -13,6 +13,8 @@
     "gulp": "^4.0.2",
     "gulp-insert": "*",
     "gulp-postcss": "^8.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-rewrite": "^3.0.3",
     "gulp-sass": "^4.1.0"
   }
 }
