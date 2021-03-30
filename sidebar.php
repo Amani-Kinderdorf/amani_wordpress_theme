@@ -4,16 +4,16 @@
 if( is_archive() || is_category() ||  is_single() || is_home() || is_page_template('archive_template.php')): ?>
 			<aside class="sideBarViewItem sideBarPageTree">
 				<li class="page_item page_item_has_children <?php if(is_home()) echo 'current_page_item'; ?>">
- 					<a class="hiddenMobile" href="<?php echo get_post_type_archive_link('post'); ?>">Alle Kategorien</a>
+					<a class="hiddenMobile" href="<?php echo get_post_type_archive_link('post'); ?>">Alle Kategorien</a>
 					<div class="sideBarPageTreeHeading visibleMobile">
-                        <a href="<?php echo get_post_type_archive_link('post'); ?>">Alle Kategorien</a>
-                        <span class="showMoreButton" onclick="
-                        this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
-                        this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');">
-                    		Kategorie wählen
-                    		<span class="showMoreIcon"></span>
-                    	</span>
-                    </div>
+						<a href="<?php echo get_post_type_archive_link('post'); ?>">Alle Kategorien</a>
+						<span class="showMoreButton" onclick="
+						this.parentNode.nextElementSibling.classList.toggle('sideBarPageTreeItems--visible');
+						this.parentNode.classList.toggle('sideBarPageTreeHeading--visible');">
+							Kategorie wählen
+							<span class="showMoreIcon"></span>
+						</span>
+					</div>
 					<ul class="children sideBarPageTreeItems">
 						<?php wp_list_categories('title_li='); ?>
 					</ul>
@@ -40,18 +40,22 @@ else:
 						href="<?php echo get_permalink($parent); ?>">
 						<?php echo get_the_title($parent); ?>
 					</a>
-					<a  class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" 
-						onclick="return toggleMobileMenu(this);">
-						<span class="showMoreButton">Unterseiten<span class="showMoreIcon"></span></span>
-					</a>
+					<div class="sideBarPageTreeHeading <?php echo $parenActiveClass; ?> visibleMobile" >
+						<?php if (is_page() && $post->post_parent): ?>
+							<a href="<?php echo get_permalink($parent); ?>"><?php echo get_the_title($parent); ?></a>
+						<?php endif ?>
+						<span onclick="return toggleMobileMenu(this.parentElement);" class="showMoreButton">
+							Unterseiten
+						<span class="showMoreIcon"></span></span>
+					</div>
 					<ul class="children sideBarPageTreeItems">
 					<?php
 					$args=array(
-					'title_li' => '',
-					'child_of' =>  $parent
+						'title_li' => '',
+						'child_of' =>  $parent
 					);
-					wp_list_pages($args);
-					wp_reset_query();
+						wp_list_pages($args);
+						wp_reset_query();
 					?>
 					</ul></li>
 			</aside>

@@ -1,0 +1,54 @@
+.searchResultItem
+	margin: 35px 0px
+	h2
+		color: #252525!important
+		margin-bottom: 0px!important
+		font:
+			size: 120%!important
+			weight: 600!important
+		>a
+			text-decoration: none
+
+
+.searchSidebarForm
+	display: flex
+	align-items: center
+	margin-top: 72px
+	@media #{$tablet}
+		margin-top: 0
+	input[type="search"], input[type="submit"]
+		font-size: 13px
+		height: 13px
+		line-height: 100%
+		padding: 9px 10px
+		box-sizing: initial
+		border-radius: 2px
+		border-style: solid
+		border-width: 1px
+		transition: all ease 0.3s
+		outline: none
+	input[type="search"]		
+		border-color: $text_gray
+		&:focus
+			border-color: $amani_orange_rgba
+	input[type="submit"]
+		margin-left: 1em
+		background: $amani_orange_rgba
+		border-color: $amani_orange_rgba
+		&:hover
+			background-color: lighten($amani_orange_rgba, 10)
+			border-color: lighten($amani_orange_rgba, 10)
+
+.resultInfo
+	margin-top: 0.4rem
+	font-size: 0.9rem
+	color: $text_gray
+	font-weight: bold
+
+.searchHeading
+	span
+		font-size: 80%
+		display: inline-block
+		margin-left: 5px
+		&:before, &:after
+			content: "\""

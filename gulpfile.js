@@ -5,27 +5,33 @@ const postcss = require("gulp-postcss");
 const insert = require('gulp-insert');
 const fs = require("fs");
 const cssnano = require("cssnano");
+const rev = require("gulp-rev");
+const revRewrite = require('gulp-rev-rewrite');
 
 var metaStyle = "";
 
-var input = './styles/sass/*';
-var output = './';
-var outputDebug = './styles/';
+const input = './styles/sass/*';
+const output = './';
+const outputDebug = './styles/';
 
 function css () {
-  return gulp
-    .src(input)
-    .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
-    .pipe(gulp.dest(outputDebug))
-    .pipe(postcss([cssnano(), autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
-    .pipe(insert.prepend(metaStyle))
-    .pipe(gulp.dest(output));
+	return gulp
+	.src(input)
+	.pipe(sass({ outputStyle: "expanded" }))
+	.pipe(postcss([autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
+	.pipe(gulp.dest(outputDebug))
+	.pipe(postcss([cssnano(), autoprefixer({overrideBrowserslist: ['> 1%','last 8 versions','Firefox >= 20', 'ie >= 9']})]))
+	.pipe(insert.prepend(metaStyle))
+	.pipe(gulp.dest(output))
+	.pipe(rev())
+	.pipe(gulp.dest(output))
+	.pipe(rev.manifest())
+	.pipe(gulp.dest(outputDebug))
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch(input, css);
+	gulp.watch(input, css);
 }
 
 function init(cb) {
@@ -34,8 +40,15 @@ function init(cb) {
 	cb();
 }
 
+function renameCSSFile() {
+	const manifest = gulp.src(outputDebug+ 'rev-manifest.json')
+	return gulp.src('./header.php')
+		.pipe(revRewrite({ manifest }))
+		.pipe(gulp.dest('./'));
+}
+
 // define complex tasks
-const build = gulp.series(init, css);
+const build = gulp.series(init, css, renameCSSFile);
 const watch = gulp.series(init, css, watchFiles);
 
 exports.build = build;

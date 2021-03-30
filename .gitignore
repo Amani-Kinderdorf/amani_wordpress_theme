@@ -1,3 +1,5 @@
 node_modules
 styles/style.css
-style.css
+
+style**.css
+styles/rev-manifest.json

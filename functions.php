@@ -4,6 +4,11 @@
 require_once('helpers/form_validations.php');
 require_once('helpers/pagination.php');
 
+//increase max file size
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 //disable emoji script
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -13,9 +18,7 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 //custom image sizes
 add_image_size('landing_slideshow', 1100, 2000);
 add_image_size('article_full_width', 700, 2000);
-add_image_size('child_preview',260,260);
 
-add_action( 'init', 'create_post_type_child' );
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' ); 
 
@@ -27,39 +30,13 @@ add_filter('excerpt_more', 'excerpt_readmore');
 // Load Slick JS Scripts
 function load_slick(){
 	if(is_front_page()||is_home()) {
-    	wp_register_script('slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), true);
-    	wp_register_script('slideshow', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery', 'slick' ), true);
-    	wp_enqueue_script( 'slick' );
-    	wp_enqueue_script( 'slideshow' );
+		wp_register_script('slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), true);
+		wp_register_script('slideshow', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery', 'slick' ), true);
+		wp_enqueue_script( 'slick' );
+		wp_enqueue_script( 'slideshow' );
 	}
 }
 add_action('wp_enqueue_scripts', 'load_slick');
-
-function create_post_type_child() {
-  register_post_type( 'child',
-	array(
-	  'labels' => array(
-		'name'                => __( 'Kinder' ),       
-		'singular_name'       => __( 'Kind' ),
-		'menu_name'           => __( 'Kinder', 'amani_theme' ),
-		'all_items'           => __( 'Alle Kinder', 'amani_theme' ),
-		'add_new_item'        => __( 'Kind erstellen', 'amani_theme' ),
-		'add_new'             => __( 'Kind erstellen', 'amani_theme' ),
-		'edit_item'           => __( 'Kind bearbeiten', 'amani_theme' ),
-		'update_item'         => __( 'Kind ändern', 'amani_theme' ),
-		'search_items'        => __( 'Nach Kindern suchen', 'amani_theme' ),
-		'not_found'           => __( 'Kein Kind gefunden', 'amani_theme' ),
-		),
-	  'public' => true,
-	  'has_archive' => false,     
-	  'hierarchical' => false,
-	  'menu_position' => 4,
-	  'capability_type' => 'post',
-	  'menu_icon' => 'dashicons-universal-access',
-	  'supports' => array('title','editor'),
-	)
-  );
-}
 
 //disable highlighning in main menu for 404 and search
 function modify_css_class($css_class, $page) {
@@ -178,52 +155,6 @@ define( 'ACF_LITE', false );
 //register Custom Fields using PHP
 if(function_exists("register_field_group"))
 {
-	register_field_group(array (
-		'id' => 'acf_kinder',
-		'title' => 'Kinder',
-		'fields' => array (
-			array (
-				'key' => 'field_55f92d74c4d78',
-				'label' => 'Bild',
-				'name' => 'bild',
-				'type' => 'image',
-				'required' => 1,
-				'save_format' => 'id',
-				'preview_size' => 'medium',
-				'library' => 'uploadedTo',
-			),
-			array (
-				'key' => 'field_55f92e247f141',
-				'label' => 'Kinderdorf',
-				'name' => 'kinderdorf',
-				'type' => 'page_link',
-				'required' => 1,
-				'post_type' => array (
-					0 => 'page',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'child',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
 	register_field_group(array (
 		'id' => 'acf_redirect',
 		'title' => 'Redirect',
