@@ -1,8 +1,8 @@
 <footer class="contentWrapper">
 	<span>Amani Kinderdorf e.V.</span>
-	<div>
-	<?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s', 'before' => '' )); ?>
-	</div>
+	<ul>
+		<?php wp_nav_menu( array('menu' => 'footerMenu', 'container' => '','items_wrap' => '%3$s', 'before' => '' )); ?>
+	</ul>
 </footer>
 
 <script type="text/javascript">
