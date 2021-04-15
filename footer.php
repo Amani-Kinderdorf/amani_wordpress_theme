@@ -5,7 +5,7 @@
 	</ul>
 </footer>
 
-<script type="text/javascript">
+<script>
 	function searchButtonClicked () {
 		console.log("Searchbutton clicked")
 		if(document.getElementById('searchField').value.length>0) {

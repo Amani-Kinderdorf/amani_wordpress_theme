@@ -72,11 +72,11 @@
 			</li>
 		</ul>
 
-		<section id="searchSection" class="inputHidden">
+		<div id="searchSection" class="inputHidden">
 			<form id="searchForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 				<input id="searchField" type="search" name="s" onblur="changeVisibility(true)" onfocus="changeVisibility(false)">
 				<span id="searchIcon" onclick="searchButtonClicked();"></span>
 			</form>
-		</section>
+		</div>
 	</div>
 </div>
