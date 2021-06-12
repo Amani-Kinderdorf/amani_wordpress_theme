@@ -27,6 +27,9 @@ function excerpt_readmore($more) {
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 
+// disbale xml rpc api
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
 // Load Slick JS Scripts
 function load_slick(){
 	if(is_front_page()||is_home()) {
