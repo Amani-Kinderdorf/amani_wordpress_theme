@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const autoprefixer = require('autoprefixer');
 const postcss = require("gulp-postcss");
 const insert = require('gulp-insert');
@@ -7,6 +7,7 @@ const fs = require("fs");
 const cssnano = require("cssnano");
 const rev = require("gulp-rev");
 const revRewrite = require('gulp-rev-rewrite');
+
 
 var metaStyle = "";
 
@@ -41,7 +42,7 @@ function init(cb) {
 }
 
 function renameCSSFile() {
-	const manifest = gulp.src(outputDebug+ 'rev-manifest.json')
+	const manifest = fs.readFileSync(outputDebug + 'rev-manifest.json');
 	return gulp.src('./header.php')
 		.pipe(revRewrite({ manifest }))
 		.pipe(gulp.dest('./'));
