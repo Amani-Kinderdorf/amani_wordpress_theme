@@ -9,10 +9,7 @@
 			<?php
 				wp_reset_postdata();
 				if (have_posts()) :
-				$shownTeaserPosts = 0;
 				while(have_posts()) : the_post();
-					if (get_field('post_teaser') == 1) $shownTeaserPosts++;
-					if ($shownTeaserPosts <= 3 && get_field('post_teaser') == 1) continue; //hides already outputted teasered posts
 			?>
 			<article class="articlePreview">
 				<?php if (has_post_thumbnail()): ?>
