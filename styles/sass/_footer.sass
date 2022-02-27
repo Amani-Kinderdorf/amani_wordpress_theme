@@ -4,17 +4,29 @@ footer
 	padding: 0.5em 0 0.8em 0
 	font-size: 14px
 	display: flex
-	justify-content: space-between
+	column-gap: 1rem
+	width: 100%
 	@media #{$tablet}
 		flex-wrap: wrap
 		padding: 3%
+	.footerMenu
+		flex-grow: 2
+	svg
+		height: 1rem
+		width: 1rem
 	ul
 		margin: 0
 		padding: 0
 	li
 		list-style: none
-		display: inline-block
+		display: block
 		margin-left: 1em
 		@media #{$tablet}
 			margin-left: 0
 			margin-right: 1em
+	.iconLink
+		text-align: right
+		display: flex
+		column-gap: 0.3rem
+		justify-content: flex-end
+		align-items: center
