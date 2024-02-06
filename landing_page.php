@@ -14,7 +14,7 @@ Template Name: Startseite
 		<h4 class="logoDescription"><?php bloginfo('description'); ?></h4>
 	</header>
 	<?php the_post(); ?>
-	<?php the_field('slideshow'); ?>
+	<?php echo wp_kses_post( get_field('slideshow') ); ?>
 	<article class="pageStyle">
 		<div class="xColumnView landingPageText">
 			<div class="twoColumnViewItem">
