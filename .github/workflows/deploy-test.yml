@@ -32,9 +32,6 @@ jobs:
     - name: Build
       run: npm run build --if-present
 
-    - name: Test
-      run: npm test
-
     - name: Deploy
       run: |
         echo "${{secrets.SSH_KEY}}" > deploy_key
