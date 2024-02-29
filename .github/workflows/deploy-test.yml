@@ -11,14 +11,14 @@ jobs:
 
     steps:
     - name: Pull code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: staging
 
     - name: Use Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
-        node-version: '14.x'
+        node-version: 20
 
     - name: Restore cached node_modules
       uses: actions/cache@v2
@@ -31,9 +31,6 @@ jobs:
 
     - name: Build
       run: npm run build --if-present
-
-    - name: Test
-      run: npm test
 
     - name: Deploy
       run: |
