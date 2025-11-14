@@ -13,7 +13,7 @@
     "gulp": "^5.0.0",
     "gulp-dart-sass": "^1.0.2",
     "gulp-insert": "*",
-    "gulp-postcss": "^9.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-rev": "^9.0.0",
     "gulp-rev-rewrite": "^4.0.0",
     "postcss": "^8.4.31"
