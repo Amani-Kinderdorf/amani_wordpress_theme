@@ -78,7 +78,7 @@ function get_categorie_simple($id) {
 		$categories[] = '<a href="'.get_category_link($c).'">'.$cat->name.'</a>';
 	}
 
-	if(strlen($result)==0)$result = "Keine Kategorie";
+	if(count($categories) == 0) $result = "Keine Kategorie";
 	else $result = implode(', ', $categories);
 	return $result;
 }
