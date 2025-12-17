@@ -71,14 +71,15 @@ function getArchiveLink() {
 }
 
 function get_categorie_simple($id) {
-	$result = "";
+	$categories = [];
 	foreach(wp_get_post_categories(get_the_ID()) as $c)
 	{
 		$cat = get_category($c);
-		$result = $result.'<a href="'.get_category_link($c).'">'.$cat->name.'</a>';
+		$categories[] = '<a href="'.get_category_link($c).'">'.$cat->name.'</a>';
 	}
 
 	if(strlen($result)==0)$result = "Keine Kategorie";
+	else $result = implode(', ', $categories);
 	return $result;
 }
 
